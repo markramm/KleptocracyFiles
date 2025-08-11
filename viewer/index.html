@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Debugging Democracy — Interactive Timeline</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/tailwind.min.css" rel="stylesheet">
   <style>
     html, body { height: 100%; }
     body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
@@ -12,33 +12,184 @@
   </style>
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/yaml@2.4.5/dist/yaml.umd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
 </head>
 <body class="bg-neutral-950 text-neutral-100">
 <div id="root"></div>
 <script>
 const e = React.createElement;
 
+function EventItem({ ev }) {
+  const [open, setOpen] = React.useState(false);
+  const [details, setDetails] = React.useState(null);
+
+  const toggle = () => {
+    setOpen((v) => !v);
+    if (!details) {
+      fetch(`../timeline/${ev._file}`)
+        .then((r) => r.text())
+        .then((txt) => setDetails(jsyaml.load(txt)))
+        .catch((err) => console.error("failed to load yaml", err));
+    }
+  };
+
+  const d = details || ev;
+  const citations = d.citations || d.sources || [];
+
+  return e(
+    "div",
+    { className: "border-b border-neutral-700 py-2" },
+    e(
+      "div",
+      {
+        className: "font-semibold cursor-pointer",
+        onClick: toggle,
+      },
+      `${ev.date} — ${ev.title}`
+    ),
+    open
+      ? e(
+          "div",
+          {
+            className:
+              "mt-2 bg-neutral-900 p-3 rounded text-sm space-y-2",
+          },
+          d.summary ? e("div", null, d.summary) : null,
+          d.tags && d.tags.length
+            ? e(
+                "div",
+                null,
+                e("span", { className: "font-semibold" }, "Tags: "),
+                d.tags.join(", ")
+              )
+            : null,
+          d.location
+            ? e(
+                "div",
+                null,
+                e("span", { className: "font-semibold" }, "Location: "),
+                d.location
+              )
+            : null,
+          d.actors && d.actors.length
+            ? e(
+                "div",
+                null,
+                e("span", { className: "font-semibold" }, "Actors: "),
+                d.actors.join(", ")
+              )
+            : null,
+          d.notes
+            ? e(
+                "div",
+                null,
+                e("span", { className: "font-semibold" }, "Notes: "),
+                d.notes
+              )
+            : null,
+          citations.length
+            ? e(
+                "div",
+                null,
+                e("div", { className: "font-semibold mb-1" }, "Sources"),
+                e(
+                  "ul",
+                  { className: "list-disc ml-4 space-y-1" },
+                  citations.map((c, i) =>
+                    e(
+                      "li",
+                      { key: i },
+                      e(
+                        "a",
+                        {
+                          href: typeof c === "string" ? c : c.url,
+                          target: "_blank",
+                          className: "text-blue-400 underline",
+                        },
+                        typeof c === "object" && c.title ? c.title : typeof c === "string" ? c : c.url
+                      ),
+                      typeof c === "object" && c.archived
+                        ? e(
+                            "span",
+                            { className: "ml-2" },
+                            e(
+                              "a",
+                              {
+                                href: c.archived,
+                                target: "_blank",
+                                className: "text-blue-400 underline",
+                              },
+                              "archive"
+                            )
+                          )
+                        : null
+                    )
+                  )
+                )
+              )
+            : null,
+          e(
+            "div",
+            null,
+            e(
+              "a",
+              {
+                href: `../timeline/${ev._file}`,
+                target: "_blank",
+                className: "text-blue-400 underline",
+              },
+              "View YAML"
+            )
+          )
+        )
+      : null
+  );
+}
+
 function App() {
   const [events, setEvents] = React.useState([]);
+  const [query, setQuery] = React.useState("");
+
   React.useEffect(() => {
+    if (location.protocol === "file:") {
+      console.error("Use a local HTTP server (e.g. 'python -m http.server') to view the timeline.");
+    }
     fetch("../timeline/index.json")
       .then((r) => r.json())
       .then((d) => setEvents(d.events || []))
       .catch((err) => console.error("failed to load index", err));
   }, []);
 
+  const filtered = events.filter((ev) => {
+    const q = query.toLowerCase();
+    return (
+      ev.title.toLowerCase().includes(q) ||
+      (ev.summary && ev.summary.toLowerCase().includes(q))
+    );
+  });
+
+  const grouped = filtered.reduce((acc, ev) => {
+    const year = ev.date.slice(0, 4);
+    (acc[year] ||= []).push(ev);
+    return acc;
+  }, {});
+  const years = Object.keys(grouped).sort().reverse();
+
   return e(
     "div",
-    { className: "p-4 space-y-4" },
-    events.map((ev) =>
+    { className: "max-w-4xl mx-auto p-4 space-y-6" },
+    e("input", {
+      className: "w-full p-2 rounded bg-neutral-800 text-neutral-100",
+      placeholder: "Search…",
+      value: query,
+      onChange: (ev) => setQuery(ev.target.value),
+    }),
+    years.map((year) =>
       e(
         "div",
-        { key: ev.id, className: "border-b border-neutral-700 pb-2" },
-        e("div", { className: "font-semibold" }, `${ev.date} — ${ev.title}`),
-        ev.summary ? e("div", { className: "text-sm" }, ev.summary) : null
+        { key: year },
+        e("h2", { className: "text-xl font-bold mt-4 mb-2" }, year),
+        grouped[year].map((ev) => e(EventItem, { key: ev.id, ev }))
       )
     )
   );
