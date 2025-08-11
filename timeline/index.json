@@ -1,5 +1,7 @@
-Wrote timeline/index.json with 126 events
-01-30",
+{
+  "events": [
+    {
+      "date": "2017-01-30",
       "title": "Executive Order 13771: Reducing Regulation and Controlling Regulatory Costs",
       "summary": "Order established a 'two-for-one' rule for federal regulations, later rescinded in 2021.",
       "tags": [
@@ -7,7 +9,10 @@ Wrote timeline/index.json with 126 events
         "regulation"
       ],
       "citations": [
-        "https://www.federalregister.gov/documents/2017/02/03/2017-02451/reducing-regulation-and-controlling-regulatory-costs"
+        {
+          "url": "https://www.federalregister.gov/d/2017-02451",
+          "archived": "https://web.archive.org/web/20170203/https://www.federalregister.gov/documents/2017/02/03/2017-02451/reducing-regulation-and-controlling-regulatory-costs"
+        }
       ],
       "id": "executive-order-13771-reducing-regulation-and-controlling-regulatory-costs",
       "location": null,
@@ -478,7 +483,10 @@ Wrote timeline/index.json with 126 events
       ],
       "citations": [
         "https://www.supremecourt.gov/opinions/23pdf/22-859_1924.pdf",
-        "https://www.reuters.com/legal/legalindustry/jurys-not-out-supreme-courts-jarkesy-decision-limits-secs-use-administrative-2024-07-18/"
+        {
+          "url": "https://www.reuters.com/legal/legalindustry/jurys-not-out-supreme-courts-jarkesy-decision-limits-secs-use-administrative-2024-07-18/",
+          "archived": "https://web.archive.org/web/20250724005258/https://www.reuters.com/legal/legalindustry/jurys-not-out-supreme-courts-jarkesy-decision-limits-secs-use-administrative-2024-07-18/"
+        }
       ],
       "notes": "",
       "_file": "2024-06-27_scotus_sec_v_jarkesy.yaml",
@@ -1421,7 +1429,7 @@ Wrote timeline/index.json with 126 events
         "enforcement"
       ],
       "citations": [
-        "https://www.transportation.gov/briefing-room/enforcement-policy-grace-period-aug-1-2025"
+        "https://www.transportation.gov/briefing-room/enforcement-policy-grace-period-through-august-1-2025"
       ],
       "_file": "2025-04-02-dot-enforcement-grace.yaml",
       "_id_hash": "008ddd0da030a38bec8ebc491dafaaa9f56dd25edb4891a4778bd747ffea80ab"
@@ -1809,7 +1817,7 @@ Wrote timeline/index.json with 126 events
       "citations": [
         "https://www.whitehouse.gov/presidential-actions/2025/06/department-of-defense-security-for-the-protection-of-department-of-homeland-security-functions/",
         "https://www.govinfo.gov/app/details/DCPD-202500672",
-        "https://news.usni.org/2025/06/09/marines-deploy-to-los-angeles",
+        "https://news.usni.org/2025/06/09/700-marines-deploying-to-downtown-los-angeles",
         "https://www.brookings.edu/articles/how-can-the-president-put-soldiers-on-the-streets-of-los-angeles/",
         "https://www.aila.org/presidential-memo-on-dod-security-for-the-protection-of-dhs-functions"
       ],
@@ -1928,7 +1936,6 @@ Wrote timeline/index.json with 126 events
         "state-courts"
       ],
       "citations": [
-        "https://apnews.com/article/88de13189060dfd42069ed558ccbcad9",
         "https://www.ajc.com/politics/2025/06/georgia-high-court-rejects-election-boards-rules-for-hand-counts-and-inquiries/"
       ],
       "notes": "",
@@ -1945,7 +1952,7 @@ Wrote timeline/index.json with 126 events
         "protests"
       ],
       "citations": [
-        "https://apnews.com/article/4b9b062785bde9428a3155812fd092de"
+        "https://cpj.org/2025/06/law-enforcement-injure-multiple-journalists-others-assaulted-while-covering-los-angeles-protests/"
       ],
       "id": "ap-reporters-shot-with-rubber-bullets-roughed-up-covering-la-protests",
       "location": null,
