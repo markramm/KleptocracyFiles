@@ -8,28 +8,49 @@ REPO = Path(__file__).resolve().parents[1]
 TIMELINE = REPO / "timeline"
 
 def check_url(url, timeout=12):
-    try:
-        req = urllib.request.Request(url, method="HEAD")
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            return resp.status, resp.getheader("Location")
-    except urllib.error.HTTPError as e:
-        return e.code, None
-    except Exception as e:
-        return None, str(e)
+    """Attempt to resolve ``url`` and return ``(status, redirect)``.
+
+    Some publishers block ``HEAD`` requests or require a user agent. We
+    start with ``HEAD`` and fall back to ``GET`` for common block codes.
+    """
+    ua = {"User-Agent": "Mozilla/5.0 (compatible; LinkChecker/1.0)"}
+    for method in ("HEAD", "GET"):
+        try:
+            req = urllib.request.Request(url, method=method, headers=ua)
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                return resp.status, resp.getheader("Location")
+        except urllib.error.HTTPError as e:
+            # Retry with GET if HEAD is rejected.
+            if method == "HEAD" and e.code in (401, 403, 405):
+                continue
+            return e.code, None
+        except Exception as e:
+            if method == "HEAD":
+                continue
+            return None, str(e)
+    return None, None
 
 def main():
     ap = argparse.ArgumentParser(description="Check timeline citation URLs for reachability.")
     ap.add_argument("--limit", type=int, default=0, help="Limit number of files checked")
     ap.add_argument("--csv", default=None, help="Optional CSV output file")
     args = ap.parse_args()
-    files = sorted([p for p in TIMELINE.glob("*.yaml") if p.name != "_SCHEMA.json"])
+    files = sorted(
+        p for p in { *TIMELINE.glob("*.yaml"), *TIMELINE.glob("*.yml") }
+        if p.name != "_SCHEMA.json"
+    )
     if args.limit:
         files = files[:args.limit]
     results = []
     for y in files:
         d = yaml.safe_load(y.read_text(encoding="utf-8")) or {}
-        for url in d.get("citations") or []:
-            status, info = check_url(url)
+        for cite in d.get("citations") or []:
+            if isinstance(cite, dict):
+                url = cite.get("url")
+                target = cite.get("archived") or url
+            else:
+                url = target = cite
+            status, info = check_url(target)
             results.append({"file": y.name, "url": url, "status": status, "info": info})
             print(json.dumps(results[-1]))
     if args.csv:

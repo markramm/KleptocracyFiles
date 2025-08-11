@@ -7,10 +7,18 @@ actors:
   - "Elon Musk"
   - "X (Twitter)"
 tags:
+  - "algorithms"
   - "platform-policy"
   - "ranking"
   - "x-twitter"
+  - "subscriptions"
   - "pay-to-play"
 citations:
-  - https://x.com/elonmusk/status/1640502698549075972
-  - https://www.theverge.com/2023/3/27/23659351/elon-musk-twitter-for-you-verified-accounts-polls
+  - url: https://twitter.com/elonmusk/status/1640490130543771650
+    archived: https://nitter.net/elonmusk/status/1640490130543771650
+  - url: https://x.com/elonmusk/status/1640502698549075972
+    archived: https://nitter.net/elonmusk/status/1640502698549075972
+  - url: https://www.theverge.com/2023/3/27/23659351/elon-musk-twitter-for-you-verified-accounts-polls
+    archived: https://web.archive.org/web/20230328232222/https://www.theverge.com/2023/3/27/23659351/elon-musk-twitter-for-you-verified-accounts-polls
+  - url: https://www.vanityfair.com/news/2023/03/elon-musk-getting-everyone-pay-for-twitter
+    archived: https://web.archive.org/web/20230328200738/https://www.vanityfair.com/news/2023/03/elon-musk-getting-everyone-pay-for-twitter
