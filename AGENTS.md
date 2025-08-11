@@ -11,8 +11,12 @@
 - Use `tools/archive_link.py` to create new archives when needed.
 
 ## Development workflow
+0. Before starting, sync with the latest main branch:
+   - `git pull --ff-only origin main`
 1. Modify source files (`timeline/*.yaml`, `posts/*.md`, etc.).
-2. Rebuild derived files (timeline index, footnotes) if relevant.
+2. Rebuild derived files (timeline index, footnotes) if relevant:
+   - `python scripts/build_timeline_index.py` (commits `timeline/index.json`; tests fail if stale)
+   - `python scripts/build_footnotes.py`
 3. Run tests:
    - `pytest -q`
    - `python scripts/link_check.py --csv link_check.csv`
