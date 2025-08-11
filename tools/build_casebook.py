@@ -37,7 +37,8 @@ def sanitize_filename(s: str) -> str:
 def iter_cards():
     for root, _, files in os.walk(TIMELINE):
         for fn in files:
-            if not fn.endswith(".yaml"): continue
+            if not (fn.endswith(".yaml") or fn.endswith(".yml")):
+                continue
             path = os.path.join(root, fn)
             y = yaml.safe_load(open(path, "r", encoding="utf-8")) or {}
             yield path, y
@@ -61,7 +62,7 @@ def main():
     os.makedirs(CASEBOOK, exist_ok=True)
     index = {}
     for path, y in iter_cards():
-        cid = y.get("id") or os.path.basename(path).replace(".yaml","")
+        cid = y.get("id") or os.path.splitext(os.path.basename(path))[0]
         bucket = []
         for src in y.get("sources", []):
             url = src.get("url")
