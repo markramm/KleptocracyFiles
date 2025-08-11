@@ -50,8 +50,5 @@ class TimelineIndexTests(unittest.TestCase):
         c_event = next(e for e in data["events"] if e["_file"] == "c.yaml")
         self.assertEqual(c_event["citations"], [{"url": "https://example.com"}])
 
-
-
-
 if __name__ == "__main__":
     unittest.main()
