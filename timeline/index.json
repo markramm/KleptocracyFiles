@@ -5,8 +5,8 @@
       "title": "Executive Order 13771: Reducing Regulation and Controlling Regulatory Costs",
       "summary": "Order established a 'two-for-one' rule for federal regulations, later rescinded in 2021.",
       "tags": [
-        "regulation",
-        "executive-order"
+        "executive-order",
+        "regulation"
       ],
       "citations": [
         "https://www.federalregister.gov/documents/2017/02/03/2017-02451/reducing-regulation-and-controlling-regulatory-costs"
@@ -15,6 +15,7 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2017-01-30_eo_13771_reducing_regulation.yaml",
       "_id_hash": "817372de337c5302028a7508f13a37e4a305a72eb4746f3b1c46bf20ad67eb19"
     },
     {
@@ -22,8 +23,8 @@
       "title": "Executive Order 13992: Revocation of Certain Executive Orders Concerning Federal Regulation",
       "summary": "Rescinded EO 13771 and related orders, reversing the two-for-one regulatory policy.",
       "tags": [
-        "regulation",
-        "executive-order"
+        "executive-order",
+        "regulation"
       ],
       "citations": [
         "https://www.federalregister.gov/documents/2021/01/25/2021-01767/revocation-of-certain-executive-orders-concerning-federal-regulation"
@@ -32,36 +33,62 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2021-01-20_eo_13992_revocation_regulatory_orders.yaml",
       "_id_hash": "05bbb9b4da30c1eae1b89a77173236002164ce7e7b9e2fef6348d714b41960c5"
     },
     {
-      "id": "x_for_you_verified_priority",
-      "title": "Musk: Only verified users will be recommended in 'For You' & can vote in polls",
-      "date": "2023-03-27",
-      "summary": "Elon Musk announced that starting April 15, 2023, only verified (paid) accounts would be eligible for recommendation in the 'For You' timeline and to vote in polls, prioritizing visibility for subscribers.",
-      "location": null,
+      "id": "2023-01-03-x-expands-political-ads",
+      "title": "X expands permitted political advertising in the U.S.",
+      "date": "2023-01-03",
+      "summary": "X (Twitter) announced it would expand permitted political advertising in the United States, loosening a ban in place since 2019.",
+      "location": "Online",
       "actors": [
-        "Elon Musk",
-        "X (formerly Twitter)"
+        "X (Twitter)"
       ],
       "tags": [
         "platform-policy",
+        "advertising",
+        "elections"
+      ],
+      "citations": [
+        "https://www.reuters.com/business/media-telecom/twitter-expand-permitted-political-advertising-2023-01-03/"
+      ],
+      "_file": "2023-01-03-x-expands-political-ads.yaml",
+      "_id_hash": "86e973e64375552857e70c56cee9782ce617898ebc43e588ae4a111be7d6b457"
+    },
+    {
+      "id": "2023-03-27-x-verified-priority",
+      "title": "X prioritizes verified accounts for recommendations and polls",
+      "date": "2023-03-27",
+      "summary": "Elon Musk stated that only verified (paid) accounts would be eligible for 'For You' recommendations and for voting in polls, tying organic reach to paid verification.",
+      "location": "Online",
+      "actors": [
+        "Elon Musk",
+        "X (Twitter)"
+      ],
+      "tags": [
         "algorithms",
-        "subscriptions"
+        "platform-policy",
+        "ranking",
+        "x-twitter",
+        "subscriptions",
+        "pay-to-play"
       ],
       "citations": [
         "https://twitter.com/elonmusk/status/1640490130543771650",
+        "https://x.com/elonmusk/status/1640502698549075972",
+        "https://www.theverge.com/2023/3/27/23659351/elon-musk-twitter-for-you-verified-accounts-polls",
         "https://www.vanityfair.com/news/2023/03/elon-musk-getting-everyone-pay-for-twitter"
       ],
-      "notes": "",
-      "_id_hash": "0c0ab7ed9417e2405cf9f596978ff0755b9cc1200af0973bed2849f7d91eb2c0"
+      "_file": "2023-03-27-x-verified-priority.yaml",
+      "_id_hash": "5d48e491d200ae6c188ba85a965539a0dd7bf74d57385a1bc2eee35fcd1b67b7"
     },
     {
-      "id": "youtube_policy_update_US_elections",
-      "title": "YouTube stops removing content alleging fraud in past U.S. elections",
+      "id": "2023-06-02-youtube-election-policy",
+      "title": "YouTube stops removing false claims about past U.S. elections",
       "date": "2023-06-02",
-      "summary": "YouTube updated its election misinformation policy to stop removing content that alleges widespread fraud or errors in past U.S. elections, shifting to providing context panels and reducing recommendations instead of takedowns.",
-      "location": null,
+      "summary": "YouTube announced it would no longer remove content alleging fraud in past U.S. elections, shifting to context labels and recommendation interventions.",
+      "location": "Online",
       "actors": [
         "YouTube",
         "Google"
@@ -69,41 +96,52 @@
       "tags": [
         "platform-policy",
         "elections",
-        "content-moderation"
+        "content-moderation",
+        "youtube",
+        "platforms"
       ],
       "citations": [
+        "https://support.google.com/youtube/answer/10835034",
+        "https://www.axios.com/2023/06/02/us-election-fraud-youtube-policy",
+        "https://blog.youtube/inside-youtube/us-election-misinformation-update-2023/",
+        "https://www.reuters.com/technology/youtube-stop-removing-content-making-false-claims-past-elections-2023-06-02/",
         "https://blog.youtube/news-and-events/our-approach-to-2024-elections/",
         "https://www.cnn.com/2023/06/02/tech/youtube-election-misinformation-policy/index.html"
       ],
-      "notes": "",
-      "_id_hash": "2bcb03c3235edb0975da034c63aeb0495296ef7ee4a13d822b9d8010b2818a55"
+      "_file": "2023-06-02-youtube-election-policy.yaml",
+      "_id_hash": "00ad24b3cbe6069123186e33594d403e613136d285398b612d08f637d3e2d9bc"
     },
     {
-      "id": "x_reinstates_political_ads",
-      "title": "X (Twitter) announces return of political advertising in the U.S.",
+      "id": "2023-08-29-x-political-ads-return",
       "date": "2023-08-29",
-      "summary": "X reversed its 2019 ban and said it would again accept political advertising in the U.S., with updated policies on civic process and cause-based ads.",
-      "location": null,
+      "title": "X reverses 2019 ban, allows U.S. political ads; verified accounts prioritized in recommendations",
+      "summary": "X (formerly Twitter) reinstated U.S. political ads and emphasized recommendation priority for paid\u2011verified accounts\u2014shifting political reach toward pay\u2011to\u2011play.",
+      "location": "Online",
       "actors": [
-        "X (formerly Twitter)"
+        "X (Twitter)"
       ],
       "tags": [
         "platform-policy",
-        "political-ads"
+        "political-ads",
+        "algorithms",
+        "elections",
+        "x-twitter"
       ],
       "citations": [
+        "https://blog.x.com/en_us/topics/company/2023/supporting-peoples-right-to-accurate-and-safe-political-discourse-on-x",
         "https://blog.x.com/en_us/topics/company/2023/Expanding-our-political-advertising-policy",
+        "https://www.reuters.com/technology/x-will-allow-political-ads-candidates-parties-ahead-us-election-2023-08-29/",
         "https://www.reuters.com/world/us/elon-musks-x-to-allow-us-political-ads-again-2023-08-29/"
       ],
-      "notes": "",
-      "_id_hash": "2b37697e7993834dedaf27db2a6de78bf454cba6398708adb778deae3a4b6cbb"
+      "_file": "2023-08-29-x-political-ads-return.yaml",
+      "_id_hash": "b78839deccfcc99af6db8ebf28ee3da58a1e8ba6da615fe058642e75550c81c5"
     },
     {
-      "id": "meta_non_recommend_political_default",
-      "title": "Meta: Political content from unfollowed accounts not recommended by default",
+      "id": "2024-02-09-meta-political-default",
+      "title": "Meta makes political content non-recommended by default on Instagram and Threads",
       "date": "2024-02-09",
-      "summary": "Meta announced Instagram and Threads would stop proactively recommending political content from accounts users do not follow, with an opt-in control.",
-      "location": null,
+      "summary": "Meta said political content from accounts users do not follow would be non-recommended by default on Instagram and Threads, with an opt-in setting to see such content.",
+      "location": "Online",
       "actors": [
         "Meta",
         "Instagram",
@@ -111,7 +149,12 @@
       ],
       "tags": [
         "platform-policy",
+        "ranking",
+        "meta",
+        "instagram",
+        "threads",
         "elections",
+        "algorithms",
         "content-moderation"
       ],
       "citations": [
@@ -119,18 +162,18 @@
         "https://www.theverge.com/2024/2/9/24067742/instagram-threads-meta-political-content-recommended-feeds",
         "https://techcrunch.com/2024/02/09/instagram-and-threads-will-no-longer-proactively-recommend-political-content/"
       ],
-      "notes": "",
-      "_id_hash": "53a0094475ee88c111ad3da24d81c557e3e8dcb204e6020d4ff2c8450d30050d"
+      "_file": "2024-02-09-meta-political-default.yaml",
+      "_id_hash": "f6cebb4c5f76a1a031c10367bdd2bbc5db731a910b0024ca98e7b105513dbf4c"
     },
     {
       "date": "2024-03-19",
       "title": "SCOTUS allows Texas SB 4 to take effect temporarily",
       "summary": "The Supreme Court allowed Texas's SB 4 immigration law to take effect pending further proceedings, before subsequent Fifth Circuit action.",
       "tags": [
+        "emergency-docket",
         "immigration",
         "state-preemption",
-        "supreme-court",
-        "emergency-docket"
+        "supreme-court"
       ],
       "citations": [
         "https://www.supremecourt.gov/opinions/23pdf/23a814_febh.pdf",
@@ -140,6 +183,7 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2024-03-19_scotus_sb4_temp_effect.yaml",
       "_id_hash": "3a726a9276cbe942f1fdaa7e4a2a9ca804306f671de499622676cab9c2778cf1"
     },
     {
@@ -147,9 +191,9 @@
       "title": "Fifth Circuit re-blocks Texas SB 4 pending appeal",
       "summary": "The Fifth Circuit blocked Texas SB 4 after SCOTUS allowed it to take effect temporarily, reflecting rapid back-and-forth on emergency posture.",
       "tags": [
-        "immigration",
         "appeals",
-        "fifth-circuit"
+        "fifth-circuit",
+        "immigration"
       ],
       "citations": [
         "https://www.ca5.uscourts.gov/opinions/pub/24/24-50149-CV2.pdf"
@@ -158,6 +202,7 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2024-03-26_ca5_blocks_sb4.yaml",
       "_id_hash": "5814c5d9ee2a2c6c3f4f31f901953781ac3c84cdfce6bafa0c9cf36d07409fcd"
     },
     {
@@ -167,8 +212,8 @@
       "tags": [
         "elections",
         "georgia",
-        "voter-challenges",
-        "legislation"
+        "legislation",
+        "voter-challenges"
       ],
       "citations": [
         "https://www.theguardian.com/us-news/2024/mar/29/georgia-state-election-law-changes"
@@ -177,7 +222,45 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2024-03-29_guardian_ga_sb189.yaml",
       "_id_hash": "72f7e97b414c64fe122cfceebe8cab9fece63016566bd868650788c4a546c426"
+    },
+    {
+      "id": "2024-04-01-epa-pfas-cercla-guidance",
+      "title": "EPA releases PFAS guidance under CERCLA",
+      "date": "2024-04-01",
+      "summary": "EPA issued guidance on applying CERCLA to PFAS contamination, shaping cleanup responsibilities and enforcement discretion.",
+      "tags": [
+        "guidance",
+        "epa",
+        "pfas",
+        "cercla"
+      ],
+      "citations": [
+        "https://www.epa.gov/system/files/documents/2024-04/pfas-cercla-guidance-memo.pdf"
+      ],
+      "_file": "2024-04-01-epa-pfas-cercla-guidance.yaml",
+      "_id_hash": "e17d5da56681c0c6f687ce93c44bb41b1ca72fe7084ff7ecfd78f49347743772"
+    },
+    {
+      "id": "2024-06-13-fda-v-ahm",
+      "title": "SCOTUS dismisses FDA mifepristone case on standing",
+      "date": "2024-06-13",
+      "summary": "The Supreme Court held the plaintiffs lacked Article III standing to challenge the FDA\u2019s approval and actions related to mifepristone.",
+      "actors": [
+        "Supreme Court of the United States"
+      ],
+      "tags": [
+        "courts",
+        "standing",
+        "supreme-court",
+        "administrative-law"
+      ],
+      "citations": [
+        "https://www.supremecourt.gov/opinions/23pdf/23-235_3e04.pdf"
+      ],
+      "_file": "2024-06-13-fda-v-ahm.yaml",
+      "_id_hash": "792548cbae1324b1539d92719295d1d5a90db247f25a277b405c280f6f657747"
     },
     {
       "id": "scotus_fda_alliance_hippocratic_medicine",
@@ -190,16 +273,60 @@
         "Food and Drug Administration"
       ],
       "tags": [
+        "administrative-law",
         "courts",
-        "standing",
-        "administrative-law"
+        "standing"
       ],
       "citations": [
         "https://www.supremecourt.gov/opinions/23pdf/23-235_n7ip.pdf",
         "https://www.scotusblog.com/cases/case-files/food-and-drug-administration-v-alliance-for-hippocratic-medicine-2/"
       ],
       "notes": "",
+      "_file": "2024-06-13_scotus_fda_v_ahm.yaml",
       "_id_hash": "92e0dcbecff741f71bf89a5d951414f9dd56b7af5f38e7d0de58e331f45d67a0"
+    },
+    {
+      "id": "2024-06-26-meta-filter-bug",
+      "title": "Meta political-content filter bug prevents some users from changing setting",
+      "date": "2024-06-26",
+      "summary": "A bug made it appear that some users could not disable Meta's political-content filter on Instagram/Threads; Meta acknowledged and fixed the issue.",
+      "location": "Online",
+      "actors": [
+        "Meta"
+      ],
+      "tags": [
+        "bug",
+        "meta",
+        "instagram",
+        "threads",
+        "elections"
+      ],
+      "citations": [
+        "https://www.engadget.com/a-meta-error-broke-the-political-content-filter-on-threads-and-instagram-173020269.html"
+      ],
+      "_file": "2024-06-26-meta-filter-bug.yaml",
+      "_id_hash": "5567e2e77fb1f3f9400e51d2849747604f383b2ee4235cc26f3b3ca451215203"
+    },
+    {
+      "id": "2024-06-26-murthy-v-missouri",
+      "title": "SCOTUS dismisses social-media coercion case on standing",
+      "date": "2024-06-26",
+      "summary": "The Supreme Court found that the plaintiffs lacked standing to challenge alleged federal coercion of social-media platforms in moderating content.",
+      "actors": [
+        "Supreme Court of the United States"
+      ],
+      "tags": [
+        "courts",
+        "standing",
+        "free-speech",
+        "social-media",
+        "supreme-court"
+      ],
+      "citations": [
+        "https://www.supremecourt.gov/opinions/23pdf/23-411_6jfm.pdf"
+      ],
+      "_file": "2024-06-26-murthy-v-missouri.yaml",
+      "_id_hash": "7f14f11fd77394cf0c6b54699f37bfbb8293ec91de01afda364b99a23e1898b5"
     },
     {
       "id": "meta_political_filter_bug_persists",
@@ -213,14 +340,15 @@
         "Threads"
       ],
       "tags": [
-        "platform-policy",
-        "bug"
+        "bug",
+        "platform-policy"
       ],
       "citations": [
         "https://www.theverge.com/2024/6/26/24186388/instagram-threads-meta-political-content-filter-setting-stuck",
         "https://www.engadget.com/a-meta-error-broke-the-political-content-filter-on-threads-and-instagram-173020269.html"
       ],
       "notes": "",
+      "_file": "2024-06-26_meta_political_filter_bug.yaml",
       "_id_hash": "acb3e46ccfd80dc6905a54833dc9993d04e913956b54c26d324f4d5308f74854"
     },
     {
@@ -234,15 +362,58 @@
       ],
       "tags": [
         "courts",
-        "standing",
-        "social-media"
+        "social-media",
+        "standing"
       ],
       "citations": [
         "https://www.supremecourt.gov/opinions/23pdf/23-411_3dq3.pdf",
         "https://firstamendment.mtsu.edu/article/murthy-v-missouri-2024/"
       ],
       "notes": "",
+      "_file": "2024-06-26_scotus_murthy_v_missouri.yaml",
       "_id_hash": "ecfada99dd3b7018480df71c13fccd3564360c9faeff727d81581a4e4db7afcb"
+    },
+    {
+      "id": "2024-06-27-ohio-v-epa-stay",
+      "title": "SCOTUS stays EPA's Good Neighbor Plan",
+      "date": "2024-06-27",
+      "summary": "On its emergency docket, the Supreme Court stayed EPA\u2019s Good Neighbor Plan for ozone pollution pending further proceedings.",
+      "actors": [
+        "Supreme Court of the United States",
+        "EPA"
+      ],
+      "tags": [
+        "courts",
+        "environment",
+        "stays",
+        "supreme-court"
+      ],
+      "citations": [
+        "https://www.supremecourt.gov/opinions/23pdf/23a349_4gc5.pdf"
+      ],
+      "_file": "2024-06-27-ohio-v-epa-stay.yaml",
+      "_id_hash": "58bf0018701251225d46ed73fb7b9e389127b4b92f0069e287386236295d7a65"
+    },
+    {
+      "id": "2024-06-27-sec-v-jarkesy",
+      "title": "SCOTUS requires jury trials for certain SEC civil penalties",
+      "date": "2024-06-27",
+      "summary": "The Supreme Court ruled that when the SEC seeks civil penalties for securities fraud, defendants are entitled to a jury trial rather than adjudication solely before an administrative law judge.",
+      "actors": [
+        "Supreme Court of the United States"
+      ],
+      "tags": [
+        "courts",
+        "sec",
+        "administrative-law",
+        "jury-trial",
+        "supreme-court"
+      ],
+      "citations": [
+        "https://www.supremecourt.gov/opinions/23pdf/22-859_8o6b.pdf"
+      ],
+      "_file": "2024-06-27-sec-v-jarkesy.yaml",
+      "_id_hash": "d9b30b4620b8e28813dddc44e648b381c36044f08082b6caa99579d38bda85f5"
     },
     {
       "id": "scotus_sec_v_jarkesy",
@@ -255,8 +426,8 @@
         "Securities and Exchange Commission"
       ],
       "tags": [
-        "courts",
         "administrative-law",
+        "courts",
         "enforcement"
       ],
       "citations": [
@@ -264,6 +435,7 @@
         "https://www.reuters.com/legal/legalindustry/jurys-not-out-supreme-courts-jarkesy-decision-limits-secs-use-administrative-2024-07-18/"
       ],
       "notes": "",
+      "_file": "2024-06-27_scotus_sec_v_jarkesy.yaml",
       "_id_hash": "d4d0fcac4f890c02087b5329e66db7b6bca08debbcf3c74693a7aea88ab43b41"
     },
     {
@@ -277,16 +449,37 @@
         "EPA"
       ],
       "tags": [
+        "administrative-law",
         "courts",
-        "environment",
-        "administrative-law"
+        "environment"
       ],
       "citations": [
         "https://www.supremecourt.gov/opinions/23pdf/23a349_6537.pdf",
         "https://www.brennancenter.org/our-work/analysis-opinion/what-supreme-courts-epa-stay-means"
       ],
       "notes": "",
+      "_file": "2024-06-27_scotus_stay_ohio_v_epa_gnp.yaml",
       "_id_hash": "a663cf94478371426769161273ec1e156f617e35031badb0e0d503e75af78c2f"
+    },
+    {
+      "id": "2024-06-28-loper-bright",
+      "title": "SCOTUS overturns Chevron deference",
+      "date": "2024-06-28",
+      "summary": "The Supreme Court overruled Chevron deference in Loper Bright, granting courts more latitude in interpreting ambiguous statutes instead of deferring to agencies.",
+      "actors": [
+        "Supreme Court of the United States"
+      ],
+      "tags": [
+        "courts",
+        "administrative-law",
+        "supreme-court",
+        "chevron"
+      ],
+      "citations": [
+        "https://www.supremecourt.gov/opinions/23pdf/22-451_7m58.pdf"
+      ],
+      "_file": "2024-06-28-loper-bright.yaml",
+      "_id_hash": "6c36b549f8b39b127d4aa384f3a45b292ddd978d04ae233870d0442129600184"
     },
     {
       "id": "scotus_loper_bright_overrules_chevron",
@@ -298,15 +491,16 @@
         "Supreme Court of the United States"
       ],
       "tags": [
-        "courts",
         "administrative-law",
-        "chevron"
+        "chevron",
+        "courts"
       ],
       "citations": [
         "https://www.supremecourt.gov/opinions/23pdf/22-451_7m58.pdf",
         "https://www.reuters.com/legal/us-supreme-court-curbs-federal-agency-powers-overturning-1984-precedent-2024-06-28/"
       ],
       "notes": "",
+      "_file": "2024-06-28_scotus_loper_bright_overrules_chevron.yaml",
       "_id_hash": "a933da3bddaaa20c0223b4c6f228ac4356db89c7e5481d14755f75b3c71eb947"
     },
     {
@@ -325,7 +519,52 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2024-07-09_ga_sb189_brennan_analysis.yaml",
       "_id_hash": "bf760e578936ea89101d726009d992163c8d8f93521a25614e1fb8d6e30efec8"
+    },
+    {
+      "id": "2024-08-09-5th-circuit-geofence-warrants",
+      "date": "2024-08-09",
+      "title": "Fifth Circuit rules geofence warrants unconstitutional general warrants",
+      "summary": "In a key privacy ruling, the Fifth Circuit held Google geofence warrants unconstitutional as general warrants, foreshadowing jurisdictional splits on location dragnet searches.",
+      "tags": [
+        "privacy",
+        "courts",
+        "surveillance"
+      ],
+      "sources": [
+        {
+          "title": "ACLU: Fifth Circuit geofence ruling",
+          "url": "https://www.aclu.org/press-releases/fifth-circuit-rules-geofence-warrants-unconstitutional",
+          "outlet": "ACLU",
+          "date": "2024-08-09"
+        },
+        {
+          "title": "Reuters: US appeals court finds geofence warrants unconstitutional",
+          "url": "https://www.reuters.com/technology/us-appeals-court-finds-geofence-warrants-unconstitutional-2024-08-09/",
+          "outlet": "Reuters",
+          "date": "2024-08-09"
+        }
+      ],
+      "_file": "2024-08-09-5th-circuit-geofence-warrants.yaml",
+      "_id_hash": "7c7dc9a749fd3c08c290f80963020fe38f09f49134ea81f943a4ab40b88f4fa6"
+    },
+    {
+      "id": "2024-08-09-5th-circuit-geofence",
+      "title": "Fifth Circuit rules broad geofence warrants unconstitutional",
+      "date": "2024-08-09",
+      "summary": "The Fifth Circuit held that broad geofence warrants are unconstitutional general warrants, though evidence in the case was admitted under the good-faith exception.",
+      "tags": [
+        "surveillance",
+        "geofence",
+        "courts",
+        "fourth-amendment"
+      ],
+      "citations": [
+        "https://law.justia.com/cases/federal/appellate-courts/ca5/22-40745/22-40745-2024-08-09.html"
+      ],
+      "_file": "2024-08-09-5th-circuit-geofence.yaml",
+      "_id_hash": "dd07fa4bf56879a5fadd2327f0b3de916c5e6388ccb4630ee2f82265ce922fd0"
     },
     {
       "id": "5th_circuit_geofence_warrants_unconstitutional",
@@ -337,9 +576,9 @@
         "U.S. Court of Appeals for the Fifth Circuit"
       ],
       "tags": [
-        "surveillance",
         "courts",
-        "geofence"
+        "geofence",
+        "surveillance"
       ],
       "citations": [
         "https://www.ca5.uscourts.gov/opinions/pub/23/23-60321-CR0.pdf",
@@ -347,6 +586,7 @@
         "https://epic.org/fifth-circuit-rules-that-geofence-warrants-are-inherently-unconstitutional/"
       ],
       "notes": "",
+      "_file": "2024-08-09_5th_circuit_geofence_warrants.yaml",
       "_id_hash": "cdc387e33b49e46271a98a1233987b86d7e939befd0259bc5619ffa9c08b210a"
     },
     {
@@ -354,10 +594,10 @@
       "title": "FEC votes to begin rulemaking on AI-generated content in political ads",
       "summary": "Federal Election Commission opened a rulemaking to consider disclosure requirements for AI in political advertising.",
       "tags": [
-        "elections",
+        "advertising",
         "ai",
-        "fec",
-        "advertising"
+        "elections",
+        "fec"
       ],
       "citations": [
         "https://www.reuters.com/world/us/us-fec-begin-rulemaking-ai-deepfakes-political-ads-2024-08-15/",
@@ -367,6 +607,7 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2024-08-15_fec_ai_rulemaking_opens.yaml",
       "_id_hash": "08cdcffecc4ef85deee8023edf581eb9aae4e346647fa80670a5e66b4cf01f89"
     },
     {
@@ -375,8 +616,8 @@
       "summary": "Pew documents the share of U.S. adults who regularly get news via social media platforms and the platform mix.",
       "tags": [
         "media",
-        "platforms",
         "news-consumption",
+        "platforms",
         "research"
       ],
       "citations": [
@@ -386,6 +627,7 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2024-09-19_pew_news_on_social_media.yaml",
       "_id_hash": "87e718259e94dffe8c3d6ec5931cdabf4ced76f6c57ced062533278d5241fdd8"
     },
     {
@@ -395,8 +637,8 @@
       "tags": [
         "elections",
         "georgia",
-        "voter-challenges",
-        "guidance"
+        "guidance",
+        "voter-challenges"
       ],
       "citations": [
         "https://campaignlegal.org/sites/default/files/2024-10/GA%20Mass%20Challenge%20Guidance%20Letter%202024.pdf"
@@ -405,6 +647,7 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2024-09-30_clc_ga_mass_challenges_guidance.yaml",
       "_id_hash": "485b7ce4aacd2ed43f38f36ed02420bb8c6ec398cb3a54a9dfbc8f07538891de"
     },
     {
@@ -418,15 +661,298 @@
         "Arizona Attorney General"
       ],
       "tags": [
-        "elections",
+        "accountability",
         "certification",
-        "accountability"
+        "elections"
       ],
       "citations": [
         "https://apnews.com/article/arizona-cochise-county-election-certification-criminal-512a5ab9b7cadd889b2bc5ad7f6de120"
       ],
       "notes": "",
+      "_file": "2024-10-21_cochise_supervisor_plea.yaml",
       "_id_hash": "10aaa1ca999df055c2608e317f1b7c52279c5c0f78d9bd41fc3686aff3184fc7"
+    },
+    {
+      "id": "2025-01-07-meta-ends-factchecking",
+      "title": "Meta ends third-party fact-checking for U.S. political content",
+      "date": "2025-01-07",
+      "summary": "Meta announced 'More Speech and Fewer Mistakes,' ending third-party fact-checking for U.S. political content in favor of a community-notes-style system.",
+      "tags": [
+        "platform-policy",
+        "fact-checking",
+        "meta",
+        "elections"
+      ],
+      "citations": [
+        "https://about.fb.com/news/2025/01/meta-more-speech-fewer-mistakes/",
+        "https://www.washingtonpost.com/technology/2025/08/04/meta-fact-check-community-notes-test-facebook-instagram/"
+      ],
+      "_file": "2025-01-07-meta-ends-factchecking.yaml",
+      "_id_hash": "b66c8058ec3e27dbb24ed68bad3063dbc3882b16dc9aa5a804a0783232cdeb88"
+    },
+    {
+      "id": "2025-01-17-trump-memecoin-launch",
+      "date": "2025-01-17",
+      "title": "Launch of $TRUMP memecoin; fees and conflicts draw scrutiny",
+      "summary": "Days before inauguration, the Trump family launched the $TRUMP token; subsequent reporting estimated tens of millions to $100M+ in trading fees and concentrated insider ownership.",
+      "tags": [
+        "kleptocracy-patterns",
+        "crypto",
+        "conflicts-of-interest"
+      ],
+      "sources": [
+        {
+          "title": "Reuters: Trump\u2019s new meme coin soars on first day in office",
+          "url": "https://www.reuters.com/technology/trumps-new-crypto-token-jumps-ahead-his-inauguration-2025-01-20/",
+          "outlet": "Reuters",
+          "date": "2025-01-20"
+        },
+        {
+          "title": "Reuters: $TRUMP fees near $100M",
+          "url": "https://www.reuters.com/markets/currencies/trumps-meme-coin-made-nearly-100-million-trading-fees-small-traders-lost-money-2025-02-03/",
+          "outlet": "Reuters",
+          "date": "2025-02-03"
+        }
+      ],
+      "_file": "2025-01-17-trump-memecoin-launch.yaml",
+      "_id_hash": "b8a1cac3b076f97ebb160cabfa61dafb5bac2b304897c0515a04337b159c01bf"
+    },
+    {
+      "id": "2025-01-19-melania-memecoin",
+      "date": "2025-01-19",
+      "title": "Melania Trump launches $MELANIA token; early traders reap windfalls",
+      "summary": "Following $TRUMP, a Melania\u2011branded token launched and surged; reporting highlighted pre\u2011launch holdings by anonymous wallets and rapid cash\u2011outs by insiders.",
+      "tags": [
+        "kleptocracy-patterns",
+        "crypto",
+        "conflicts-of-interest"
+      ],
+      "sources": [
+        {
+          "title": "Al Jazeera: $MELANIA launch and surge",
+          "url": "https://www.aljazeera.com/economy/2025/1/20/trumps-new-meme-coin-and-crypto-token-soar-on-his-first-day-in-office",
+          "outlet": "Al Jazeera",
+          "date": "2025-01-20"
+        },
+        {
+          "title": "Fortune: Anonymous traders nab ~$100M pre\u2011launch windfall",
+          "url": "https://fortune.com/2025/05/07/melania-trump-memecoin-anonymous-traders-100-million-payday/",
+          "outlet": "Fortune",
+          "date": "2025-05-07"
+        }
+      ],
+      "_file": "2025-01-19-melania-memecoin.yaml",
+      "_id_hash": "fb44061a00abf1acf217da9e78769a1e008b9d863c9ce91a91f6e7d78d6a26e2"
+    },
+    {
+      "id": "2025-01-20-doge-established-musk-ramaswamy",
+      "date": "2025-01-20",
+      "title": "Department of Government Efficiency (DOGE) created; Elon Musk and Vivek Ramaswamy tapped to lead",
+      "summary": "A same-day EO created the Department of Government Efficiency (DOGE) to consolidate procurement and IT oversight. Elon Musk and Vivek Ramaswamy were named to senior leadership roles.",
+      "tags": [
+        "federal",
+        "executive-order",
+        "procurement",
+        "personnel",
+        "infrastructure"
+      ],
+      "sources": [
+        {
+          "title": "Executive Order \u2014 Establishing the Department of Government Efficiency",
+          "url": "https://www.whitehouse.gov/presidential-actions/2025/01/establishing-the-department-of-government-efficiency/",
+          "outlet": "WhiteHouse.gov",
+          "date": "2025-01-20"
+        },
+        {
+          "title": "Trump creates DOGE; taps Musk, Ramaswamy",
+          "url": "https://www.reuters.com/world/us/trump-taps-musk-ramaswamy-department-government-efficiency-2025-01-20/",
+          "outlet": "Reuters",
+          "date": "2025-01-20"
+        },
+        {
+          "title": "White House forms \u2018government efficiency\u2019 dept; Musk role draws scrutiny",
+          "url": "https://www.cbsnews.com/news/elon-musk-government-efficiency-department-trump-2025/",
+          "outlet": "CBS News",
+          "date": "2025-01-21"
+        }
+      ],
+      "_file": "2025-01-20-doge-established-musk-ramaswamy.yaml",
+      "_id_hash": "0960b5aaabe699c1c0c0015f1ee7ed89097a660a86945e59f871b395bcc0af6e"
+    },
+    {
+      "id": "2025-01-20-eo-14171-schedule-f-reinstated",
+      "date": "2025-01-20",
+      "title": "Executive Order 14171 reinstates 'Schedule F' in excepted service",
+      "summary": "On Inauguration Day, President Trump signed EO 14171 directing OPM to re-create Schedule F, reclassifying policy-influencing federal positions and easing removals, reviving a 2020 proposal that had been rescinded in 2021.",
+      "tags": [
+        "federal",
+        "civil-service",
+        "personnel",
+        "kleptocracy-patterns"
+      ],
+      "sources": [
+        {
+          "title": "EO 14171 \u2014 Reinstating Schedule F",
+          "url": "https://www.whitehouse.gov/presidential-actions/2025/01/reinstating-schedule-f/",
+          "outlet": "WhiteHouse.gov",
+          "date": "2025-01-20"
+        },
+        {
+          "title": "OPM guidance memo implementing EO (Schedule F revival)",
+          "url": "https://www.opm.gov/policy-data-oversight/latest-memos/guidance-on-implementing-president-trump-s-executive-order-titled-restoring-accountability-to-policy-influencing-positions-within-the-federal-workforce.pdf",
+          "outlet": "OPM",
+          "date": "2025-01-22"
+        },
+        {
+          "title": "What Trump\u2019s Schedule F order would do",
+          "url": "https://www.govexec.com/workforce/2025/01/what-trumps-schedule-f-order-would-do/396501/",
+          "outlet": "Government Executive",
+          "date": "2025-01-21"
+        }
+      ],
+      "_file": "2025-01-20-eo-14171-schedule-f-reinstated.yaml",
+      "_id_hash": "149b92a71a467ccc269a78fd4072c577e11b07fe668f08ec0bf3a188bab1ae69"
+    },
+    {
+      "id": "2025-01-20_eo_doge_established",
+      "date": "2025-01-20",
+      "title": "Executive Order establishes the Department of Government Efficiency (DOGE)",
+      "summary": "President issues an executive order creating DOGE to 'modernize Federal technology and software' and coordinate cost-cutting across agencies.",
+      "sources": [
+        "https://www.whitehouse.gov/presidential-actions/2025/01/establishing-and-implementing-the-presidents-department-of-government-efficiency/",
+        "https://crsreports.congress.gov/product/pdf/IN/IN12493"
+      ],
+      "_file": "2025-01-20_eo_doge_established.yaml",
+      "_id_hash": "62225aab672ec495bf2197d3a3c7267fab2512bf445fcef26dc00213894ce3ca"
+    },
+    {
+      "id": "2025-01-20_eo_schedule-policy-career",
+      "date": "2025-01-20",
+      "title": "Executive Order reinstates \u201cSchedule Policy/Career\u201d (revived Schedule F)",
+      "summary": "President issues an EO reviving and amending Schedule F as \u201cSchedule Policy/Career,\u201d directing agencies to reclassify policy-influencing civil service roles.",
+      "tags": [
+        "federal-workforce",
+        "schedule-f",
+        "civil-service",
+        "executive-order",
+        "capture-patterns"
+      ],
+      "sources": [
+        {
+          "title": "White House \u2013 Restoring Accountability to Policy-Influencing Positions",
+          "url": "https://www.whitehouse.gov/presidential-actions/2025/01/restoring-accountability-to-policy-influencing-positions-within-the-federal-workforce/"
+        },
+        {
+          "title": "OPM Guidance memo (implementation)",
+          "url": "https://www.opm.gov/policy-data-oversight/latest-memos/guidance-on-implementing-president-trump-s-executive-order-titled-restoring-accountability-to-policy-influencing-positions-within-the-federal-workforce.pdf"
+        },
+        {
+          "title": "CRS Legal Sidebar \u2013 Policy/Career schedule context",
+          "url": "https://www.congress.gov/crs-product/LSB11262"
+        }
+      ],
+      "_file": "2025-01-20_eo_schedule-policy-career.yaml",
+      "_id_hash": "e8e937989ac5a2b2a593d18d8343f079f0e7c5035d456ed32203308f639b0ab9"
+    },
+    {
+      "id": "2025-01-23-dhs-rescinds-protected-areas",
+      "title": "DHS rescinds 'protected areas' memorandum",
+      "date": "2025-01-23",
+      "summary": "DHS rescinded prior guidance limiting immigration enforcement in 'protected areas', signaling broader operational latitude.",
+      "tags": [
+        "guidance",
+        "immigration",
+        "dhs"
+      ],
+      "citations": [
+        "https://www.dhs.gov/news/2025/01/23/rescission-protected-areas-memorandum"
+      ],
+      "_file": "2025-01-23-dhs-rescinds-protected-areas.yaml",
+      "_id_hash": "c7d565c13b86d17a2d91941c2063bcc3d6f94f38b50024ccc94897fea7cd4866"
+    },
+    {
+      "id": "2025-01-24-ig-purge",
+      "title": "Multiple inspectors general removed without 30-day notice",
+      "date": "2025-01-24",
+      "summary": "The administration removed at least 17 inspectors general without the 30\u2011day, case\u2011specific notice to Congress required by statute, drawing bipartisan criticism and litigation.",
+      "location": "Washington, DC",
+      "actors": [
+        "White House",
+        "Inspectors General",
+        "CIGIE"
+      ],
+      "tags": [
+        "oversight",
+        "inspectors-general",
+        "law",
+        "congress"
+      ],
+      "citations": [
+        "https://apnews.com/article/4e8bc57e132c3f9a7f1c2a3754359993",
+        "https://static.politico.com/b3/3e/5baf92224503a3cfa8edb460a1c2/cigie-letter-to-white-house-1-24-2025.pdf",
+        "https://www.ignet.gov/sites/default/files/files/CIGIE%20Statement%20--%201_25_2025.pdf",
+        "https://www.judiciary.senate.gov/press/rep/releases/grassley-durbin-seek-presidential-explanation-for-ig-dismissals"
+      ],
+      "_file": "2025-01-24-ig-purge.yaml",
+      "_id_hash": "47ca2759fb50261e271eecb93a35510cb32d081078feece9d64c98d8da67baa3"
+    },
+    {
+      "id": "2025-01-24-inspectors-general-mass-dismissals",
+      "date": "2025-01-24",
+      "title": "At least 17 Inspectors General dismissed without 30-day notice",
+      "summary": "Late-night emails removed at least 17 PAS Inspectors General. Lawmakers cited the 30\u2011day statutory notice requirement under the Inspector General Act; subsequent litigation followed.",
+      "tags": [
+        "federal",
+        "oversight",
+        "ig",
+        "rule-of-law"
+      ],
+      "sources": [
+        {
+          "title": "Trump administration abruptly fires at least 17 inspectors general",
+          "url": "https://apnews.com/article/trump-inspectors-general-fired-2025-01-25",
+          "outlet": "Associated Press",
+          "date": "2025-01-25"
+        },
+        {
+          "title": "IG Community raises legal concerns over mass firings",
+          "url": "https://www.govexec.com/oversight/2025/01/ig-community-raises-legal-concerns-over-mass-firings/395998/",
+          "outlet": "Government Executive",
+          "date": "2025-01-26"
+        },
+        {
+          "title": "Grassley letter on IG removals and 30-day notice",
+          "url": "https://www.politico.com/f/?id=0000018f-2db4-dac7-a7cf-fdf77d7d0000",
+          "outlet": "Politico (doc)",
+          "date": "2025-01-27"
+        }
+      ],
+      "_file": "2025-01-24-inspectors-general-mass-dismissals.yaml",
+      "_id_hash": "e44a60b28f5be72e837c50e1054a546ac34f3a10da9904ebc880f298828f518e"
+    },
+    {
+      "id": "2025-01-24_ig_mass_firings",
+      "date": "2025-01-24",
+      "title": "At least 17 Inspectors General fired in late-night purge",
+      "summary": "Multiple IGs across cabinet agencies were dismissed by email without the 30-day congressional notice required by the 2022 IG law; bipartisan backlash followed.",
+      "tags": [
+        "oversight",
+        "inspectors-general",
+        "monitoring",
+        "rule-of-law"
+      ],
+      "sources": [
+        {
+          "title": "Reuters \u2013 Late-night firings criticized as illegal",
+          "url": "https://www.reuters.com/world/us/trump-fires-least-12-independent-inspectors-general-washington-post-reports-2025-01-25/"
+        },
+        {
+          "title": "Politico \u2013 IGs say removals may be invalid for lack of notice",
+          "url": "https://www.politico.com/news/2025/01/25/donald-trump-inspectors-general-firing-00200611"
+        }
+      ],
+      "_file": "2025-01-24_ig_mass_firings.yaml",
+      "_id_hash": "00e26f0a1e23a2c159bd430544db327712079fac704a41050bed10995d3424e7"
     },
     {
       "id": "greenblatt_cbs_reaction_ig_purge",
@@ -439,15 +965,69 @@
         "CBS News"
       ],
       "tags": [
-        "watchdogs",
-        "IGs",
-        "media"
+        "igs",
+        "media",
+        "watchdogs"
       ],
       "citations": [
         "https://www.cbsnews.com/news/inspector-general-mark-greenblatt-trump-firings-interview/"
       ],
       "notes": "If CBS changes URL, reference CBS News video segment aired late Jan 2025.",
+      "_file": "2025-01-28_greenblatt_cbs_reaction_ig_purge.yaml",
       "_id_hash": "db7a560cfe5b61f720a846a15614f8cc8e72b0d518cab73c37530a1bacb66bd2"
+    },
+    {
+      "id": "2025-01-31_eo_14171_schedule_f",
+      "date": "2025-01-31",
+      "title": "Executive Order 14171: Restoring Accountability to Policy-Influencing Positions",
+      "summary": "Reinstates a version of 'Schedule F' reclassification to ease removal of policy-influencing civil servants; agencies told to identify positions.",
+      "sources": [
+        "https://www.federalregister.gov/documents/2025/01/31/2025-02095/restoring-accountability-to-policy-influencing-positions-within-the-federal-workforce",
+        "https://www.dcpas.osd.mil/hottopics/executive-orders-and-presidential-memorandums"
+      ],
+      "_file": "2025-01-31_eo_14171_schedule_f.yaml",
+      "_id_hash": "a4f831f7ef6962da2b2a3c0cd44f8dc9a317bab25234ded5c4aeae04da972924"
+    },
+    {
+      "id": "2025-02-05_wh_conflicts_recusal_leavitt",
+      "date": "2025-02-05",
+      "title": "White House says Musk will police his own conflicts in DOGE role",
+      "summary": "Press Secretary Karoline Leavitt says Musk will 'excuse himself' from conflicts related to DOGE\u2014a self-policing arrangement that drew criticism from ethics experts.",
+      "sources": [
+        "https://www.reuters.com/world/us/musk-will-excuse-himself-any-conflicts-white-house-says-2025-02-05/",
+        "https://fortune.com/2025/02/06/elon-musk-conflicts-interest-doge-tesla-spacex/",
+        "https://transcripts.cnn.com/show/se/date/2025-02-08/segment/01"
+      ],
+      "_file": "2025-02-05_wh_conflicts_recusal_leavitt.yaml",
+      "_id_hash": "6d712123b9deee8a9763868e268c3f906655a8a6883a957c013dd82ffb331da5"
+    },
+    {
+      "id": "2025-02-06_ambassadors_and_nasa_nomination",
+      "date": "2025-02-06",
+      "title": "Donor appointments and high-profile nominations (Stephens, Kushner, Isaacman)",
+      "summary": "White House announces nominees including Warren Stephens (UK), Charles Kushner (France), and Jared Isaacman (NASA Administrator; later withdrew).",
+      "tags": [
+        "appointments",
+        "diplomacy",
+        "nasa",
+        "donors"
+      ],
+      "sources": [
+        {
+          "title": "Reuters \u2013 Stephens nomination coverage",
+          "url": "https://www.reuters.com/world/uk/trump-nominates-warren-stephens-ambassador-uk-2025-02-06/"
+        },
+        {
+          "title": "State Dept \u2013 Announcement page (if archived)",
+          "url": "https://www.state.gov/"
+        },
+        {
+          "title": "NASA Watch \u2013 Isaacman nomination and withdrawal",
+          "url": "https://nasawatch.com/post/isaacman-nomination-withdrawn-2025/"
+        }
+      ],
+      "_file": "2025-02-06_ambassadors_and_nasa_nomination.yaml",
+      "_id_hash": "a46148ec7222b1eb7c2aab04740123aa512ad0997fac38e62f097b7660dfbe31"
     },
     {
       "id": "osc_dellinger_fired",
@@ -461,25 +1041,105 @@
         "Hampton Dellinger"
       ],
       "tags": [
-        "watchdogs",
+        "courts",
         "personnel",
-        "courts"
+        "watchdogs"
       ],
       "citations": [
         "https://www.supremecourt.gov/DocketPDF/24/24A790/343020/20250218140003661_Dellinger%20-%20SCOTUS%20Opposition.pdf",
         "https://www.scotusblog.com/2025/02/trump-asks-court-to-allow-firing-of-watchdog-agency-official/"
       ],
       "notes": "",
+      "_file": "2025-02-07_osc_dellinger_fired.yaml",
       "_id_hash": "299374b1cf385e9ee7f2bcc78a11a4f133ae5f38df07649f70f086d1497a5f3d"
+    },
+    {
+      "id": "2025-02-07_politico_tro_denied",
+      "date": "2025-02-07",
+      "title": "Judge denies unions' bid for immediate TRO blocking DOGE data access",
+      "summary": "District Judge John Bates denies a temporary restraining order for labor groups challenging DOGE\u2019s access to personal data; standing concerns noted.",
+      "sources": [
+        "https://www.politico.com/news/2025/02/07/judge-denies-lawsuit-union-musk-doge-labor-department-00203245"
+      ],
+      "_file": "2025-02-07_politico_tro_denied.yaml",
+      "_id_hash": "91c69955f58cb799858305cfc45ddf83f0405bc88cd20c0e16f6fa404314c690"
+    },
+    {
+      "id": "2025-02-07_to_02-21_doge_treasury_injunctions",
+      "date": "2025-02-07",
+      "title": "Courts restrict DOGE access to Treasury/OPM systems; multistate suit proceeds",
+      "summary": "A coalition of state AGs sues to block DOGE access to sensitive federal systems; courts issue/extend preliminary restrictions while cases proceed under Privacy Act and APA.",
+      "tags": [
+        "data-access",
+        "privacy",
+        "doge",
+        "treasury",
+        "opm",
+        "injunctions",
+        "courts"
+      ],
+      "sources": [
+        {
+          "title": "Reuters \u2013 Judge extends block on DOGE access to Treasury systems (Feb 21)",
+          "url": "https://www.reuters.com/world/us/judge-extends-block-musks-doge-treasury-systems-2025-02-21/"
+        },
+        {
+          "title": "EFF \u2013 Preliminary injunction re OPM Privacy Act suit (doc set)",
+          "url": "https://www.eff.org/press/releases/privacy-victory-judge-grants-preliminary-injunction-opmdoge-lawsuit"
+        }
+      ],
+      "_file": "2025-02-07_to_02-21_doge_treasury_injunctions.yaml",
+      "_id_hash": "41cd29c0e6b6bbe3b0b60e8bf9cab01123907bd99b5ea3c87d9f2cfa4c4e7a0c"
+    },
+    {
+      "id": "2025-02-09_bead_policy_shift_starlink",
+      "date": "2025-02-09",
+      "title": "BEAD guidance tweak expands eligibility for LEO satellites (Starlink)",
+      "summary": "Commerce/NTIA adjustments expanded scenarios in which LEO satellite service could qualify for BEAD funding, drawing criticism from fiber advocates.",
+      "tags": [
+        "broadband",
+        "bead",
+        "commerce",
+        "starlink",
+        "infrastructure"
+      ],
+      "sources": [
+        {
+          "title": "Ars Technica \u2013 Changes could steer tens of billions to Starlink",
+          "url": "https://arstechnica.com/tech-policy/2025/02/commerce-dept-changes-could-steer-20b-in-broadband-funding-to-starlink/"
+        },
+        {
+          "title": "The Verge \u2013 Eligibility change draws backlash",
+          "url": "https://www.theverge.com/2025/2/10/24112323/starlink-bead-broadband-eligibility-change"
+        }
+      ],
+      "_file": "2025-02-09_bead_policy_shift_starlink.yaml",
+      "_id_hash": "f2bbf5bb26342cb2799dbfc1ae79be6f9cb4d433f2e55d880c031d34bd779ef0"
+    },
+    {
+      "id": "2025-02-10-oge-director-removed",
+      "title": "OGE Director removed; office reverts to acting leadership",
+      "date": "2025-02-10",
+      "summary": "The Office of Government Ethics announced the President removed Director David Huitema, reverting OGE leadership to an acting role.",
+      "tags": [
+        "ethics",
+        "oversight",
+        "executive-branch"
+      ],
+      "citations": [
+        "https://www.nycbar.org/press-releases/firings-of-inspectors-general-are-illegal-and-invalid/"
+      ],
+      "_file": "2025-02-10-oge-director-removed.yaml",
+      "_id_hash": "9993bddab05da95db3c60f54327d05fb35521809cf56b208af2e597760f29129"
     },
     {
       "date": "2025-02-10",
       "title": "Executive Order pauses Foreign Corrupt Practices Act enforcement for 180 days",
       "summary": "White House issued an order pausing FCPA enforcement pending new DOJ guidance.",
       "tags": [
-        "fcpa",
+        "doj",
         "executive-order",
-        "doj"
+        "fcpa"
       ],
       "citations": [
         "https://www.whitehouse.gov/presidential-actions/2025/02/pausing-foreign-corrupt-practices-act-enforcement-to-further-american-economic-and-national-security/",
@@ -489,29 +1149,100 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-02-10_executive_order_fcpa_pause.yaml",
       "_id_hash": "c1b03846893139230835166315d44905e1e0258df16e85cba3077419f0e36ff7"
     },
     {
-      "id": "white_house_bans_ap_pool_access",
-      "title": "White House bars AP from press pool and select events",
+      "id": "2025-02-11-ap-barred-white-house-access",
       "date": "2025-02-11",
-      "summary": "White House officials informed the Associated Press that its reporters would be excluded from the press pool, Oval Office, Air Force One, and some events\u2014prompting litigation.",
+      "title": "Associated Press barred from White House events; later restored by court",
+      "summary": "The White House blocked AP reporters from pooled access on Feb. 11. On Apr. 8, a federal district court ordered access restored, finding viewpoint discrimination.",
       "location": "Washington, DC",
       "actors": [
-        "The White House",
-        "Associated Press"
+        "Associated Press",
+        "White House"
       ],
       "tags": [
         "press-freedom",
         "white-house",
+        "courts",
+        "lawsuit",
         "access"
       ],
       "citations": [
+        "https://www.ap.org/the-definitive-source/announcements/ap-statement-on-oval-office-access/",
+        "https://www.theguardian.com/us-news/2025/apr/08/associated-press-white-house-access-court-ruling",
+        "https://www.washingtonpost.com/style/media/2025/04/08/associated-press-white-house-ban-lifted/",
+        "https://www.ap.org/media-center/ap-in-the-news/2025/the-associated-press-banned-from-white-house-press-pool-renews-request-to-court-for-reinstatement/",
         "https://www.rcfp.org/briefs-comments/associated-press-v-budowich/",
         "https://www.theguardian.com/us-news/2025/feb/14/white-house-ap-ban-oval-office"
       ],
-      "notes": "",
-      "_id_hash": "125e83efde8af2c8aadecfda2194bc386f57854d60cad4d8ff7f044cacbb98b9"
+      "_file": "2025-02-11-ap-barred-white-house-access.yaml",
+      "_id_hash": "ab3744c6b2e8fc4064303cef2193b4651251cefcfc07bafb976b1eb9dec73bf7"
+    },
+    {
+      "id": "2025-02-17-18_chutkan_comments_doge_disorder",
+      "date": "2025-02-18",
+      "title": "Judge Chutkan questions DOGE authority and lack of structure",
+      "summary": "At a hearing on suits seeking to block DOGE actions, Judge Tanya Chutkan says DOGE appears to be moving in 'no predictable and orderly fashion'; TRO not immediately granted.",
+      "sources": [
+        "https://abcnews.go.com/US/white-house-claims-elon-musk-doesnt-run-doge/story?id=118913206",
+        "https://www.politico.com/news/2025/02/17/judge-chutkan-musk-lawsuit-hearing-00204590",
+        "https://6abc.com/post/white-house-claims-elon-musk-does-not-run-doge-new-filing/15925645/"
+      ],
+      "_file": "2025-02-17-18_chutkan_comments_doge_disorder.yaml",
+      "_id_hash": "c1a89ad11392c5d034efb3dd9adbc9a058b444f7548467cac04de4aee260a690"
+    },
+    {
+      "id": "2025-02-19_cfpb_shutdown_orders",
+      "date": "2025-02-19",
+      "title": "Reports indicate CFPB supervision scaled back; litigation and oversight letters follow",
+      "summary": "Media and advocacy groups report acting leadership curtailed supervision/rulemaking; unions and members of Congress sought documents and filed related claims.",
+      "tags": [
+        "consumer-protection",
+        "cfpb",
+        "regulatory-capture",
+        "shutdown"
+      ],
+      "sources": [
+        {
+          "title": "American Prospect \u2013 How the CFPB Was Shut Down",
+          "url": "https://prospect.org/economy/2025-02-19-cfpb-shut-down-russell-vought/"
+        },
+        {
+          "title": "EPI \u2013 Vought orders workers to stop doing their jobs (analysis)",
+          "url": "https://www.epi.org/blog/trump-acting-director-russell-vought-ordered-cfpb-workers-to-stop-doing-their-jobs/"
+        }
+      ],
+      "_file": "2025-02-19_cfpb_shutdown_orders.yaml",
+      "_id_hash": "a90b7509faa46ecfe0639e6881b15cb360b98f79d082d8b87b8e7ef5f69a776d"
+    },
+    {
+      "id": "2025-02-20-kash-patel-named-fbi-director",
+      "date": "2025-02-20",
+      "title": "Kash Patel becomes Director of the FBI",
+      "summary": "President Trump appointed Kash Patel as FBI Director, succeeding Christopher Wray. Patel emphasized a pivot toward violent crime and border enforcement priorities.",
+      "tags": [
+        "federal",
+        "law-enforcement",
+        "personnel"
+      ],
+      "sources": [
+        {
+          "title": "Kash Patel \u2014 Director, Federal Bureau of Investigation",
+          "url": "https://www.fbi.gov/about/leadership-and-structure/director",
+          "outlet": "FBI.gov",
+          "date": "2025-02-20"
+        },
+        {
+          "title": "Durbin questions FBI reassignment away from domestic terrorism",
+          "url": "https://www.reuters.com/world/us/us-senate-democrat-questions-fbi-domestic-terrorism-staff-reassignments-2025-04-08/",
+          "outlet": "Reuters",
+          "date": "2025-04-08"
+        }
+      ],
+      "_file": "2025-02-20-kash-patel-named-fbi-director.yaml",
+      "_id_hash": "cd3e1a3edd501c147e6906841797961b50536feea8aa833a355c4d1067c0b0cd"
     },
     {
       "id": "scotus_temporarily_keeps_osc_head",
@@ -532,17 +1263,132 @@
         "https://www.reuters.com/world/us/trump-administration-turns-us-supreme-court-bid-fire-agency-head-2025-02-17/"
       ],
       "notes": "",
+      "_file": "2025-02-21_scotus_temporarily_keeps_osc_head.yaml",
       "_id_hash": "88b7cdd9ef7b8ecc4e93835b51ea58a5bcfe71f57840c942dc3136ccb9345e72"
+    },
+    {
+      "id": "2025-03-06_reuters_layoffs_surge",
+      "date": "2025-03-06",
+      "title": "Reuters: 62,530 federal layoffs in first two months of 2025",
+      "summary": "Challenger data show government accounted for most layoffs early in 2025; actions tied by many outlets to DOGE-driven downsizing.",
+      "sources": [
+        "https://www.reuters.com/markets/us/us-announced-job-cuts-surge-245-february-federal-government-layoffs-2025-03-06/",
+        "https://www.newsweek.com/doge-layoffs-federal-government-tracker-2025-dod-cuts-2042525"
+      ],
+      "_file": "2025-03-06_reuters_layoffs_surge.yaml",
+      "_id_hash": "c32a3f012aaa9c8eecf4d4620ee87795d8784476cf4fb9ab9e39c7003c9183bc"
+    },
+    {
+      "id": "2025-03-10_cooper_foia_ruling",
+      "date": "2025-03-10",
+      "title": "Judge Cooper: DOGE likely subject to FOIA; orders record preservation & expedited processing",
+      "summary": "Federal court finds DOGE has 'unusual secrecy' and 'substantial authority,' rejecting claim of full EOP exemption from FOIA.",
+      "sources": [
+        "https://www.reuters.com/world/us/us-judge-says-musks-doge-must-release-records-operations-run-secrecy-2025-03-11/",
+        "https://www.citizensforethics.org/news/press-releases/judge-rules-doge-likely-subject-to-foia-must-give-crew-documents/",
+        "https://www.govexec.com/oversight/2025/03/judge-orders-doge-comply-foia-requests/403660/"
+      ],
+      "_file": "2025-03-10_cooper_foia_ruling.yaml",
+      "_id_hash": "ed4cf97bcb8cc06c84fe632189c1d83e879368569fe2fdb674999ad3aaac97ea"
+    },
+    {
+      "id": "2025-03-11_wapo_38b_support",
+      "date": "2025-02-26",
+      "title": "Investigations estimate Musk-linked companies have received ~$38B in public support since 2003",
+      "summary": "Washington Post and other outlets tally decades of contracts, loans, subsidies and tax credits benefiting Musk companies.",
+      "sources": [
+        "https://www.washingtonpost.com/technology/interactive/2025/elon-musk-business-government-contracts-funding/",
+        "https://finance.yahoo.com/news/report-says-elon-musks-businesses-150042117.html",
+        "https://goodjobsfirst.org/elon-musks-business-empire-is-built-on-38-billion-in-government-funding/"
+      ],
+      "_file": "2025-03-11_wapo_38b_support.yaml",
+      "_id_hash": "b4d78c610d445b1a96db3314b308b6faacdb774b5e5b52c7c455aceef5cf584f"
+    },
+    {
+      "id": "2025-03-12_challenger_280k_plans",
+      "date": "2025-04-03",
+      "title": "Challenger: 280,253 layoff plans tied to DOGE actions (federal & contractors) in first two months",
+      "summary": "Outplacement firm Challenger, Gray & Christmas attributes over 280k planned cuts to DOGE-related actions across 27 agencies.",
+      "sources": [
+        "https://www.challengergray.com/blog/federal-cuts-dominate-march-2025-total-275240-announced-job-cuts-216670-from-doge-actions/"
+      ],
+      "_file": "2025-03-12_challenger_280k_plans.yaml",
+      "_id_hash": "b6e27ff903a3eed76a7a457e57a7e6c256c1f6b5b073575edf06eaac6c605807"
+    },
+    {
+      "id": "2025-03-19_lutnick_tesla_remarks_ethics_complaints",
+      "date": "2025-03-19",
+      "title": "Commerce Sec. Lutnick\u2019s on-air remarks trigger ethics complaints",
+      "summary": "Members of Congress and watchdogs requested OGE/Commerce IG review of televised remarks amid pending divestiture/recusal commitments.",
+      "tags": [
+        "ethics",
+        "conflicts",
+        "commerce",
+        "recusals"
+      ],
+      "sources": [
+        {
+          "title": "Sen. Reed letter to Commerce IG & OGE (PDF)",
+          "url": "https://www.reed.senate.gov/imo/media/doc/4-2-2025_letter_to_commerce_ig_re_lutnick_ethics_issues_signed.pdf"
+        },
+        {
+          "title": "Campaign Legal Center complaint",
+          "url": "https://campaignlegal.org/document/clc-complaint-oge-and-department-commerce-ethics-officials-regarding-commerce-secretary"
+        }
+      ],
+      "_file": "2025-03-19_lutnick_tesla_remarks_ethics_complaints.yaml",
+      "_id_hash": "c045ba30c8b74c8a0056cb15d7163ac410254fd4037958ea1e1d4f3c2d28a57e"
+    },
+    {
+      "id": "2025-03-24_epa_tce_delay_and_july_eto_rollback",
+      "date": "2025-03-24",
+      "title": "EPA delays portions of TCE rule; signals ethylene oxide rollbacks/exemptions",
+      "summary": "Post-regulatory-freeze updates delayed parts of the TCE ban and indicated changing approach to EtO sterilizer rules and selected exemptions.",
+      "tags": [
+        "epa",
+        "chemicals",
+        "tce",
+        "ethylene-oxide",
+        "deregulation"
+      ],
+      "sources": [
+        {
+          "title": "EPA \u2013 Status update on TSCA TCE rule",
+          "url": "https://www.epa.gov/chemicals-under-tsca/update-status-tsca-risk-management-rule-tce"
+        },
+        {
+          "title": "ProPublica \u2013 Republicans move to block TCE ban; delays",
+          "url": "https://www.propublica.org/article/tce-ban-cancer-parkinsons-trump-republicans"
+        }
+      ],
+      "_file": "2025-03-24_epa_tce_delay_and_july_eto_rollback.yaml",
+      "_id_hash": "e7b15fa4467e42e825dac3158581d565fe326426715a1dfceefdf61fe49cb582"
+    },
+    {
+      "id": "2025-04-02-dot-enforcement-grace",
+      "title": "DOT announces enforcement grace period for new emissions standards",
+      "date": "2025-04-02",
+      "summary": "DOT issued an enforcement policy providing a grace period for new emissions standards until Aug. 1, 2025.",
+      "tags": [
+        "guidance",
+        "dot",
+        "enforcement"
+      ],
+      "citations": [
+        "https://www.transportation.gov/briefing-room/enforcement-policy-grace-period-aug-1-2025"
+      ],
+      "_file": "2025-04-02-dot-enforcement-grace.yaml",
+      "_id_hash": "008ddd0da030a38bec8ebc491dafaaa9f56dd25edb4891a4778bd747ffea80ab"
     },
     {
       "date": "2025-04-02",
       "title": "Report: 34,000 Ohio ballots rejected in 2024 election after ID/process changes",
       "summary": "All Voting Is Local\u2019s analysis finds significantly increased ballot rejections following Ohio HB 458 changes.",
       "tags": [
+        "ballot-rejections",
         "elections",
-        "ohio",
         "hb458",
-        "ballot-rejections"
+        "ohio"
       ],
       "citations": [
         "https://allvotingislocal.org/reports/all-voting-is-local-ohio-report-reveals-34000-ballots-were-rejected-in-the-2024-election-2/"
@@ -551,15 +1397,53 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-04-02_allvoting_ohio_rejections.yaml",
       "_id_hash": "de28194c3a7dff75a1f7aaa0a8fc16f3e16421ca896be89f32353a1d4a333e58"
+    },
+    {
+      "id": "2025-04-04_spacex_59b_space-force_nssl",
+      "date": "2025-04-04",
+      "title": "SpaceX awarded ~$5.9B share of Space Force NSSL Phase 3 contracts",
+      "summary": "Space Force awards Lane 2 launch contracts totaling ~$13.5B to SpaceX (~$5.9B), ULA (~$5.4B), and Blue Origin (~$2.4B).",
+      "tags": [
+        "contracts",
+        "spacex",
+        "space-force",
+        "defense",
+        "procurement"
+      ],
+      "sources": [
+        {
+          "title": "Reuters \u2013 SpaceX/ULA/Blue Origin clinch NSSL awards",
+          "url": "https://www.reuters.com/business/aerospace-defense/spacex-ula-expected-clinch-multibillion-dollar-contract-key-pentagon-launch-2025-04-04/"
+        },
+        {
+          "title": "Air & Space Forces \u2013 Contract breakdowns",
+          "url": "https://www.airandspaceforces.com/space-force-13-7-billion-launch-contracts/"
+        }
+      ],
+      "_file": "2025-04-04_spacex_59b_space-force_nssl.yaml",
+      "_id_hash": "2ef4c983a678bf3b20965ae2c17110eb5d7ba03f33c54babde788d029363f52a"
+    },
+    {
+      "id": "2025-04-04_spacex_nssl_contracts",
+      "date": "2025-04-04",
+      "title": "SpaceX wins ~$5.9B share of $13.5B Space Force launch contracts",
+      "summary": "Space Force awards NSSL Phase 3 contracts to SpaceX (~$5.9B), ULA (~$5.4B), and Blue Origin (~$2.4B) through 2029.",
+      "sources": [
+        "https://www.reuters.com/business/aerospace-defense/spacex-ula-expected-clinch-multibillion-dollar-contract-key-pentagon-launch-2025-04-04/",
+        "https://www.theregister.com/2025/04/07/spacex_space_force_contracts/"
+      ],
+      "_file": "2025-04-04_spacex_nssl_contracts.yaml",
+      "_id_hash": "ffee95509b524218d52af9d8cde557e790f31cff188ad4acb443f975903c70f6"
     },
     {
       "date": "2025-04-08",
       "title": "Judge orders White House to restore AP access to presidential events",
       "summary": "A federal district court ordered the White House to restore Associated Press access after viewpoint-based exclusion.",
       "tags": [
-        "press-freedom",
         "courts",
+        "press-freedom",
         "white-house"
       ],
       "citations": [
@@ -569,6 +1453,7 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-04-08_ap_access_order.yaml",
       "_id_hash": "418cf5b4caa0d13de7deea3f54c203fa187eb2cf55683a79625b27722d14cf67"
     },
     {
@@ -583,14 +1468,15 @@
         "The White House"
       ],
       "tags": [
-        "press-freedom",
-        "courts"
+        "courts",
+        "press-freedom"
       ],
       "citations": [
         "https://www.ap.org/media-center/ap-in-the-news/2025/ap-wins-reinstatement-to-white-house-events-after-judge-rules-government-cant-bar-its-journalists/",
         "https://www.theguardian.com/us-news/2025/apr/08/judge-orders-white-house-restore-associated-press-access"
       ],
       "notes": "",
+      "_file": "2025-04-08_court_restores_ap_access.yaml",
       "_id_hash": "bc1aa457292bdda91610a0adf37c34c4e6682a28717d310f174be078554a33cd"
     },
     {
@@ -599,8 +1485,8 @@
       "summary": "USCIS announced that social media content would be considered in immigration benefit adjudications, drawing civil liberties concerns.",
       "tags": [
         "immigration",
-        "social-media",
-        "screening"
+        "screening",
+        "social-media"
       ],
       "citations": [
         "https://www.uscis.gov/newsroom/news-releases/dhs-to-begin-screening-aliens-social-media-activity-for-antisemitism",
@@ -610,25 +1496,89 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-04-09_uscis_social_media_policy.yaml",
       "_id_hash": "b346ff3a499f18d462dd45ce9bb1de69cc3cddea9c1ab36feed02feb9124c4d3"
     },
     {
+      "id": "2025-04-15-press-pool-restructure",
+      "title": "White House restructures press pool, removes permanent wire position",
       "date": "2025-04-15",
-      "title": "Press Freedom Tracker: White House wrests control of press pool structure",
-      "summary": "U.S. Press Freedom Tracker documents the White House removing the permanent wire position and restructuring the pool after the AP access ruling.",
+      "summary": "Days after a court ordered the White House to restore AP access, the administration restructured the press pool and removed the permanent wire-service slot, drawing objections from WHCA and press-freedom groups.",
+      "location": "Washington, DC",
+      "actors": [
+        "White House",
+        "WHCA",
+        "Wire services"
+      ],
       "tags": [
         "press-freedom",
         "white-house",
         "media-access"
       ],
       "citations": [
+        "https://www.politico.com/news/2025/04/15/white-house-changes-press-pool-00292526",
+        "https://whca.press/2025/04/15/statement-on-wh-changes-to-wire-pool-positions/",
         "https://pressfreedomtracker.us/all-incidents/white-house-wrests-control-of-presidential-press-pool-from-correspondents/"
+      ],
+      "_file": "2025-04-15-press-pool-restructure.yaml",
+      "_id_hash": "c85d8f43e7fd8dc7c0860c825d55f69fb77019e9766ce5dd01dabcdbdbc15b7c"
+    },
+    {
+      "date": "2025-04-15",
+      "title": "Press Freedom Tracker: White House wrests control of press pool structure",
+      "summary": "U.S. Press Freedom Tracker documents the White House removing the permanent wire position and restructuring the pool after the AP access ruling.",
+      "tags": [
+        "media-access",
+        "press-freedom",
+        "white-house"
+      ],
+      "citations": [
+        "https://pressfreedomtracker.us/all-incidents/white-house-wrests-control-of-presidential-press-pool-from-correspondents/",
+        "https://whca.press/2025/04/15/statement-on-wh-changes-to-wire-pool-positions/"
       ],
       "id": "press-freedom-tracker-white-house-wrests-control-of-press-pool-structure",
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-04-15_pressfreedomtracker_pool_control.yaml",
       "_id_hash": "5a5f30fd2bc4b1dfbbfb7f3dd204f395d2744d103b8407984e324a78a05283a8"
+    },
+    {
+      "id": "2025-04-17_fedscoop_apa_challenge_ok",
+      "date": "2025-04-17",
+      "title": "Judge allows unions\u2019 APA challenge to DOGE data access to proceed",
+      "summary": "Court declines to dismiss suit alleging DOGE access to PII at DOL, CFPB, HHS violated the Administrative Procedure Act.",
+      "sources": [
+        "https://fedscoop.com/doge-lawsuit-cfpb-hhs-labor-data/"
+      ],
+      "_file": "2025-04-17_fedscoop_apa_challenge_ok.yaml",
+      "_id_hash": "6e9a4ac3a67588d91ea86543e58c00450a5547944b1fe61073ac1acfcc894732"
+    },
+    {
+      "id": "2025-04-27_senate_psi_memo_liabilities",
+      "date": "2025-04-27",
+      "title": "Senate PSI minority memo estimates $2.37B in potential liabilities for Musk companies",
+      "summary": "Memo tallies 65 actual or potential regulatory actions across 11 agencies; quantifies 40, including Tesla Autopilot cases and Neuralink.",
+      "sources": [
+        "https://www.hsgac.senate.gov/wp-content/uploads/2025-04-27-Minority-Staff-Memorandum-Elon-Musk-Conflicts.pdf",
+        "https://www.theguardian.com/technology/2025/apr/28/elon-musks-doge-conflict-of-interest",
+        "https://www.theregister.com/2025/04/28/musk_doge_help_companies/"
+      ],
+      "_file": "2025-04-27_senate_psi_memo_liabilities.yaml",
+      "_id_hash": "48ba6f7a2809d603b770b807f7b786a68c51f657a3e48f2519d9a6388a428d14"
+    },
+    {
+      "id": "2025-04-29_psp_cost_estimate",
+      "date": "2025-04-29",
+      "title": "Partnership for Public Service estimates DOGE costs could reach ~$135B in FY2025",
+      "summary": "PPP analysis cited by major outlets estimates taxpayer costs from paid leave, productivity loss, and rehiring tied to DOGE actions.",
+      "sources": [
+        "https://ourpublicservice.org/press-release/partnership-for-public-service-releases-new-resources-measuring-the-impact-of-president-trumps-federal-government-reforms-during-first-100-days/",
+        "https://fortune.com/article/doge-mass-federal-workforce-cuts-taxpayers-billions/",
+        "https://www.cbsnews.com/news/doge-cuts-cost-135-billion-analysis-elon-musk-department-of-government-efficiency/"
+      ],
+      "_file": "2025-04-29_psp_cost_estimate.yaml",
+      "_id_hash": "bb6018e3e852a98e93022a6f641a93e52e125842664a656c0879b6c05798216c"
     },
     {
       "id": "cochise_crosby_case_continues",
@@ -641,24 +1591,36 @@
         "Arizona courts"
       ],
       "tags": [
-        "elections",
         "certification",
+        "elections",
         "litigation"
       ],
       "citations": [
         "https://www.azcentral.com/story/news/politics/elections/2025/05/02/cochise-county-supervisor-thomas-crosby-court-hearing-election-certification/"
       ],
       "notes": "If this link changes, substitute with AP or Arizona Republic coverage of Crosby proceedings from May 2025.",
+      "_file": "2025-05-02_cochise_crosby_case_continues.yaml",
       "_id_hash": "a4e4ebeef890081e75411d2c8d4339c1f1cb3935defec052d9b106c91ded805b"
+    },
+    {
+      "id": "2025-05-02_tigta_snapshot_irs_reductions",
+      "date": "2025-05-02",
+      "title": "TIGTA snapshot: IRS workforce reductions, DRP details",
+      "summary": "Treasury Inspector General documents deferred resignation program terms and early reduction-in-force actions at IRS.",
+      "sources": [
+        "https://www.tigta.gov/sites/default/files/reports/2025-05/2025ier017fr.pdf"
+      ],
+      "_file": "2025-05-02_tigta_snapshot_irs_reductions.yaml",
+      "_id_hash": "931e4d9a6d74e7788ae1bc9600d355653e6386581f889532c83f3d2a4ef6f4b6"
     },
     {
       "date": "2025-05-09",
       "title": "CRS Legal Sidebar: Geofence warrants and the Fourth Amendment",
       "summary": "Congressional Research Service details legal issues and split decisions around geofence warrants.",
       "tags": [
-        "surveillance",
+        "courts",
         "geofence",
-        "courts"
+        "surveillance"
       ],
       "citations": [
         "https://www.congress.gov/crs-product/LSB11274"
@@ -667,40 +1629,191 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-05-09_crs_geofence_sidebar.yaml",
       "_id_hash": "b4d201b258d792c35347aa45baa6af6926a88a552bab5044f0c1532a138d5ca1"
     },
     {
-      "id": "dod_support_for_dhs_functions_memo",
-      "title": "Presidential memo authorizes military support for DHS functions",
+      "id": "2025-05-20-student-visa-revocations-protest-context",
+      "date": "2025-05-20",
+      "title": "Reports of F\u20111 student visa revocations linked to campus protest activity",
+      "summary": "Universities reported F\u20111 visa revocations for international students involved in campus protests; FOIA records and press reports detailed DHS/State coordination and SEVP guidance tightening compliance reviews.",
+      "tags": [
+        "civil-liberties",
+        "immigration",
+        "universities",
+        "protest"
+      ],
+      "sources": [
+        {
+          "title": "CNN: DHS revoking student visas linked to protests",
+          "url": "https://www.cnn.com/2025/05/20/politics/student-visa-revocations-protests/index.html",
+          "outlet": "CNN",
+          "date": "2025-05-20"
+        },
+        {
+          "title": "Harvard Gazette: SEVP guidance and campus compliance",
+          "url": "https://news.harvard.edu/gazette/story/2025/05/what-revoked-student-visa-status-means/",
+          "outlet": "Harvard Gazette",
+          "date": "2025-05-21"
+        },
+        {
+          "title": "FOIA Docs: SEVP policy emails (excerpt repository)",
+          "url": "https://www.documentcloud.org/documents/24680123-sevp-foia-2025",
+          "outlet": "DocumentCloud",
+          "date": "2025-06-01"
+        }
+      ],
+      "_file": "2025-05-20-student-visa-revocations-protest-context.yaml",
+      "_id_hash": "66ab7babefb70e65a5f1e1afbb2763cf3a35f5af5ddc84cbdf7218388b6e35c3"
+    },
+    {
+      "id": "2025-05-22-gao-b337137-impoundment-ev-charging",
+      "date": "2025-05-22",
+      "title": "GAO finds EV charging funds freeze violated Impoundment Control Act",
+      "summary": "GAO\u2019s legal opinion B\u2011337137 concluded the administration violated the ICA by withholding congressionally appropriated NEVI funds. OMB/DOT did not cure the violation.",
+      "tags": [
+        "budget",
+        "impoundment",
+        "oversight",
+        "gao"
+      ],
+      "sources": [
+        {
+          "title": "B-337137: Department of Transportation\u2014Impoundment Control Act\u2014NEVI Funds",
+          "url": "https://www.gao.gov/products/b-337137",
+          "outlet": "U.S. GAO",
+          "date": "2025-05-22"
+        },
+        {
+          "title": "White House tells DOT to disregard GAO opinion",
+          "url": "https://www.politico.com/news/2025/06/04/white-house-dot-ignore-gao-impoundment-00168900",
+          "outlet": "POLITICO",
+          "date": "2025-06-04"
+        },
+        {
+          "title": "House bill moves to cut GAO budget nearly in half",
+          "url": "https://www.govexec.com/oversight/2025/06/house-bill-would-cut-gaos-budget-nearly-half/397901/",
+          "outlet": "Government Executive",
+          "date": "2025-06-27"
+        }
+      ],
+      "_file": "2025-05-22-gao-b337137-impoundment-ev-charging.yaml",
+      "_id_hash": "14afe486309bff11d6558cad78591e006b3694011c85f2502a973daa5eee657b"
+    },
+    {
+      "id": "2025-05-22-gao-nevi-ica",
+      "title": "GAO finds unlawful withholding of EV charger funds (NEVI)",
+      "date": "2025-05-22",
+      "summary": "GAO concluded that DOT\u2019s actions on NEVI funds violated the Impoundment Control Act, finding funds were unlawfully withheld.",
+      "actors": [
+        "GAO",
+        "DOT",
+        "FHWA"
+      ],
+      "tags": [
+        "budget",
+        "impoundment",
+        "gao",
+        "omb"
+      ],
+      "citations": [
+        "https://www.gao.gov/assets/880/877916.pdf",
+        "https://www.govexec.com/oversight/2025/05/gao-transportation-department-cant-withhold-electric-vehicle-infrastructure-program-funds/405534/"
+      ],
+      "_file": "2025-05-22-gao-nevi-ica.yaml",
+      "_id_hash": "5982d616cd14892d9edd042b1408fcf3e3dbec77c309b2abe44c2fe6df692830"
+    },
+    {
+      "id": "2025-06-03-visa-revocations-campus-protests",
+      "title": "Reports of student visa revocations linked to campus protests",
+      "date": "2025-06-03",
+      "summary": "Universities and press reported instances of student visa revocations tied to protest activity, raising free-speech concerns and prompting calls for transparency.",
+      "tags": [
+        "visas",
+        "protests",
+        "education"
+      ],
+      "citations": [
+        "https://www.washingtonpost.com/education/2025/06/03/student-visas-revoked-campus-protests/",
+        "https://www.aau.edu/newsroom/press-releases/aau-calls-transparency-reports-student-visa-revocations"
+      ],
+      "_file": "2025-06-03-visa-revocations-campus-protests.yaml",
+      "_id_hash": "45888d8f3e76b5b167b59764633667026039779a0811f870cefe3334e23bd3d2"
+    },
+    {
+      "id": "2025-06-07-dod-support-dhs-memo-and-la-deployments",
       "date": "2025-06-07",
-      "summary": "A White House memorandum authorized deployment of at least 2,000 National Guard troops for 60 days (or at SecDef discretion) and permitted active-duty support for DHS operations.",
+      "title": "Memo authorizes DoD support to DHS; National Guard federalized; Marines deploy to Los Angeles",
+      "summary": "A presidential memorandum authorized at least 2,000 Guard for 60 days to support DHS. Within days, federalized Guard and ~700 Marines supported operations in Los Angeles amid protests, triggering legal challenges.",
       "location": "Washington, DC",
       "actors": [
-        "The White House",
+        "White House",
         "Department of Defense",
         "Department of Homeland Security"
       ],
       "tags": [
+        "military",
+        "domestic-deployment",
+        "dhs",
+        "dod",
+        "posse-comitatus",
         "civil-military",
         "emergency-powers"
       ],
       "citations": [
         "https://www.whitehouse.gov/presidential-actions/2025/06/department-of-defense-security-for-the-protection-of-department-of-homeland-security-functions/",
-        "https://www.aila.org/presidential-memo-on-dod-security-for-the-protection-of-dhs-functions",
-        "https://www.govinfo.gov/app/details/DCPD-202500672"
+        "https://www.govinfo.gov/app/details/DCPD-202500672",
+        "https://news.usni.org/2025/06/09/marines-deploy-to-los-angeles",
+        "https://www.brookings.edu/articles/how-can-the-president-put-soldiers-on-the-streets-of-los-angeles/",
+        "https://www.aila.org/presidential-memo-on-dod-security-for-the-protection-of-dhs-functions"
       ],
-      "notes": "",
-      "_id_hash": "6908ccf984ed89ec18d60e3164425775cb8657d2782433d462fd1b3e23723bf9"
+      "_file": "2025-06-07-dod-support-dhs-memo-and-la-deployments.yaml",
+      "_id_hash": "9757f21ca2cc7ee5d055ff62cdc856208d11d9243cc9aeeb6b7de00b3ffddfce"
+    },
+    {
+      "id": "2025-06-09-marines-los-angeles",
+      "title": "Approximately 700 Marines deploy to Los Angeles",
+      "date": "2025-06-09",
+      "summary": "Reports indicated about 700 Marines from 2/7 deployed in support of federal operations in Los Angeles; NORTHCOM issued a related statement.",
+      "location": "Los Angeles, CA",
+      "actors": [
+        "USMC",
+        "USNORTHCOM",
+        "National Guard"
+      ],
+      "tags": [
+        "military",
+        "domestic-deployment"
+      ],
+      "citations": [
+        "https://news.usni.org/2025/06/09/700-marines-deploying-to-downtown-los-angeles",
+        "https://www.northcom.mil/Newsroom/Press-Releases/Article/4210889/usnorthcom-statement-on-additional-military-personnel-in-the-los-angeles-area/"
+      ],
+      "_file": "2025-06-09-marines-los-angeles.yaml",
+      "_id_hash": "1a823232c82b0d294f1b2a04fcb61e7541db3a83b885386e6c1a4991de531efe"
+    },
+    {
+      "id": "2025-06-09_cote_opm_injunction",
+      "date": "2025-06-09",
+      "title": "Judge Denise Cote issues preliminary injunction restricting DOGE access to OPM records",
+      "summary": "Court finds privacy and cybersecurity laws violated in granting DOGE affiliates access to OPM systems; limits further access pending litigation.",
+      "sources": [
+        "https://fedscoop.com/judge-grants-preliminary-injunction-challenge-doge-opm-record-access/",
+        "https://federalnewsnetwork.com/management/2025/06/judge-finds-opm-broke-law-in-granting-data-access-to-doge/",
+        "https://www.narfe.org/il/2025/06/19/judge-restricts-doge-access-to-opm-systems/"
+      ],
+      "_file": "2025-06-09_cote_opm_injunction.yaml",
+      "_id_hash": "45e58c223b29e58be73c7eca3a1370510f59147ce8cda6eeec021421b9197bf3"
     },
     {
       "date": "2025-06-09",
       "title": "CPJ: Law enforcement injure multiple journalists covering Los Angeles protests",
       "summary": "Committee to Protect Journalists documents injuries and assaults of reporters covering immigration protest operations in Los Angeles.",
       "tags": [
-        "press-freedom",
+        "law-enforcement",
         "los-angeles",
-        "protests",
-        "law-enforcement"
+        "press-freedom",
+        "protests"
       ],
       "citations": [
         "https://cpj.org/2025/06/law-enforcement-injure-multiple-journalists-others-assaulted-while-covering-los-angeles-protests/"
@@ -709,6 +1822,7 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-06-09_cpj_la_journalists_injured.yaml",
       "_id_hash": "bc3b136fb7dc9dcd74a58ac1658e9ab8b16f00f61d609056788174f6d75ddd04"
     },
     {
@@ -716,8 +1830,8 @@
       "title": "DOJ issues updated guidelines for FCPA investigations and enforcement",
       "summary": "Justice Department released guidelines signaling the end of the blanket enforcement pause and prioritization of U.S. interests.",
       "tags": [
-        "fcpa",
         "doj",
+        "fcpa",
         "guidance"
       ],
       "citations": [
@@ -728,6 +1842,7 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-06-09_doj_fcpa_guidelines.yaml",
       "_id_hash": "9833e6b2d2922b0ab66494645d5f339b6263dc9fe7020489af3ed923892c1e00"
     },
     {
@@ -745,9 +1860,10 @@
         "domestic-operations"
       ],
       "citations": [
-        "https://news.usni.org/"
+        "https://news.usni.org/2025/06/09/700-marines-deploying-to-downtown-los-angeles"
       ],
       "notes": "Cite specific article URL when archived link is available.",
+      "_file": "2025-06-09_usni_marines_los_angeles.yaml",
       "_id_hash": "46eab19828ded4d24ac1f1634ae54b8ee3c68cdbc6bfb389047bd8319e388de3"
     },
     {
@@ -761,15 +1877,16 @@
         "Georgia State Election Board"
       ],
       "tags": [
+        "election-administration",
         "elections",
-        "state-courts",
-        "election-administration"
+        "state-courts"
       ],
       "citations": [
         "https://apnews.com/article/88de13189060dfd42069ed558ccbcad9",
         "https://www.ajc.com/politics/2025/06/georgia-high-court-rejects-election-boards-rules-for-hand-counts-and-inquiries/"
       ],
       "notes": "",
+      "_file": "2025-06-10_ga_sc_blocks_hand_count_rule.yaml",
       "_id_hash": "f9b29526a92c458e3bfbdf08f6c5966235496ffd71b625d3d04335a7fabb200d"
     },
     {
@@ -777,8 +1894,8 @@
       "title": "AP: Reporters shot with rubber bullets, roughed up covering LA protests",
       "summary": "Associated Press describes journalists being struck with projectiles or obstructed by police during coverage of Los Angeles protests.",
       "tags": [
-        "press-freedom",
         "los-angeles",
+        "press-freedom",
         "protests"
       ],
       "citations": [
@@ -788,7 +1905,36 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-06-11_ap_reporters_shot_roughed.yaml",
       "_id_hash": "5291abc34c3235176979407d9d3f40df050c09e64be245bfb0e2a2ffa1dff651"
+    },
+    {
+      "id": "2025-06-12-breyer-ruling-and-ninth-circuit-stays",
+      "date": "2025-06-12",
+      "title": "Judge Breyer finds LA deployment unlawful; Ninth Circuit stays preserve status quo",
+      "summary": "A federal district court held the deployments likely unlawful under statutory and federalism limits, but the Ninth Circuit granted emergency stays pending appeal, allowing deployments to continue.",
+      "tags": [
+        "courts",
+        "emergency-stays",
+        "military",
+        "federalism"
+      ],
+      "sources": [
+        {
+          "title": "District court ruling reported; Ninth Circuit stay follows",
+          "url": "https://apnews.com/article/los-angeles-guard-marines-ruling-stay-2025",
+          "outlet": "AP News",
+          "date": "2025-06-20"
+        },
+        {
+          "title": "Courthouse News on emergency stay",
+          "url": "https://www.courthousenews.com/appeals-court-stays-order-halting-national-guard-in-los-angeles/",
+          "outlet": "Courthouse News",
+          "date": "2025-06-20"
+        }
+      ],
+      "_file": "2025-06-12-breyer-ruling-and-ninth-circuit-stays.yaml",
+      "_id_hash": "03d03edeb7f59e94c95cd4bb0e3b4db12d7cf8bb2309d82c8655281873e4edf2"
     },
     {
       "id": "la_deployment_unlawful_district_ruling",
@@ -811,16 +1957,68 @@
         "https://www.courthousenews.com/california-gets-a-win-in-challenge-to-national-guard-deployment/"
       ],
       "notes": "",
+      "_file": "2025-06-12_la_deployment_unlawful_district_ruling.yaml",
       "_id_hash": "92f3539ea393f668139e4674e06b2a0edfd8ed7fcb76918797ffa4434e29d1e2"
+    },
+    {
+      "id": "2025-06-13-starlink-outage",
+      "title": "Starlink global outage caused by configuration change",
+      "date": "2025-06-13",
+      "summary": "Starlink suffered a global outage attributed to a configuration change, disrupting connectivity for users worldwide.",
+      "tags": [
+        "infrastructure",
+        "outage",
+        "spacecomms",
+        "dependency"
+      ],
+      "citations": [
+        "https://www.reuters.com/technology/space-exploration/starlink-hit-by-global-outage-2025-06-13/",
+        "https://www.theverge.com/2025/6/13/24180976/starlink-outage-global-down"
+      ],
+      "_file": "2025-06-13-starlink-outage.yaml",
+      "_id_hash": "ef119bc904f90fada5a4f3fe28fbf1530e713aa77ac69d7ab9933137179afce8"
+    },
+    {
+      "id": "2025-06-14-mn-lawmaker-assassination",
+      "date": "2025-06-14",
+      "title": "Minnesota lawmaker Melissa Hortman assassinated; prosecutors cite political motive",
+      "summary": "Rep. Melissa Hortman was shot and killed at her home; prosecutors called it a political assassination. A suspect was later indicted. Incident intensified concerns about politically motivated violence.",
+      "tags": [
+        "violence",
+        "stochastic-terrorism",
+        "states"
+      ],
+      "sources": [
+        {
+          "title": "AP: Minnesota lawmaker lies in state; suspect indicted",
+          "url": "https://apnews.com/article/minnesota-lawmakers-shot-funeral-119d4589c28205b4faec41f5c59a823c",
+          "outlet": "Associated Press",
+          "date": "2025-06-27"
+        },
+        {
+          "title": "CNN live updates (June 15)",
+          "url": "https://www.cnn.com/us/live-news/minnesota-lawmaker-shootings-06-15-25/index.html",
+          "outlet": "CNN",
+          "date": "2025-06-15"
+        },
+        {
+          "title": "Wikipedia summary (for aggregation only)",
+          "url": "https://en.wikipedia.org/wiki/2025_shootings_of_Minnesota_legislators",
+          "outlet": "Wikipedia",
+          "date": "2025-07-15"
+        }
+      ],
+      "_file": "2025-06-14-mn-lawmaker-assassination.yaml",
+      "_id_hash": "9f3185062dbb6d92bd0f5b9c20ba864dd1d678312ee5c749f4c3bcd9f81c2e7d"
     },
     {
       "date": "2025-06-18",
       "title": "State Department announces expanded screening and vetting for visa applicants",
       "summary": "State said it would expand visa screening, including review of online presence of applicants, as part of broader vetting changes.",
       "tags": [
+        "screening",
         "state-dept",
-        "visas",
-        "screening"
+        "visas"
       ],
       "citations": [
         "https://www.state.gov/releases/office-of-the-spokesperson/2025/06/announcement-of-expanded-screening-and-vetting-for-visa-applicants"
@@ -829,7 +2027,32 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-06-18_state_expanded_screening.yaml",
       "_id_hash": "11402426143b57ae97f9b8611721158ee85c01c2734962ea1a788312a38b04fb"
+    },
+    {
+      "id": "2025-06-19-9th-circuit-stay",
+      "title": "Ninth Circuit stays district court order on LA deployment",
+      "date": "2025-06-19",
+      "summary": "The Ninth Circuit stayed a district court order that found the Los Angeles deployment likely unlawful, preserving the deployment pending appeal.",
+      "location": "San Francisco, CA",
+      "actors": [
+        "Ninth Circuit",
+        "DOJ",
+        "State of California"
+      ],
+      "tags": [
+        "courts",
+        "stays",
+        "military",
+        "domestic-deployment"
+      ],
+      "citations": [
+        "https://cdn.ca9.uscourts.gov/datastore/general/2025/06/19/25-3727.pdf",
+        "https://calmatters.org/justice/2025/06/9th-circuit-los-angeles-national-guard/"
+      ],
+      "_file": "2025-06-19-9th-circuit-stay.yaml",
+      "_id_hash": "e59c882cd51ba003a146d2be4f3718d8fc178f10735ab52fe45017cc513c2faa"
     },
     {
       "id": "ninth_circuit_extends_stay_la_deployment",
@@ -841,14 +2064,15 @@
         "U.S. Court of Appeals for the Ninth Circuit"
       ],
       "tags": [
-        "courts",
         "civil-military",
+        "courts",
         "emergency-powers"
       ],
       "citations": [
         "https://www.pbs.org/newshour/politics/appeals-court-temporarily-blocks-judges-ruling-to-return-control-of-national-guard-to-california"
       ],
       "notes": "",
+      "_file": "2025-06-20_ninth_circuit_extends_stay_la_deployment.yaml",
       "_id_hash": "4f966a94d223dd0ca929f0b395d5e662b1d52377157e89e2da271cf88f16d925"
     },
     {
@@ -867,6 +2091,7 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-06-22_dhs_ntas_bulletin.yaml",
       "_id_hash": "fce322f0296fcc48320b37175972a13bece1276246b5e9dc788bd47df3d00aad"
     },
     {
@@ -887,6 +2112,7 @@
         "https://www.brookings.edu/articles/how-can-the-president-put-soldiers-on-the-streets-of-los-angeles/"
       ],
       "notes": "",
+      "_file": "2025-06-26_brookings_la_troops_analysis.yaml",
       "_id_hash": "3641caa9d6860a2b1d1986042b975b73a82b4597ad1a704a28af61d433c4c886"
     },
     {
@@ -902,34 +2128,16 @@
       ],
       "tags": [
         "budget",
-        "oversight",
-        "congress"
+        "congress",
+        "oversight"
       ],
       "citations": [
         "https://rollcall.com/2025/06/27/house-appropriators-approve-legislative-branch-bill-with-gao-cuts/",
         "https://federalnewsnetwork.com/congress/2025/07/senate-appropriators-reject-house-proposal-to-halve-gaos-budget-next-year/"
       ],
       "notes": "",
+      "_file": "2025-06-27_house_moves_cut_gao_50pct.yaml",
       "_id_hash": "36b489da8f0f6b6185ffb1729955b3d349c2ac1fd0625dd4e3dc2a47daf688cf"
-    },
-    {
-      "date": "2025-06-30",
-      "title": "EAC releases 2024 Election Administration and Voting Survey (EAVS)",
-      "summary": "EAVS documents mail voting volumes, early voting, and administrative burdens facing local jurisdictions in the 2024 cycle.",
-      "tags": [
-        "elections",
-        "eavs",
-        "administration"
-      ],
-      "citations": [
-        "https://www.eac.gov/sites/default/files/2025-06/2024_EAVS_Report_508c.pdf",
-        "https://www.eac.gov/research-and-data/studies-and-reports"
-      ],
-      "id": "eac-releases-2024-election-administration-and-voting-survey-eavs",
-      "location": null,
-      "actors": [],
-      "notes": "",
-      "_id_hash": "bda9c47f8fb478afc7921ab5886402ae454147cd94a926cab836e0cce67b5d99"
     },
     {
       "id": "eac_releases_2024_eavs",
@@ -941,15 +2149,16 @@
         "U.S. Election Assistance Commission"
       ],
       "tags": [
-        "elections",
+        "administration",
         "data",
-        "administration"
+        "elections"
       ],
       "citations": [
         "https://www.eac.gov/news/2025/06/30/us-election-assistance-commission-releases-2024-election-administration-and-voting",
         "https://www.eac.gov/sites/default/files/2025-06/2024_EAVS_Report_508c.pdf"
       ],
       "notes": "",
+      "_file": "2025-06-30_eac_releases_2024_eavs.yaml",
       "_id_hash": "ab9353afbf5e088f77a0987586cbdc70b5a94850675f093d03a7e3e8dfdf6da9"
     },
     {
@@ -957,8 +2166,8 @@
       "title": "Brennan Center survey: local election officials warn of federal support cuts",
       "summary": "A national survey found growing concerns about federal cuts to election security services and ongoing resource stress.",
       "tags": [
-        "elections",
         "admin-capacity",
+        "elections",
         "funding"
       ],
       "citations": [
@@ -968,7 +2177,64 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-07-10_brennan_survey_local_officials.yaml",
       "_id_hash": "7a2f7ca634095a5514b68a23e04ad1e01bfd0fbfb173230a77ca1a97ce5b1e25"
+    },
+    {
+      "id": "2025-07-11-la-press-tro",
+      "date": "2025-07-11",
+      "title": "Federal court restrains LAPD from using projectiles on journalists covering protests",
+      "summary": "Following dozens of reported injuries and detentions of credentialed journalists during LA protests, a judge granted a TRO barring LAPD from firing \u2018less\u2011lethal\u2019 munitions at reporters.",
+      "tags": [
+        "press-freedom",
+        "protests",
+        "law-enforcement"
+      ],
+      "sources": [
+        {
+          "title": "LA Times: Judge orders LAPD to stop shooting journalists with rubber bullets",
+          "url": "https://www.latimes.com/california/story/2025-07-11/federal-judge-lapd-journalists-order",
+          "outlet": "Los Angeles Times",
+          "date": "2025-07-11"
+        },
+        {
+          "title": "CPJ: Law enforcement injure multiple journalists in LA",
+          "url": "https://cpj.org/2025/06/law-enforcement-injure-multiple-journalists-others-assaulted-while-covering-los-angeles-protests/",
+          "outlet": "Committee to Protect Journalists",
+          "date": "2025-06-09"
+        },
+        {
+          "title": "RCFP coalition letter documenting incidents",
+          "url": "https://www.rcfp.org/la-immigration-protests-press-rights-letter/",
+          "outlet": "Reporters Committee for Freedom of the Press",
+          "date": "2025-06-13"
+        }
+      ],
+      "_file": "2025-07-11-la-press-tro.yaml",
+      "_id_hash": "f593bf41ec7d2a9ee0d602d57a55996d789afebb41892e1b418831c56a181941"
+    },
+    {
+      "id": "2025-07-11-lapd-tro-press",
+      "title": "Federal court restrains LAPD use of less-lethal force against journalists",
+      "date": "2025-07-11",
+      "summary": "A federal judge issued a TRO prohibiting LAPD from using less-lethal munitions and chemical agents against clearly identified journalists covering protests, and from removing them from protest areas.",
+      "location": "Los Angeles, CA",
+      "actors": [
+        "U.S. District Court",
+        "LAPD",
+        "Journalists"
+      ],
+      "tags": [
+        "press-freedom",
+        "courts",
+        "protests"
+      ],
+      "citations": [
+        "https://www.latimes.com/california/story/2025-07-11/federal-judge-lapd-journalists-order",
+        "https://www.politico.com/news/2025/07/11/lapd-weapons-journalists-00448476"
+      ],
+      "_file": "2025-07-11-lapd-tro-press.yaml",
+      "_id_hash": "c34dfafda2d9ce1f467dd5216985430fa6d590f75ccf9bc63c4e980e6bab06a4"
     },
     {
       "date": "2025-07-11",
@@ -986,17 +2252,110 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-07-11_ncsl_private_funding_bans.yaml",
       "_id_hash": "ba7c4950e538e05b487f10d66e3135969c3055dd2a2ed839f6e003d588267e2e"
+    },
+    {
+      "id": "2025-07-14_dod_frontier_ai_contracts_xai",
+      "date": "2025-07-14",
+      "title": "DoD announces $200M-ceiling AI contracts to Anthropic, Google, OpenAI, xAI",
+      "summary": "DoD CDAO unveils multi-vendor awards (each with $200M ceiling) for \u201cfrontier AI\u201d capabilities; xAI included among awardees.",
+      "tags": [
+        "defense",
+        "ai",
+        "procurement",
+        "xai",
+        "cdao"
+      ],
+      "sources": [
+        {
+          "title": "DoD CDAO press \u2013 Partnerships with frontier AI companies",
+          "url": "https://www.ai.mil/latest/news-press/pr-view/article/4242822/cdao-announces-partnerships-with-frontier-ai-companies-to-address-national-secu/"
+        },
+        {
+          "title": "Reuters \u2013 Pentagon awards vendor list",
+          "url": "https://www.reuters.com/business/autos-transportation/us-department-defense-awards-contracts-google-xai-2025-07-14/"
+        }
+      ],
+      "_file": "2025-07-14_dod_frontier_ai_contracts_xai.yaml",
+      "_id_hash": "4ca7b60cb4e0382e92f7d44d1934d844bc9ecc672051c7deb7488c596e4f7572"
+    },
+    {
+      "id": "2025-07-14_dod_xai_ceiling",
+      "date": "2025-07-14",
+      "title": "DoD CDAO announces $200M-ceiling AI awards including xAI",
+      "summary": "Defense Department announces partnerships with Anthropic, Google, OpenAI, and xAI\u2014each with a $200M ceiling\u2014to develop frontier AI capabilities.",
+      "sources": [
+        "https://www.ai.mil/latest/news-press/pr-view/article/4242822/cdao-announces-partnerships-with-frontier-ai-companies-to-address-national-secu/",
+        "https://www.reuters.com/business/autos-transportation/us-department-defense-awards-contracts-google-xai-2025-07-14/"
+      ],
+      "_file": "2025-07-14_dod_xai_ceiling.yaml",
+      "_id_hash": "ba3c52c8f4c12396a70ac3d27b4226a36edcc31cdc739ab5355af865aa8a8be6"
+    },
+    {
+      "id": "2025-07-18-gsa-aws-onegov",
+      "title": "GSA enters $1B OneGov cloud agreement with AWS",
+      "date": "2025-07-18",
+      "summary": "GSA announced a $1 billion 'OneGov' cloud agreement with AWS intended to streamline federal procurement, raising questions about vendor concentration risk.",
+      "location": "Washington, DC",
+      "actors": [
+        "GSA",
+        "AWS"
+      ],
+      "tags": [
+        "cloud",
+        "procurement",
+        "dependency"
+      ],
+      "citations": [
+        "https://www.gsa.gov/about-us/newsroom/news-releases/gsa-enters-into-1b-onegov-cloud-agreement-with-aws",
+        "https://www.reuters.com/technology/amazon-inks-1-billion-cloud-deal-us-government-2025-07-18/"
+      ],
+      "_file": "2025-07-18-gsa-aws-onegov.yaml",
+      "_id_hash": "665ad1efeca470620f171d8bf215cbb5362de2c275674537b7daa950ea227c4e"
+    },
+    {
+      "id": "2025-07-18-texas-redistricting-fbi-inquiry",
+      "date": "2025-07-18",
+      "title": "Cornyn urges FBI to locate Texas House Democrats amid redistricting standoff",
+      "summary": "During a mid\u2011decade redistricting fight, Sen. John Cornyn asked FBI Director Kash Patel to help locate Texas Democratic legislators who left the state; the episode highlighted federal involvement in a state political dispute.",
+      "tags": [
+        "states",
+        "redistricting",
+        "federal-involvement",
+        "law-enforcement"
+      ],
+      "sources": [
+        {
+          "title": "Texas Tribune: Cornyn asks FBI to help find Democrats amid redistricting standoff",
+          "url": "https://www.texastribune.org/2025/07/18/texas-redistricting-cornyn-fbi/",
+          "outlet": "Texas Tribune",
+          "date": "2025-07-18"
+        }
+      ],
+      "_file": "2025-07-18-texas-redistricting-fbi-inquiry.yaml",
+      "_id_hash": "d9f9055f4a1d77fd34021b4fe01dc1a5ec4b002ac42bd0c28d5e49a34270def2"
+    },
+    {
+      "id": "2025-07-18_tigta_snapshot_update",
+      "date": "2025-07-18",
+      "title": "TIGTA update: IRS reductions and DRP effects as of July",
+      "summary": "Follow-on TIGTA snapshot quantifies DRP and VERA/VSIP participation and implications for IRS operations and revenue.",
+      "sources": [
+        "https://www.tigta.gov/sites/default/files/reports/2025-07/2025ier027fr.pdf"
+      ],
+      "_file": "2025-07-18_tigta_snapshot_update.yaml",
+      "_id_hash": "44e76c4b5c779db847820657ba42ffd29f6732ef3edfff5e332e722b41a84474"
     },
     {
       "date": "2025-07-23",
       "title": "Columbia University announces settlement with federal government",
       "summary": "Columbia agrees to pay $200M over three years to the federal government and $21M to resolve EEOC claims; settlement includes policy and oversight requirements.",
       "tags": [
-        "universities",
+        "monitoring",
         "settlement",
         "title-vi",
-        "monitoring"
+        "universities"
       ],
       "citations": [
         "https://president.columbia.edu/news/resolution-federal-investigations-and-restoration-universitys-research-funding",
@@ -1006,7 +2365,42 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-07-23_columbia_settlement.yaml",
       "_id_hash": "66144782d5abc4fee8e26c901eb278f24afc48290c1eb9594ce00f2eea40d866"
+    },
+    {
+      "id": "2025-07-24-fcc-approves-skydance-paramount",
+      "date": "2025-07-24",
+      "title": "FCC approves Skydance\u2013Paramount merger 2\u20131; deal closes Aug. 7",
+      "summary": "The FCC approved Skydance\u2019s purchase of Paramount in a 2\u20131 vote; the merger closed Aug. 7. Coverage noted unusual conditions and concerns about editorial independence.",
+      "tags": [
+        "media",
+        "regulators",
+        "mergers",
+        "press-freedom"
+      ],
+      "sources": [
+        {
+          "title": "FCC news release on approval",
+          "url": "https://www.fcc.gov/document/fcc-approves-skydances-acquisition-paramount-cbs",
+          "outlet": "FCC",
+          "date": "2025-07-24"
+        },
+        {
+          "title": "Reuters: US clears way for $8.4B Paramount\u2013Skydance merger",
+          "url": "https://www.reuters.com/sustainability/boards-policy-regulation/us-clears-way-8-billion-paramount-skydance-merger-2025-07-25/",
+          "outlet": "Reuters",
+          "date": "2025-07-25"
+        },
+        {
+          "title": "AP: Merger closes, scrutiny on CBS News operations",
+          "url": "https://apnews.com/article/paramount-skydance-merger-cbs-news-trump-85560c3c7aaaa1fe894380683e66a89c",
+          "outlet": "Associated Press",
+          "date": "2025-07-26"
+        }
+      ],
+      "_file": "2025-07-24-fcc-approves-skydance-paramount.yaml",
+      "_id_hash": "97b9ececa3a22194f5ae3a1d25d425c20e86bd23ef9088fe1ee9c8768ed377f9"
     },
     {
       "date": "2025-07-25",
@@ -1025,7 +2419,21 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-07-25_starlink_outage.yaml",
       "_id_hash": "87ff58362a9cc017502bcaacda9b708813ae5f4b087587d8983eaaa7adf9118e"
+    },
+    {
+      "id": "2025-07-31_senate_psi_21_7b_waste",
+      "date": "2025-07-31",
+      "title": "Senate PSI report alleges $21.7B in DOGE-created waste",
+      "summary": "Minority staff report cites $14.8B in 'Deferred Resignation Program' payments and $6.1B in administrative leave among other waste categories.",
+      "sources": [
+        "https://www.blumenthal.senate.gov/newsroom/press/release/07/31/2025/the-217-billion-blunder-new-psi-report-reveals-billions-in-taxpayer-dollars-squandered-by-doge",
+        "https://www.washingtonpost.com/documents/b256b202-ff01-48dc-a2d1-80b0e43fa87a.pdf",
+        "https://www.washingtonpost.com/politics/2025/07/31/federal-workers-doge-buyout-paid/"
+      ],
+      "_file": "2025-07-31_senate_psi_21_7b_waste.yaml",
+      "_id_hash": "cfe6305d6234f03a5a5fb012fba67f5ab5b1879f9d50ff66e6972c1916ad5b60"
     },
     {
       "id": "trac_ice_arrests_drop_july",
@@ -1039,15 +2447,16 @@
         "DHS"
       ],
       "tags": [
-        "immigration",
+        "data",
         "enforcement",
-        "data"
+        "immigration"
       ],
       "citations": [
         "https://tracreports.org/whatsnew/email.250801.html",
         "https://www.axios.com/2025/08/05/ice-arrests-july-decline-immigrants"
       ],
       "notes": "",
+      "_file": "2025-08-02_trac_ice_arrests_drop_july.yaml",
       "_id_hash": "689e878f65d73fd52910cd76abbcda4c6e2a9d7feaa2c6904fe737b74707e732"
     },
     {
@@ -1055,10 +2464,10 @@
       "title": "Washington Post tests Meta\u2019s replacement for political fact-checking",
       "summary": "WaPo reports 'coverage and speed gaps' in Meta\u2019s Community Notes\u2013style system for political content after Meta ended U.S. political fact-checking.",
       "tags": [
-        "platform-policy",
+        "elections",
         "fact-checking",
         "meta",
-        "elections",
+        "platform-policy",
         "research"
       ],
       "citations": [
@@ -1068,7 +2477,64 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-08-04_wapo_meta_notes_test.yaml",
       "_id_hash": "f587e8831b347d6bed0c189c3bd8f39f7687fd3e4e001e0c23b1db3b7a4ea23a"
+    },
+    {
+      "id": "2025-08-05-ca-deepfake-law-struck-down",
+      "date": "2025-08-05",
+      "title": "Federal judge strikes down California\u2019s election deepfake law",
+      "summary": "A federal judge in Sacramento struck down California\u2019s law restricting AI\u2011generated political deepfakes; a related labeling requirement was also signaled as unconstitutional.",
+      "tags": [
+        "ai",
+        "elections",
+        "speech",
+        "platforms"
+      ],
+      "sources": [
+        {
+          "title": "Politico: Elon Musk and X notch court win",
+          "url": "https://www.politico.com/news/2025/08/05/elon-musk-x-court-win-california-deepfake-law-00494936",
+          "outlet": "Politico",
+          "date": "2025-08-05"
+        },
+        {
+          "title": "Bloomberg Law: Musk\u2011challenged deepfake law struck",
+          "url": "https://news.bloomberglaw.com/litigation/musk-challenged-california-anti-deepfake-law-struck-by-judge",
+          "outlet": "Bloomberg Law",
+          "date": "2025-08-06"
+        },
+        {
+          "title": "Courthouse News: Judge rebukes California laws targeting misinformation",
+          "url": "https://www.courthousenews.com/federal-judge-rebukes-california-laws-targeting-misinformation/",
+          "outlet": "Courthouse News Service",
+          "date": "2025-08-06"
+        }
+      ],
+      "_file": "2025-08-05-ca-deepfake-law-struck-down.yaml",
+      "_id_hash": "553171a6ca9cf96f1a8a3a43b1660530bc22710eee0088822ebc56235b7ac221"
+    },
+    {
+      "id": "2025-08-05-gao-nih-ica",
+      "title": "GAO says NIH grant delays violated the Impoundment Control Act",
+      "date": "2025-08-05",
+      "summary": "GAO found that HHS/NIH unlawfully delayed grant funding in violation of the Impoundment Control Act.",
+      "actors": [
+        "GAO",
+        "HHS",
+        "NIH"
+      ],
+      "tags": [
+        "budget",
+        "impoundment",
+        "gao"
+      ],
+      "citations": [
+        "https://www.gao.gov/products/b-337203",
+        "https://www.govexec.com/oversight/2025/08/trump-illegally-froze-1800-nih-medical-research-grants-congress-watchdog-says/407296/"
+      ],
+      "_file": "2025-08-05-gao-nih-ica.yaml",
+      "_id_hash": "1981862d7687c01f2c156ea8300d3c873b24a67af1e5ef54ba873e0f5c55130b"
     },
     {
       "date": "2025-08-05",
@@ -1088,6 +2554,7 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-08-05_ca_political_deepfake_law_blocked.yaml",
       "_id_hash": "776f02d11c472f785b74ae96292fc788fe79a14ff93a492298b4aa853f4404c3"
     },
     {
@@ -1095,8 +2562,8 @@
       "title": "AP: Harvard scientists warn multi-billion research freeze could cause lasting damage",
       "summary": "AP reports researchers fear long-term setbacks following a $2.6B+ funding freeze amid federal-university dispute.",
       "tags": [
-        "universities",
-        "funding-freeze"
+        "funding-freeze",
+        "universities"
       ],
       "citations": [
         "https://apnews.com/article/32c1ae9dc542897496974a85aaa07b85"
@@ -1105,6 +2572,7 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-08-07_harvard_freeze_ap.yaml",
       "_id_hash": "173bd7f0726a9493a3c6becb56265bbdf8437376248170da80a5da64cd8948fb"
     },
     {
@@ -1128,7 +2596,42 @@
         "https://www.reuters.com/markets/us/skydance-closes-8-billion-paramount-deal-2025-08-07/"
       ],
       "notes": "While Reuters reported FCC-related undertakings tied to broadcast license transfers, final conditions are still being parsed across agencies; cite Reuters for contemporaneous reporting.",
+      "_file": "2025-08-07_paramount_skydance_merger_closes.yaml",
       "_id_hash": "08d1bb778cbd9794e89646c833a8b2842d7d838a8c38e7473d572b3342a4cae8"
+    },
+    {
+      "id": "2025-08-08-dc-federal-surge-and-guard-prep",
+      "date": "2025-08-08",
+      "title": "White House orders federal surge in D.C.; FBI agents patrol streets; Guard activation prepared",
+      "summary": "The White House announced an increased federal law\u2011enforcement presence in Washington, D.C. Reports indicated ~120 FBI agents on street patrols and preparations to activate hundreds of D.C. National Guard members.",
+      "tags": [
+        "federal",
+        "law-enforcement",
+        "dc",
+        "military"
+      ],
+      "sources": [
+        {
+          "title": "AP: Increased federal presence ordered",
+          "url": "https://apnews.com/article/trump-washington-increased-federal-law-enforcement-takeover-33b186a95dabf111bac61db398aa7543",
+          "outlet": "Associated Press",
+          "date": "2025-08-08"
+        },
+        {
+          "title": "Washington Post: FBI agents dispatched to D.C. streets",
+          "url": "https://www.washingtonpost.com/dc-md-va/2025/08/10/dc-crime-trump-crackdown/",
+          "outlet": "Washington Post",
+          "date": "2025-08-10"
+        },
+        {
+          "title": "Reuters: Military preparing Guard activation in D.C.",
+          "url": "https://www.reuters.com/world/us/us-military-preparing-national-guard-activation-washington-dc-officials-say-2025-08-11/",
+          "outlet": "Reuters",
+          "date": "2025-08-11"
+        }
+      ],
+      "_file": "2025-08-08-dc-federal-surge-and-guard-prep.yaml",
+      "_id_hash": "098b8a7f733d19b0d572163ed63ff61dd9f4b140fb86d283e3f8acc8cf10e817"
     },
     {
       "date": "2025-08-08",
@@ -1136,16 +2639,17 @@
       "summary": "Administration outlines expanded patrols by federal agents at tourist sites and transit hubs.",
       "tags": [
         "federal-deployment",
-        "washington-dc",
-        "law-enforcement"
+        "law-enforcement",
+        "washington-dc"
       ],
       "citations": [
-        "https://www.reuters.com/world/us/white-house-ramps-up-federal-law-enforcement-presence-washington-2025-08-08/"
+        "https://www.reuters.com/world/us/white-house-ups-federal-law-enforcement-tourist-hot-spots-washington-dc-2025-08-08/"
       ],
       "id": "white-house-announces-increased-federal-law-enforcement-presence-in-washington-d-c",
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-08-08_dc_federal_surge.yaml",
       "_id_hash": "20722463715256cb53909e66d73b57849c2041eb0c956ef7b8c1560bdb2f28ea"
     },
     {
@@ -1153,9 +2657,9 @@
       "title": "Administration seeks $1B settlement from UCLA amid $584M funding freeze",
       "summary": "Federal officials propose a $1B agreement tied to policy terms; California leaders denounce demand as extortion.",
       "tags": [
-        "universities",
         "funding-freeze",
-        "settlement-demand"
+        "settlement-demand",
+        "universities"
       ],
       "citations": [
         "https://www.reuters.com/world/us/newsom-calls-trumps-1-billion-ucla-settlement-offer-extortion-says-california-2025-08-09/",
@@ -1165,6 +2669,7 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-08-08_ucla_settlement_demand.yaml",
       "_id_hash": "35029118a86512a86f288818814865ebc0478c5ee9099851665682791fbc8cc7"
     },
     {
@@ -1172,9 +2677,9 @@
       "title": "About 120 FBI agents assigned to patrol Washington, D.C. streets",
       "summary": "Washington Post reports reassignment of approximately 120 FBI agents to street patrol duties as part of DC surge.",
       "tags": [
+        "fbi",
         "federal-deployment",
-        "washington-dc",
-        "fbi"
+        "washington-dc"
       ],
       "citations": [
         "https://www.washingtonpost.com/dc-md-va/2025/08/10/fbi-agents-patrol-dc-surge/"
@@ -1183,6 +2688,7 @@
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-08-10_fbi_patrols_dc.yaml",
       "_id_hash": "16dcce320d1984d0924b1b1a5f708d00455291871215ff2175043fca62338205"
     },
     {
@@ -1194,15 +2700,14 @@
         "washington-dc"
       ],
       "citations": [
-        "https://www.reuters.com/world/us/us-military-preparing-activate-hundreds-dc-national-guard-members-2025-08-11/"
+        "https://www.reuters.com/world/us/us-military-preparing-national-guard-activation-washington-dc-officials-say-2025-08-11/"
       ],
       "id": "military-preparing-to-activate-hundreds-of-d-c-national-guard-members",
       "location": null,
       "actors": [],
       "notes": "",
+      "_file": "2025-08-11_dc_guard_prep.yaml",
       "_id_hash": "2ec2e4b4881e385f3de99c9791ae6a5d573a186cb4ee8c4a1fcd89d4875ae138"
     }
-  ],
-  "count": 60,
-  "updated": "2025-08-11T08:47:48.149643Z"
+  ]
 }
