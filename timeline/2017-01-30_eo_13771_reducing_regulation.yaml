@@ -5,7 +5,8 @@ tags:
 - executive-order
 - regulation
 citations:
-- https://www.federalregister.gov/documents/2017/02/03/2017-02451/reducing-regulation-and-controlling-regulatory-costs
+- url: https://www.federalregister.gov/d/2017-02451
+  archived: https://web.archive.org/web/20170203/https://www.federalregister.gov/documents/2017/02/03/2017-02451/reducing-regulation-and-controlling-regulatory-costs
 id: executive-order-13771-reducing-regulation-and-controlling-regulatory-costs
 location: null
 actors: []

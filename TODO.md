@@ -12,3 +12,6 @@ Outstanding tasks for Kleptocracy Files repository.
 - [x] Refresh `ARCHIVE_QA.md` and link-check outputs and ensure all posts include `Filed:` footers.
  - [x] Restore interactive viewer runtime for `viewer/index.html` so the timeline can be browsed.
 - [x] Expand test coverage for utilities (footnotes builder, link checker, timeline index, viewer).
+- [x] Replace several failing citation links with accessible or archived sources.
+- [ ] Review remaining link-check failures and source reliable replacements.
+- [x] Add an `AGENTS.md` guide documenting build scripts and tests.
