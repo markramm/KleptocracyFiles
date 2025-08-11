@@ -20,6 +20,15 @@ def main(timeline_dir="timeline", out_json="timeline/index.json"):
             continue
         if "citations" not in data and "sources" in data:
             data["citations"] = data["sources"]
+
+        tags = data.get("tags")
+        if isinstance(tags, list):
+            data["tags"] = tags
+        elif tags is None:
+            data["tags"] = []
+        else:
+            data["tags"] = [tags]
+
         data["_file"] = y.name
         data["_id_hash"] = sha256(data.get("id", ""))
         events.append(data)

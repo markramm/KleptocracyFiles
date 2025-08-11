@@ -150,6 +150,7 @@ function EventItem({ ev }) {
 function App() {
   const [events, setEvents] = React.useState([]);
   const [query, setQuery] = React.useState("");
+  const [tag, setTag] = React.useState("");
 
   React.useEffect(() => {
     if (location.protocol === "file:") {
@@ -161,12 +162,19 @@ function App() {
       .catch((err) => console.error("failed to load index", err));
   }, []);
 
+  const tags = React.useMemo(() => {
+    const set = new Set();
+    events.forEach((ev) => (ev.tags || []).forEach((t) => set.add(t)));
+    return Array.from(set).sort();
+  }, [events]);
+
   const filtered = events.filter((ev) => {
     const q = query.toLowerCase();
-    return (
-      ev.title.toLowerCase().includes(q) ||
-      (ev.summary && ev.summary.toLowerCase().includes(q))
-    );
+    const matchesText =
+      (ev.title || "").toLowerCase().includes(q) ||
+      (ev.summary || "").toLowerCase().includes(q);
+    const matchesTag = !tag || (ev.tags || []).includes(tag);
+    return matchesText && matchesTag;
   });
 
   const grouped = filtered.reduce((acc, ev) => {
@@ -179,12 +187,26 @@ function App() {
   return e(
     "div",
     { className: "max-w-4xl mx-auto p-4 space-y-6" },
-    e("input", {
-      className: "w-full p-2 rounded bg-neutral-800 text-neutral-100",
-      placeholder: "Search…",
-      value: query,
-      onChange: (ev) => setQuery(ev.target.value),
-    }),
+    e(
+      "div",
+      { className: "flex flex-col sm:flex-row gap-2" },
+      e("input", {
+        className: "w-full sm:flex-1 p-2 rounded bg-neutral-800 text-neutral-100",
+        placeholder: "Search…",
+        value: query,
+        onChange: (ev) => setQuery(ev.target.value),
+      }),
+      e(
+        "select",
+        {
+          className: "w-full sm:w-48 p-2 rounded bg-neutral-800 text-neutral-100",
+          value: tag,
+          onChange: (ev) => setTag(ev.target.value),
+        },
+        e("option", { value: "" }, "All tags"),
+        tags.map((t) => e("option", { key: t, value: t }, t))
+      )
+    ),
     years.map((year) =>
       e(
         "div",
