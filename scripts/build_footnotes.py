@@ -10,6 +10,7 @@ TIMELINE = REPO / "timeline"
 def load_events():
     events = []
     for y in sorted({*TIMELINE.glob("*.yml"), *TIMELINE.glob("*.yaml")}):
+    for y in sorted(TIMELINE.glob("*.yaml")):
         if y.name == "_SCHEMA.json":
             continue
         try:

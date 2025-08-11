@@ -3,7 +3,7 @@
 This repository houses research into the possibility of kleptocratic capture in the United States. It organizes public source material into a searchable timeline, narrative posts, and a casebook of primary documents.
 
 ## Repository layout
-- `timeline/` – YAML events with metadata, tags, and source citations.
+- `timeline/` – `.yaml` event files with metadata, tags, and source citations.
 - `posts/` – Narrative essays and playbooks that expand on timeline events.
 - `casebook/` – Tools and data for ingesting and cataloging primary source PDFs.
 - `scripts/` – Maintenance scripts and quality-assurance reports.
