@@ -49,6 +49,9 @@ class TimelineIndexTests(unittest.TestCase):
         self.assertEqual(hashes["c.yaml"], hashlib.sha256("evt3".encode("utf-8")).hexdigest())
         c_event = next(e for e in data["events"] if e["_file"] == "c.yaml")
         self.assertEqual(c_event["citations"], [{"url": "https://example.com"}])
+        for ev in data["events"]:
+            self.assertIn("tags", ev)
+            self.assertIsInstance(ev["tags"], list)
 
 if __name__ == "__main__":
     unittest.main()
