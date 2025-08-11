@@ -20,7 +20,7 @@ def check_url(url, timeout=12):
 def main():
     ap = argparse.ArgumentParser(description="Check timeline citation URLs for reachability.")
     ap.add_argument("--limit", type=int, default=0, help="Limit number of files checked")
-        ap.add_argument("--csv", default=None, help="Optional CSV output file")
+    ap.add_argument("--csv", default=None, help="Optional CSV output file")
     args = ap.parse_args()
     files = sorted([p for p in TIMELINE.glob("*.yml") if p.name != "_SCHEMA.json"])
     if args.limit:
@@ -32,6 +32,13 @@ def main():
             status, info = check_url(url)
             results.append({"file": y.name, "url": url, "status": status, "info": info})
             print(json.dumps(results[-1]))
+    if args.csv:
+        import csv
+
+        with open(args.csv, "w", newline="", encoding="utf-8") as fp:
+            writer = csv.DictWriter(fp, fieldnames=["file", "url", "status", "info"])
+            writer.writeheader()
+            writer.writerows(results)
     # summary to stderr
     ok = sum(1 for r in results if r["status"] and 200 <= r["status"] < 400)
     bad = sum(1 for r in results if r["status"] and r["status"] >= 400)
