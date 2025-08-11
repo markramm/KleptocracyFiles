@@ -19,7 +19,6 @@
   <div id="root"></div>
   <script>
     const e = React.createElement;
-
     function App() {
       const [events, setEvents] = React.useState([]);
       const [query, setQuery] = React.useState("");
@@ -179,7 +178,6 @@
           ),
       ]);
     }
-
     const rootEl = document.getElementById("root");
     if (location.protocol === "file:") {
       rootEl.innerHTML = '<p class="p-4">Run a local web server (e.g., <code>python -m http.server</code>) to view the timeline.</p>';
