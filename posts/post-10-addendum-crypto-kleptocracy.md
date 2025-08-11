@@ -30,3 +30,4 @@ formed a self‑reinforcing loop that looks, architecturally, like a supply‑ch
 governance.
 
 *All items above are captured in the timeline and flagged for corroboration. Add PDFs to the casebook once primary documents are archived.*
+*Filed: 2025-08-11*
