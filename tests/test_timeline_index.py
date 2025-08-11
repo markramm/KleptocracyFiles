@@ -68,6 +68,5 @@ class RepoIndexUpToDateTests(unittest.TestCase):
             msg="timeline/index.json is out of date. Run scripts/build_timeline_index.py",
         )
 
-
 if __name__ == "__main__":
     unittest.main()
