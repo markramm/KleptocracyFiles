@@ -10,5 +10,5 @@ Outstanding tasks for Kleptocracy Files repository.
 - [ ] Expand archival coverage by adding archived URLs for cited sources.
 - [ ] Investigate paywalled or broken links and replace them with accessible mirrors where possible.
 - [ ] Refresh `ARCHIVE_QA.md` and link-check outputs and ensure all posts include `Filed:` footers.
- - [x] Restore interactive viewer runtime for `viewer/index.html` so the timeline can be browsed.
+- [x] Restore interactive viewer runtime for `viewer/index.html` so the timeline can be browsed.
 - [ ] Expand test coverage for utilities (footnotes builder, link checker, timeline index, viewer).
