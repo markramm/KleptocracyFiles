@@ -68,24 +68,5 @@ class RepoIndexUpToDateTests(unittest.TestCase):
             msg="timeline/index.json is out of date. Run scripts/build_timeline_index.py",
         )
 
-
-class RepoIndexUpToDateTests(unittest.TestCase):
-    def test_repo_index_matches_sources(self):
-        mod = load_module("build_timeline_index", os.path.join(SCRIPTS, "build_timeline_index.py"))
-        with tempfile.TemporaryDirectory(prefix="repo_index_") as tmp:
-            out_json = os.path.join(tmp, "index.json")
-            mod.main(os.path.join(REPO_ROOT, "timeline"), out_json)
-            with open(out_json, "r", encoding="utf-8") as f:
-                generated = json.load(f)
-            repo_index = os.path.join(REPO_ROOT, "timeline", "index.json")
-            with open(repo_index, "r", encoding="utf-8") as f:
-                existing = json.load(f)
-        self.assertEqual(
-            generated,
-            existing,
-            msg="timeline/index.json is out of date. Run scripts/build_timeline_index.py",
-        )
-
-
 if __name__ == "__main__":
     unittest.main()
