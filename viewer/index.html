@@ -113,11 +113,12 @@ function App() {
   svg.call(zoom);
 }
 
-  const grouped = filtered.reduce((acc, ev) => {
+  const grouped = {};
+  filtered.forEach((ev) => {
     const year = ev.date.slice(0, 4);
-    (acc[year] ||= []).push(ev);
-    return acc;
-  }, {});
+    if (!grouped[year]) grouped[year] = [];
+    grouped[year].push(ev);
+  });
   const years = Object.keys(grouped).sort().reverse();
 
   return e(
