@@ -22,7 +22,7 @@ def main():
     ap.add_argument("--limit", type=int, default=0, help="Limit number of files checked")
     ap.add_argument("--csv", default=None, help="Optional CSV output file")
     args = ap.parse_args()
-    files = sorted([p for p in TIMELINE.glob("*.yml") if p.name != "_SCHEMA.json"])
+    files = sorted([p for p in TIMELINE.glob("*.yaml") if p.name != "_SCHEMA.json"])
     if args.limit:
         files = files[:args.limit]
     results = []
