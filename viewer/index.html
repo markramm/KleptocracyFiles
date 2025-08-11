@@ -16,7 +16,7 @@
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 </head>
 <body class="bg-neutral-950 text-neutral-100">
-  <div id="root"></div>
+  <div id="root" class="w-full"></div>
   <script>
     const e = React.createElement;
     function App() {
@@ -72,7 +72,7 @@
         setModal(null);
       }
 
-      return e("div", { className: "p-4 space-y-6" }, [
+      return e("div", { className: "p-4 space-y-6 w-full" }, [
         e("div", { className: "flex flex-wrap gap-2" }, [
           e("input", {
             type: "text",
@@ -96,7 +96,7 @@
         ]),
         e(
           "div",
-          { className: "relative h-64" },
+          { className: "relative h-64 w-full" },
           [
             e("div", {
               className: "absolute top-1/2 left-0 right-0 h-px bg-neutral-700",
@@ -178,6 +178,7 @@
           ),
       ]);
     }
+
     const rootEl = document.getElementById("root");
     if (location.protocol === "file:") {
       rootEl.innerHTML = '<p class="p-4">Run a local web server (e.g., <code>python -m http.server</code>) to view the timeline.</p>';
