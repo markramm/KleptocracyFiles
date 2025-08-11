@@ -53,8 +53,5 @@ class TimelineIndexTests(unittest.TestCase):
             self.assertIn("tags", ev)
             self.assertIsInstance(ev["tags"], list)
 
-
-
-
 if __name__ == "__main__":
     unittest.main()
