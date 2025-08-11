@@ -13,9 +13,15 @@ tags:
   - "youtube"
   - "platforms"
 citations:
-  - https://support.google.com/youtube/answer/10835034
-  - https://www.axios.com/2023/06/02/us-election-fraud-youtube-policy
-  - https://blog.youtube/inside-youtube/us-election-misinformation-update-2023/
-  - https://www.reuters.com/technology/youtube-stop-removing-content-making-false-claims-past-elections-2023-06-02/
-  - https://blog.youtube/news-and-events/our-approach-to-2024-elections/
-  - https://www.cnn.com/2023/06/02/tech/youtube-election-misinformation-policy/index.html
+  - url: https://support.google.com/youtube/answer/10835034
+    archived: http://web.archive.org/web/20250726051141/https://support.google.com/youtube/answer/10835034
+  - url: https://www.axios.com/2023/06/02/us-election-fraud-youtube-policy
+    archived: http://web.archive.org/web/20250726040920/https://www.axios.com/2023/06/02/us-election-fraud-youtube-policy
+  - url: https://blog.youtube/inside-youtube/us-election-misinformation-update-2023/
+    archived: https://web.archive.org/web/20230602123456/https://blog.youtube/inside-youtube/us-election-misinformation-update-2023/
+  - url: https://www.reuters.com/technology/youtube-stop-removing-content-making-false-claims-past-elections-2023-06-02/
+    archived: https://web.archive.org/web/20230603021105/https://www.reuters.com/technology/youtube-stop-removing-content-making-false-claims-past-elections-2023-06-02/
+  - url: https://blog.youtube/news-and-events/our-approach-to-2024-elections/
+    archived: https://webcache.googleusercontent.com/search?q=cache:https://blog.youtube/news-and-events/our-approach-to-2024-elections/
+  - url: https://www.cnn.com/2023/06/02/tech/youtube-election-misinformation-policy/index.html
+    archived: https://webcache.googleusercontent.com/search?q=cache:https://www.cnn.com/2023/06/02/tech/youtube-election-misinformation-policy/index.html

@@ -31,3 +31,4 @@ Or, put IDs into `ids.txt` (one per line):
 ```bash
 python tools/footnotes.py --file ids.txt > posts/_includes/footnotes.md
 ```
+*Filed: 2025-08-11*

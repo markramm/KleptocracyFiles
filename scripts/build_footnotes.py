@@ -52,14 +52,22 @@ def main():
         tags = set([t.lower() for t in args.tags])
         sel = [e for e in sel if tags & set((e.get("tags") or []))]
 
-    # Build footnotes list with deduped citations (preserving order)
+    # Build footnotes list with deduped citations (preserving order).
+    # Each citation may be a plain URL string or an object with a
+    # `url` field and optional `archived` mirror.
     seen = set()
     foots = []
     for e in sel:
-        for url in e.get("citations") or []:
+        for cite in e.get("citations") or []:
+            if isinstance(cite, dict):
+                url = cite.get("url")
+                target = cite.get("archived") or url
+            else:
+                url = cite
+                target = url
             if url and url not in seen:
                 seen.add(url)
-                foots.append(url)
+                foots.append(target)
     md = []
     for i, url in enumerate(foots, 1):
         md.append(f"[{i}] {url}")

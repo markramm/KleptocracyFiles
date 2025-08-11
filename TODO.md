@@ -7,8 +7,8 @@ Outstanding tasks for Kleptocracy Files repository.
 - [x] Restore `archive_link` module.
 - [x] Refactor `scripts/build_timeline_index.py` to parse events with `yaml.safe_load`.
 - [x] Fix `scripts/build_footnotes.py` (indentation bug; ensure it processes both `.yaml` and `.yml`) and ensure link/footnote utilities process all timeline files.
-- [ ] Expand archival coverage by adding archived URLs for cited sources.
-- [ ] Investigate paywalled or broken links and replace them with accessible mirrors where possible.
-- [ ] Refresh `ARCHIVE_QA.md` and link-check outputs and ensure all posts include `Filed:` footers.
-- [x] Restore interactive viewer runtime for `viewer/index.html` so the timeline can be browsed.
-- [ ] Expand test coverage for utilities (footnotes builder, link checker, timeline index, viewer).
+- [x] Expand archival coverage by adding archived URLs for cited sources.
+- [x] Investigate paywalled or broken links and replace them with accessible mirrors where possible.
+- [x] Refresh `ARCHIVE_QA.md` and link-check outputs and ensure all posts include `Filed:` footers.
+ - [x] Restore interactive viewer runtime for `viewer/index.html` so the timeline can be browsed.
+- [x] Expand test coverage for utilities (footnotes builder, link checker, timeline index, viewer).

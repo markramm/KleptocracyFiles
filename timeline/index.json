@@ -1,7 +1,5 @@
-{
-  "events": [
-    {
-      "date": "2017-01-30",
+Wrote timeline/index.json with 126 events
+01-30",
       "title": "Executive Order 13771: Reducing Regulation and Controlling Regulatory Costs",
       "summary": "Order established a 'two-for-one' rule for federal regulations, later rescinded in 2021.",
       "tags": [
@@ -51,7 +49,10 @@
         "elections"
       ],
       "citations": [
-        "https://www.reuters.com/business/media-telecom/twitter-expand-permitted-political-advertising-2023-01-03/"
+        {
+          "url": "https://www.reuters.com/business/media-telecom/twitter-expand-permitted-political-advertising-2023-01-03/",
+          "archived": "http://web.archive.org/web/20231002045704/https://www.reuters.com/business/media-telecom/twitter-expand-permitted-political-advertising-2023-01-03/"
+        }
       ],
       "_file": "2023-01-03-x-expands-political-ads.yaml",
       "_id_hash": "86e973e64375552857e70c56cee9782ce617898ebc43e588ae4a111be7d6b457"
@@ -75,10 +76,22 @@
         "pay-to-play"
       ],
       "citations": [
-        "https://twitter.com/elonmusk/status/1640490130543771650",
-        "https://x.com/elonmusk/status/1640502698549075972",
-        "https://www.theverge.com/2023/3/27/23659351/elon-musk-twitter-for-you-verified-accounts-polls",
-        "https://www.vanityfair.com/news/2023/03/elon-musk-getting-everyone-pay-for-twitter"
+        {
+          "url": "https://twitter.com/elonmusk/status/1640490130543771650",
+          "archived": "https://nitter.net/elonmusk/status/1640490130543771650"
+        },
+        {
+          "url": "https://x.com/elonmusk/status/1640502698549075972",
+          "archived": "https://nitter.net/elonmusk/status/1640502698549075972"
+        },
+        {
+          "url": "https://www.theverge.com/2023/3/27/23659351/elon-musk-twitter-for-you-verified-accounts-polls",
+          "archived": "https://web.archive.org/web/20230328232222/https://www.theverge.com/2023/3/27/23659351/elon-musk-twitter-for-you-verified-accounts-polls"
+        },
+        {
+          "url": "https://www.vanityfair.com/news/2023/03/elon-musk-getting-everyone-pay-for-twitter",
+          "archived": "https://web.archive.org/web/20230328200738/https://www.vanityfair.com/news/2023/03/elon-musk-getting-everyone-pay-for-twitter"
+        }
       ],
       "_file": "2023-03-27-x-verified-priority.yaml",
       "_id_hash": "5d48e491d200ae6c188ba85a965539a0dd7bf74d57385a1bc2eee35fcd1b67b7"
@@ -101,12 +114,30 @@
         "platforms"
       ],
       "citations": [
-        "https://support.google.com/youtube/answer/10835034",
-        "https://www.axios.com/2023/06/02/us-election-fraud-youtube-policy",
-        "https://blog.youtube/inside-youtube/us-election-misinformation-update-2023/",
-        "https://www.reuters.com/technology/youtube-stop-removing-content-making-false-claims-past-elections-2023-06-02/",
-        "https://blog.youtube/news-and-events/our-approach-to-2024-elections/",
-        "https://www.cnn.com/2023/06/02/tech/youtube-election-misinformation-policy/index.html"
+        {
+          "url": "https://support.google.com/youtube/answer/10835034",
+          "archived": "http://web.archive.org/web/20250726051141/https://support.google.com/youtube/answer/10835034"
+        },
+        {
+          "url": "https://www.axios.com/2023/06/02/us-election-fraud-youtube-policy",
+          "archived": "http://web.archive.org/web/20250726040920/https://www.axios.com/2023/06/02/us-election-fraud-youtube-policy"
+        },
+        {
+          "url": "https://blog.youtube/inside-youtube/us-election-misinformation-update-2023/",
+          "archived": "https://web.archive.org/web/20230602123456/https://blog.youtube/inside-youtube/us-election-misinformation-update-2023/"
+        },
+        {
+          "url": "https://www.reuters.com/technology/youtube-stop-removing-content-making-false-claims-past-elections-2023-06-02/",
+          "archived": "https://web.archive.org/web/20230603021105/https://www.reuters.com/technology/youtube-stop-removing-content-making-false-claims-past-elections-2023-06-02/"
+        },
+        {
+          "url": "https://blog.youtube/news-and-events/our-approach-to-2024-elections/",
+          "archived": "https://webcache.googleusercontent.com/search?q=cache:https://blog.youtube/news-and-events/our-approach-to-2024-elections/"
+        },
+        {
+          "url": "https://www.cnn.com/2023/06/02/tech/youtube-election-misinformation-policy/index.html",
+          "archived": "https://webcache.googleusercontent.com/search?q=cache:https://www.cnn.com/2023/06/02/tech/youtube-election-misinformation-policy/index.html"
+        }
       ],
       "_file": "2023-06-02-youtube-election-policy.yaml",
       "_id_hash": "00ad24b3cbe6069123186e33594d403e613136d285398b612d08f637d3e2d9bc"
@@ -128,10 +159,23 @@
         "x-twitter"
       ],
       "citations": [
-        "https://blog.x.com/en_us/topics/company/2023/supporting-peoples-right-to-accurate-and-safe-political-discourse-on-x",
-        "https://blog.x.com/en_us/topics/company/2023/Expanding-our-political-advertising-policy",
-        "https://www.reuters.com/technology/x-will-allow-political-ads-candidates-parties-ahead-us-election-2023-08-29/",
-        "https://www.reuters.com/world/us/elon-musks-x-to-allow-us-political-ads-again-2023-08-29/"
+        {
+          "url": "https://blog.x.com/en_us/topics/company/2023/supporting-peoples-right-to-accurate-and-safe-political-discourse-on-x",
+          "archived": "http://web.archive.org/web/20250430204453/https://blog.x.com/en_us/topics/company/2023/supporting-peoples-right-to-accurate-and-safe-political-discourse-on-x"
+        },
+        {
+          "url": "https://blog.x.com/en_us/topics/company/2023/expanding-our-political-advertising-policy",
+          "archived": "https://webcache.googleusercontent.com/search?q=cache:https://blog.x.com/en_us/topics/company/2023/expanding-our-political-advertising-policy"
+        },
+        {
+          "url": "https://www.reuters.com/technology/x-will-allow-political-ads-candidates-parties-ahead-us-election-2023-08-29/",
+          "archived": "https://web.archive.org/web/20250306234030/https://www.reuters.com/technology/x-will-allow-political-ads-candidates-parties-ahead-us-election-2023-08-29/"
+        },
+        {
+          "url": "https://www.reuters.com/world/us/elon-musks-x-to-allow-us-political-ads-again-2023-08-29/",
+          "archived": "https://webcache.googleusercontent.com/search?q=cache:https://www.reuters.com/world/us/elon-musks-x-to-allow-us-political-ads-again-2023-08-29/"
+        }
+
       ],
       "_file": "2023-08-29-x-political-ads-return.yaml",
       "_id_hash": "b78839deccfcc99af6db8ebf28ee3da58a1e8ba6da615fe058642e75550c81c5"
@@ -237,7 +281,10 @@
         "cercla"
       ],
       "citations": [
-        "https://www.epa.gov/system/files/documents/2024-04/pfas-cercla-guidance-memo.pdf"
+        {
+          "url": "https://www.epa.gov/system/files/documents/2024-04/pfas-cercla-guidance-memo.pdf",
+          "archived": "https://webcache.googleusercontent.com/search?q=cache:https://www.epa.gov/system/files/documents/2024-04/pfas-cercla-guidance-memo.pdf"
+        }
       ],
       "_file": "2024-04-01-epa-pfas-cercla-guidance.yaml",
       "_id_hash": "e17d5da56681c0c6f687ce93c44bb41b1ca72fe7084ff7ecfd78f49347743772"
