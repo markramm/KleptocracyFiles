@@ -4,10 +4,8 @@
 - Footnote pages in `posts/` – build with `scripts/build_footnotes.py`.
 - Link report – run `python scripts/link_check.py --csv link_check.csv`.
   - The checker caches results in `link_status.json`; commit this file so repeated runs can skip recently verified URLs.
-<!--
-`timeline/index.json` is generated in the GitHub Pages workflow and is no longer committed.
-Run `python scripts/build_timeline_index.py` locally if you need a fresh index for development.
--->
+- Timeline index – run `python scripts/build_timeline_index.py`.
+  - Outputs `timeline/index.json`, generated during the GitHub Pages workflow and ignored by Git.
 
 ## Archiving citations
 - Timeline YAML `citations` entries may specify `url` and optional `archived` fields.
