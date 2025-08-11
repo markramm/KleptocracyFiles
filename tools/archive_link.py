@@ -86,7 +86,7 @@ def save_archive(outdir: str, url: str, blob: dict):
         "status_code": blob.get("status_code"),
         "content_type": blob.get("content_type"),
         "sha256": sha,
-        "archived_at": datetime.datetime.now(datetime.UTC).isoformat().replace("+00:00", "Z"),
+        "archived_at": datetime.datetime.utcnow().isoformat() + "Z",
         "file": os.path.join(os.path.basename(outdir), fname)
     }
     with open(os.path.join(outdir, fname) + ".yaml", "w", encoding="utf-8") as f:
@@ -111,7 +111,7 @@ def save_casebook(casebook_dir: str, url: str, blob: dict, force=False):
         "status_code": blob.get("status_code"),
         "content_type": blob.get("content_type"),
         "sha256": sha,
-        "order_archived_at": datetime.datetime.now(datetime.UTC).isoformat().replace("+00:00", "Z"),
+        "order_archived_at": datetime.datetime.utcnow().isoformat() + "Z",
         "file": os.path.join(os.path.basename(casebook_dir), fname)
     }
     with open(os.path.join(casebook_dir, fname) + ".yaml", "w", encoding="utf-8") as f:

@@ -4,209 +4,47 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Debugging Democracy — Interactive Timeline</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/tailwind.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/vis-timeline@9.5.2/dist/vis-timeline-graph2d.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html, body { height: 100%; }
-    body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue,
- Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    .line-clamp-1{ display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden; }
   </style>
-  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/yaml@2.4.5/dist/yaml.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 <body class="bg-neutral-950 text-neutral-100">
-<div class="p-4 space-y-4 max-w-5xl mx-auto">
-  <div class="flex flex-wrap gap-2">
-    <input id="search" class="flex-1 min-w-[12rem] p-2 rounded bg-neutral-800" placeholder="Search…" />
-    <select id="tagFilter" class="p-2 rounded bg-neutral-800">
-      <option value="">All tags</option>
-    </select>
-    <select id="actorFilter" class="p-2 rounded bg-neutral-800">
-      <option value="">All actors</option>
-    </select>
-  </div>
-  <div id="timeline" class="relative h-96 border border-neutral-700 rounded"></div>
-</div>
-
-<div id="modal" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center">
-  <div class="bg-neutral-900 p-4 rounded max-w-xl w-full max-h-[90vh] overflow-y-auto">
-    <button id="modalClose" class="float-right text-neutral-400">&times;</button>
-    <h2 id="modalTitle" class="text-xl font-bold mb-2"></h2>
-    <div id="modalBody" class="space-y-2 text-sm"></div>
-  </div>
-</div>
-
+<div id="root"></div>
 <script>
-if (location.protocol === "file:") {
-  console.error("Use a local HTTP server (e.g. 'python -m http.server') to view the timeline.");
+const e = React.createElement;
+
+function App() {
+  const [events, setEvents] = React.useState([]);
+  React.useEffect(() => {
+    fetch("../timeline/index.json")
+      .then((r) => r.json())
+      .then((d) => setEvents(d.events || []))
+      .catch((err) => console.error("failed to load index", err));
+  }, []);
+
+  return e(
+    "div",
+    { className: "p-4 space-y-4" },
+    events.map((ev) =>
+      e(
+        "div",
+        { key: ev.id, className: "border-b border-neutral-700 pb-2" },
+        e("div", { className: "font-semibold" }, `${ev.date} — ${ev.title}`),
+        ev.summary ? e("div", { className: "text-sm" }, ev.summary) : null
+      )
+    )
+  );
 }
 
-let allEvents = [];
-let currentEvents = [];
-
-const searchInput = document.getElementById('search');
-const tagSelect = document.getElementById('tagFilter');
-const actorSelect = document.getElementById('actorFilter');
-
-function populateFilters(events) {
-  const tagSet = new Set();
-  const actorSet = new Set();
-  events.forEach(ev => {
-    (ev.tags || []).forEach(t => tagSet.add(t));
-    (ev.actors || []).forEach(a => actorSet.add(a));
-  });
-  [...tagSet].sort().forEach(t => {
-    const opt = document.createElement('option');
-    opt.value = t;
-    opt.textContent = t;
-    tagSelect.appendChild(opt);
-  });
-  [...actorSet].sort().forEach(a => {
-    const opt = document.createElement('option');
-    opt.value = a;
-    opt.textContent = a;
-    actorSelect.appendChild(opt);
-  });
-}
-
-function applyFilters() {
-  const q = searchInput.value.toLowerCase();
-  const tag = tagSelect.value;
-  const actor = actorSelect.value;
-  currentEvents = allEvents.filter(ev => {
-    return (!tag || ev.tags.includes(tag)) &&
-           (!actor || ev.actors.includes(actor)) &&
-           (ev.title.toLowerCase().includes(q) || (ev.summary && ev.summary.toLowerCase().includes(q)));
-  });
-  renderTimeline();
-}
-
-searchInput.addEventListener('input', applyFilters);
-tagSelect.addEventListener('change', applyFilters);
-actorSelect.addEventListener('change', applyFilters);
-
-function renderTimeline() {
-  const container = document.getElementById('timeline');
-  container.innerHTML = '';
-  const width = container.clientWidth;
-  const height = container.clientHeight;
-  const svg = d3.select(container).append('svg')
-    .attr('width', width)
-    .attr('height', height);
-
-  const g = svg.append('g');
-
-  const dates = currentEvents.map(ev => new Date(ev.date));
-  const x = d3.scaleTime()
-    .domain(d3.extent(dates))
-    .range([40, width - 40]);
-
-  g.append('line')
-    .attr('x1', 0).attr('x2', width)
-    .attr('y1', height/2).attr('y2', height/2)
-    .attr('stroke', '#4b5563');
-
-  const axis = d3.axisBottom(x).ticks(Math.max(2, width/100));
-  g.append('g')
-    .attr('transform', `translate(0, ${height/2})`)
-    .call(axis)
-    .selectAll('text')
-    .attr('fill', '#d1d5db');
-
-  const events = g.selectAll('g.event')
-    .data(currentEvents)
-    .enter()
-    .append('g')
-    .attr('class', 'event cursor-pointer')
-    .attr('transform', d => `translate(${x(new Date(d.date))}, ${height/2})`)
-    .on('click', (event,d) => openModal(d));
-
-  events.append('circle')
-    .attr('r', 5)
-    .attr('fill', '#3b82f6');
-
-  events.append('line')
-    .attr('stroke', '#3b82f6')
-    .attr('y1', 0)
-    .attr('y2', (d,i) => i%2 ? 40 : -40);
-
-  events.append('text')
-    .attr('y', (d,i) => i%2 ? 55 : -45)
-    .attr('text-anchor', 'middle')
-    .attr('class', 'fill-neutral-100 text-xs')
-    .text(d => d.title);
-
-  const zoom = d3.zoom().scaleExtent([0.5, 10]).on('zoom', (event) => {
-    g.attr('transform', event.transform);
-  });
-  svg.call(zoom);
-}
-
-function openModal(ev) {
-  fetch(`../timeline/${ev._file}`)
-    .then(r => r.text())
-    .then(txt => {
-      const d = jsyaml.load(txt);
-      document.getElementById('modalTitle').textContent = d.title;
-      const body = document.getElementById('modalBody');
-      body.innerHTML = '';
-      function addRow(label, value) {
-        if (!value || (Array.isArray(value) && !value.length)) return;
-        const div = document.createElement('div');
-        div.innerHTML = `<span class=\"font-semibold\">${label}: </span>${Array.isArray(value)? value.join(', ') : value}`;
-        body.appendChild(div);
-      }
-      addRow('Date', d.date);
-      addRow('Summary', d.summary);
-      addRow('Tags', d.tags);
-      addRow('Actors', d.actors);
-      addRow('Location', d.location);
-      addRow('Notes', d.notes);
-      if (d.citations && d.citations.length) {
-        const wrap = document.createElement('div');
-        wrap.innerHTML = '<div class=\"font-semibold mb-1\">Sources</div>';
-        const ul = document.createElement('ul');
-        ul.className = 'list-disc ml-4 space-y-1';
-        d.citations.forEach(c => {
-          const li = document.createElement('li');
-          const a = document.createElement('a');
-          a.href = typeof c === 'string' ? c : c.url;
-          a.target = '_blank';
-          a.className = 'text-blue-400 underline';
-          a.textContent = typeof c === 'object' && c.title ? c.title : (typeof c === 'string' ? c : c.url);
-          li.appendChild(a);
-          if (typeof c === 'object' && c.archived) {
-            const span = document.createElement('span');
-            span.className = 'ml-2';
-            span.innerHTML = `<a href=\"${c.archived}\" target=\"_blank\" class=\"text-blue-400 underline\">archive</a>`;
-            li.appendChild(span);
-          }
-          ul.appendChild(li);
-        });
-        wrap.appendChild(ul);
-        body.appendChild(wrap);
-      }
-      const yamlLink = document.createElement('div');
-      yamlLink.innerHTML = `<a href=\"../timeline/${ev._file}\" target=\"_blank\" class=\"text-blue-400 underline\">View YAML</a>`;
-      body.appendChild(yamlLink);
-      document.getElementById('modal').classList.remove('hidden');
-    })
-    .catch(err => console.error('failed to load yaml', err));
-}
-
-document.getElementById('modalClose').addEventListener('click', () => {
-  document.getElementById('modal').classList.add('hidden');
-});
-
-fetch("../timeline/index.json")
-  .then(r => r.json())
-  .then(data => {
-    allEvents = data.events || [];
-    populateFilters(allEvents);
-    currentEvents = allEvents.slice();
-    renderTimeline();
-  })
-  .catch(err => console.error("failed to load index", err));
+ReactDOM.createRoot(document.getElementById("root")).render(e(App));
 </script>
 </body>
 </html>
