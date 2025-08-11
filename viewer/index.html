@@ -31,8 +31,56 @@ function EventItem({ ev }) {
       },
       `${ev.date} — ${ev.title}`
     ),
-    open && ev.summary
-      ? e("div", { className: "mt-1 text-sm" }, ev.summary)
+    open
+      ? e(
+          "div",
+          {
+            className:
+              "mt-2 bg-neutral-900 p-3 rounded text-sm space-y-2",
+          },
+          ev.summary ? e("div", null, ev.summary) : null,
+          ev.citations && ev.citations.length
+            ? e(
+                "div",
+                null,
+                e("div", { className: "font-semibold mb-1" }, "Sources"),
+                e(
+                  "ul",
+                  { className: "list-disc ml-4 space-y-1" },
+                  ev.citations.map((c, i) =>
+                    e(
+                      "li",
+                      { key: i },
+                      e(
+                        "a",
+                        {
+                          href: typeof c === "string" ? c : c.url,
+                          target: "_blank",
+                          className: "text-blue-400 underline",
+                        },
+                        typeof c === "string" ? c : c.url
+                      ),
+                      typeof c === "object" && c.archived
+                        ? e(
+                            "span",
+                            { className: "ml-2" },
+                            e(
+                              "a",
+                              {
+                                href: c.archived,
+                                target: "_blank",
+                                className: "text-blue-400 underline",
+                              },
+                              "archive"
+                            )
+                          )
+                        : null
+                    )
+                  )
+                )
+              )
+            : null
+        )
       : null
   );
 }
