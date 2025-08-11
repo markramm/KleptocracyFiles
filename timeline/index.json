@@ -600,6 +600,20 @@
           "date": "2024-08-09"
         }
       ],
+      "citations": [
+        {
+          "title": "ACLU: Fifth Circuit geofence ruling",
+          "url": "https://www.aclu.org/press-releases/fifth-circuit-rules-geofence-warrants-unconstitutional",
+          "outlet": "ACLU",
+          "date": "2024-08-09"
+        },
+        {
+          "title": "Reuters: US appeals court finds geofence warrants unconstitutional",
+          "url": "https://www.reuters.com/technology/us-appeals-court-finds-geofence-warrants-unconstitutional-2024-08-09/",
+          "outlet": "Reuters",
+          "date": "2024-08-09"
+        }
+      ],
       "_file": "2024-08-09-5th-circuit-geofence-warrants.yaml",
       "_id_hash": "7c7dc9a749fd3c08c290f80963020fe38f09f49134ea81f943a4ab40b88f4fa6"
     },
@@ -768,6 +782,20 @@
           "date": "2025-02-03"
         }
       ],
+      "citations": [
+        {
+          "title": "Reuters: Trump\u2019s new meme coin soars on first day in office",
+          "url": "https://www.reuters.com/technology/trumps-new-crypto-token-jumps-ahead-his-inauguration-2025-01-20/",
+          "outlet": "Reuters",
+          "date": "2025-01-20"
+        },
+        {
+          "title": "Reuters: $TRUMP fees near $100M",
+          "url": "https://www.reuters.com/markets/currencies/trumps-meme-coin-made-nearly-100-million-trading-fees-small-traders-lost-money-2025-02-03/",
+          "outlet": "Reuters",
+          "date": "2025-02-03"
+        }
+      ],
       "_file": "2025-01-17-trump-memecoin-launch.yaml",
       "_id_hash": "b8a1cac3b076f97ebb160cabfa61dafb5bac2b304897c0515a04337b159c01bf"
     },
@@ -782,6 +810,20 @@
         "conflicts-of-interest"
       ],
       "sources": [
+        {
+          "title": "Al Jazeera: $MELANIA launch and surge",
+          "url": "https://www.aljazeera.com/economy/2025/1/20/trumps-new-meme-coin-and-crypto-token-soar-on-his-first-day-in-office",
+          "outlet": "Al Jazeera",
+          "date": "2025-01-20"
+        },
+        {
+          "title": "Fortune: Anonymous traders nab ~$100M pre\u2011launch windfall",
+          "url": "https://fortune.com/2025/05/07/melania-trump-memecoin-anonymous-traders-100-million-payday/",
+          "outlet": "Fortune",
+          "date": "2025-05-07"
+        }
+      ],
+      "citations": [
         {
           "title": "Al Jazeera: $MELANIA launch and surge",
           "url": "https://www.aljazeera.com/economy/2025/1/20/trumps-new-meme-coin-and-crypto-token-soar-on-his-first-day-in-office",
@@ -811,6 +853,26 @@
         "infrastructure"
       ],
       "sources": [
+        {
+          "title": "Executive Order \u2014 Establishing the Department of Government Efficiency",
+          "url": "https://www.whitehouse.gov/presidential-actions/2025/01/establishing-the-department-of-government-efficiency/",
+          "outlet": "WhiteHouse.gov",
+          "date": "2025-01-20"
+        },
+        {
+          "title": "Trump creates DOGE; taps Musk, Ramaswamy",
+          "url": "https://www.reuters.com/world/us/trump-taps-musk-ramaswamy-department-government-efficiency-2025-01-20/",
+          "outlet": "Reuters",
+          "date": "2025-01-20"
+        },
+        {
+          "title": "White House forms \u2018government efficiency\u2019 dept; Musk role draws scrutiny",
+          "url": "https://www.cbsnews.com/news/elon-musk-government-efficiency-department-trump-2025/",
+          "outlet": "CBS News",
+          "date": "2025-01-21"
+        }
+      ],
+      "citations": [
         {
           "title": "Executive Order \u2014 Establishing the Department of Government Efficiency",
           "url": "https://www.whitehouse.gov/presidential-actions/2025/01/establishing-the-department-of-government-efficiency/",
@@ -864,6 +926,26 @@
           "date": "2025-01-21"
         }
       ],
+      "citations": [
+        {
+          "title": "EO 14171 \u2014 Reinstating Schedule F",
+          "url": "https://www.whitehouse.gov/presidential-actions/2025/01/reinstating-schedule-f/",
+          "outlet": "WhiteHouse.gov",
+          "date": "2025-01-20"
+        },
+        {
+          "title": "OPM guidance memo implementing EO (Schedule F revival)",
+          "url": "https://www.opm.gov/policy-data-oversight/latest-memos/guidance-on-implementing-president-trump-s-executive-order-titled-restoring-accountability-to-policy-influencing-positions-within-the-federal-workforce.pdf",
+          "outlet": "OPM",
+          "date": "2025-01-22"
+        },
+        {
+          "title": "What Trump\u2019s Schedule F order would do",
+          "url": "https://www.govexec.com/workforce/2025/01/what-trumps-schedule-f-order-would-do/396501/",
+          "outlet": "Government Executive",
+          "date": "2025-01-21"
+        }
+      ],
       "_file": "2025-01-20-eo-14171-schedule-f-reinstated.yaml",
       "_id_hash": "149b92a71a467ccc269a78fd4072c577e11b07fe668f08ec0bf3a188bab1ae69"
     },
@@ -873,6 +955,10 @@
       "title": "Executive Order establishes the Department of Government Efficiency (DOGE)",
       "summary": "President issues an executive order creating DOGE to 'modernize Federal technology and software' and coordinate cost-cutting across agencies.",
       "sources": [
+        "https://www.whitehouse.gov/presidential-actions/2025/01/establishing-and-implementing-the-presidents-department-of-government-efficiency/",
+        "https://crsreports.congress.gov/product/pdf/IN/IN12493"
+      ],
+      "citations": [
         "https://www.whitehouse.gov/presidential-actions/2025/01/establishing-and-implementing-the-presidents-department-of-government-efficiency/",
         "https://crsreports.congress.gov/product/pdf/IN/IN12493"
       ],
@@ -892,6 +978,20 @@
         "capture-patterns"
       ],
       "sources": [
+        {
+          "title": "White House \u2013 Restoring Accountability to Policy-Influencing Positions",
+          "url": "https://www.whitehouse.gov/presidential-actions/2025/01/restoring-accountability-to-policy-influencing-positions-within-the-federal-workforce/"
+        },
+        {
+          "title": "OPM Guidance memo (implementation)",
+          "url": "https://www.opm.gov/policy-data-oversight/latest-memos/guidance-on-implementing-president-trump-s-executive-order-titled-restoring-accountability-to-policy-influencing-positions-within-the-federal-workforce.pdf"
+        },
+        {
+          "title": "CRS Legal Sidebar \u2013 Policy/Career schedule context",
+          "url": "https://www.congress.gov/crs-product/LSB11262"
+        }
+      ],
+      "citations": [
         {
           "title": "White House \u2013 Restoring Accountability to Policy-Influencing Positions",
           "url": "https://www.whitehouse.gov/presidential-actions/2025/01/restoring-accountability-to-policy-influencing-positions-within-the-federal-workforce/"
@@ -981,6 +1081,26 @@
           "date": "2025-01-27"
         }
       ],
+      "citations": [
+        {
+          "title": "Trump administration abruptly fires at least 17 inspectors general",
+          "url": "https://apnews.com/article/trump-inspectors-general-fired-2025-01-25",
+          "outlet": "Associated Press",
+          "date": "2025-01-25"
+        },
+        {
+          "title": "IG Community raises legal concerns over mass firings",
+          "url": "https://www.govexec.com/oversight/2025/01/ig-community-raises-legal-concerns-over-mass-firings/395998/",
+          "outlet": "Government Executive",
+          "date": "2025-01-26"
+        },
+        {
+          "title": "Grassley letter on IG removals and 30-day notice",
+          "url": "https://www.politico.com/f/?id=0000018f-2db4-dac7-a7cf-fdf77d7d0000",
+          "outlet": "Politico (doc)",
+          "date": "2025-01-27"
+        }
+      ],
       "_file": "2025-01-24-inspectors-general-mass-dismissals.yaml",
       "_id_hash": "e44a60b28f5be72e837c50e1054a546ac34f3a10da9904ebc880f298828f518e"
     },
@@ -996,6 +1116,16 @@
         "rule-of-law"
       ],
       "sources": [
+        {
+          "title": "Reuters \u2013 Late-night firings criticized as illegal",
+          "url": "https://www.reuters.com/world/us/trump-fires-least-12-independent-inspectors-general-washington-post-reports-2025-01-25/"
+        },
+        {
+          "title": "Politico \u2013 IGs say removals may be invalid for lack of notice",
+          "url": "https://www.politico.com/news/2025/01/25/donald-trump-inspectors-general-firing-00200611"
+        }
+      ],
+      "citations": [
         {
           "title": "Reuters \u2013 Late-night firings criticized as illegal",
           "url": "https://www.reuters.com/world/us/trump-fires-least-12-independent-inspectors-general-washington-post-reports-2025-01-25/"
@@ -1039,6 +1169,10 @@
         "https://www.federalregister.gov/documents/2025/01/31/2025-02095/restoring-accountability-to-policy-influencing-positions-within-the-federal-workforce",
         "https://www.dcpas.osd.mil/hottopics/executive-orders-and-presidential-memorandums"
       ],
+      "citations": [
+        "https://www.federalregister.gov/documents/2025/01/31/2025-02095/restoring-accountability-to-policy-influencing-positions-within-the-federal-workforce",
+        "https://www.dcpas.osd.mil/hottopics/executive-orders-and-presidential-memorandums"
+      ],
       "_file": "2025-01-31_eo_14171_schedule_f.yaml",
       "_id_hash": "a4f831f7ef6962da2b2a3c0cd44f8dc9a317bab25234ded5c4aeae04da972924"
     },
@@ -1048,6 +1182,11 @@
       "title": "White House says Musk will police his own conflicts in DOGE role",
       "summary": "Press Secretary Karoline Leavitt says Musk will 'excuse himself' from conflicts related to DOGE\u2014a self-policing arrangement that drew criticism from ethics experts.",
       "sources": [
+        "https://www.reuters.com/world/us/musk-will-excuse-himself-any-conflicts-white-house-says-2025-02-05/",
+        "https://fortune.com/2025/02/06/elon-musk-conflicts-interest-doge-tesla-spacex/",
+        "https://transcripts.cnn.com/show/se/date/2025-02-08/segment/01"
+      ],
+      "citations": [
         "https://www.reuters.com/world/us/musk-will-excuse-himself-any-conflicts-white-house-says-2025-02-05/",
         "https://fortune.com/2025/02/06/elon-musk-conflicts-interest-doge-tesla-spacex/",
         "https://transcripts.cnn.com/show/se/date/2025-02-08/segment/01"
@@ -1067,6 +1206,20 @@
         "donors"
       ],
       "sources": [
+        {
+          "title": "Reuters \u2013 Stephens nomination coverage",
+          "url": "https://www.reuters.com/world/uk/trump-nominates-warren-stephens-ambassador-uk-2025-02-06/"
+        },
+        {
+          "title": "State Dept \u2013 Announcement page (if archived)",
+          "url": "https://www.state.gov/"
+        },
+        {
+          "title": "NASA Watch \u2013 Isaacman nomination and withdrawal",
+          "url": "https://nasawatch.com/post/isaacman-nomination-withdrawn-2025/"
+        }
+      ],
+      "citations": [
         {
           "title": "Reuters \u2013 Stephens nomination coverage",
           "url": "https://www.reuters.com/world/uk/trump-nominates-warren-stephens-ambassador-uk-2025-02-06/"
@@ -1115,6 +1268,9 @@
       "sources": [
         "https://www.politico.com/news/2025/02/07/judge-denies-lawsuit-union-musk-doge-labor-department-00203245"
       ],
+      "citations": [
+        "https://www.politico.com/news/2025/02/07/judge-denies-lawsuit-union-musk-doge-labor-department-00203245"
+      ],
       "_file": "2025-02-07_politico_tro_denied.yaml",
       "_id_hash": "91c69955f58cb799858305cfc45ddf83f0405bc88cd20c0e16f6fa404314c690"
     },
@@ -1142,6 +1298,16 @@
           "url": "https://www.eff.org/press/releases/privacy-victory-judge-grants-preliminary-injunction-opmdoge-lawsuit"
         }
       ],
+      "citations": [
+        {
+          "title": "Reuters \u2013 Judge extends block on DOGE access to Treasury systems (Feb 21)",
+          "url": "https://www.reuters.com/world/us/judge-extends-block-musks-doge-treasury-systems-2025-02-21/"
+        },
+        {
+          "title": "EFF \u2013 Preliminary injunction re OPM Privacy Act suit (doc set)",
+          "url": "https://www.eff.org/press/releases/privacy-victory-judge-grants-preliminary-injunction-opmdoge-lawsuit"
+        }
+      ],
       "_file": "2025-02-07_to_02-21_doge_treasury_injunctions.yaml",
       "_id_hash": "41cd29c0e6b6bbe3b0b60e8bf9cab01123907bd99b5ea3c87d9f2cfa4c4e7a0c"
     },
@@ -1158,6 +1324,16 @@
         "infrastructure"
       ],
       "sources": [
+        {
+          "title": "Ars Technica \u2013 Changes could steer tens of billions to Starlink",
+          "url": "https://arstechnica.com/tech-policy/2025/02/commerce-dept-changes-could-steer-20b-in-broadband-funding-to-starlink/"
+        },
+        {
+          "title": "The Verge \u2013 Eligibility change draws backlash",
+          "url": "https://www.theverge.com/2025/2/10/24112323/starlink-bead-broadband-eligibility-change"
+        }
+      ],
+      "citations": [
         {
           "title": "Ars Technica \u2013 Changes could steer tens of billions to Starlink",
           "url": "https://arstechnica.com/tech-policy/2025/02/commerce-dept-changes-could-steer-20b-in-broadband-funding-to-starlink/"
@@ -1244,6 +1420,11 @@
         "https://www.politico.com/news/2025/02/17/judge-chutkan-musk-lawsuit-hearing-00204590",
         "https://6abc.com/post/white-house-claims-elon-musk-does-not-run-doge-new-filing/15925645/"
       ],
+      "citations": [
+        "https://abcnews.go.com/US/white-house-claims-elon-musk-doesnt-run-doge/story?id=118913206",
+        "https://www.politico.com/news/2025/02/17/judge-chutkan-musk-lawsuit-hearing-00204590",
+        "https://6abc.com/post/white-house-claims-elon-musk-does-not-run-doge-new-filing/15925645/"
+      ],
       "_file": "2025-02-17-18_chutkan_comments_doge_disorder.yaml",
       "_id_hash": "c1a89ad11392c5d034efb3dd9adbc9a058b444f7548467cac04de4aee260a690"
     },
@@ -1268,6 +1449,16 @@
           "url": "https://www.epi.org/blog/trump-acting-director-russell-vought-ordered-cfpb-workers-to-stop-doing-their-jobs/"
         }
       ],
+      "citations": [
+        {
+          "title": "American Prospect \u2013 How the CFPB Was Shut Down",
+          "url": "https://prospect.org/economy/2025-02-19-cfpb-shut-down-russell-vought/"
+        },
+        {
+          "title": "EPI \u2013 Vought orders workers to stop doing their jobs (analysis)",
+          "url": "https://www.epi.org/blog/trump-acting-director-russell-vought-ordered-cfpb-workers-to-stop-doing-their-jobs/"
+        }
+      ],
       "_file": "2025-02-19_cfpb_shutdown_orders.yaml",
       "_id_hash": "a90b7509faa46ecfe0639e6881b15cb360b98f79d082d8b87b8e7ef5f69a776d"
     },
@@ -1282,6 +1473,20 @@
         "personnel"
       ],
       "sources": [
+        {
+          "title": "Kash Patel \u2014 Director, Federal Bureau of Investigation",
+          "url": "https://www.fbi.gov/about/leadership-and-structure/director",
+          "outlet": "FBI.gov",
+          "date": "2025-02-20"
+        },
+        {
+          "title": "Durbin questions FBI reassignment away from domestic terrorism",
+          "url": "https://www.reuters.com/world/us/us-senate-democrat-questions-fbi-domestic-terrorism-staff-reassignments-2025-04-08/",
+          "outlet": "Reuters",
+          "date": "2025-04-08"
+        }
+      ],
+      "citations": [
         {
           "title": "Kash Patel \u2014 Director, Federal Bureau of Investigation",
           "url": "https://www.fbi.gov/about/leadership-and-structure/director",
@@ -1329,6 +1534,10 @@
         "https://www.reuters.com/markets/us/us-announced-job-cuts-surge-245-february-federal-government-layoffs-2025-03-06/",
         "https://www.newsweek.com/doge-layoffs-federal-government-tracker-2025-dod-cuts-2042525"
       ],
+      "citations": [
+        "https://www.reuters.com/markets/us/us-announced-job-cuts-surge-245-february-federal-government-layoffs-2025-03-06/",
+        "https://www.newsweek.com/doge-layoffs-federal-government-tracker-2025-dod-cuts-2042525"
+      ],
       "_file": "2025-03-06_reuters_layoffs_surge.yaml",
       "_id_hash": "c32a3f012aaa9c8eecf4d4620ee87795d8784476cf4fb9ab9e39c7003c9183bc"
     },
@@ -1338,6 +1547,11 @@
       "title": "Judge Cooper: DOGE likely subject to FOIA; orders record preservation & expedited processing",
       "summary": "Federal court finds DOGE has 'unusual secrecy' and 'substantial authority,' rejecting claim of full EOP exemption from FOIA.",
       "sources": [
+        "https://www.reuters.com/world/us/us-judge-says-musks-doge-must-release-records-operations-run-secrecy-2025-03-11/",
+        "https://www.citizensforethics.org/news/press-releases/judge-rules-doge-likely-subject-to-foia-must-give-crew-documents/",
+        "https://www.govexec.com/oversight/2025/03/judge-orders-doge-comply-foia-requests/403660/"
+      ],
+      "citations": [
         "https://www.reuters.com/world/us/us-judge-says-musks-doge-must-release-records-operations-run-secrecy-2025-03-11/",
         "https://www.citizensforethics.org/news/press-releases/judge-rules-doge-likely-subject-to-foia-must-give-crew-documents/",
         "https://www.govexec.com/oversight/2025/03/judge-orders-doge-comply-foia-requests/403660/"
@@ -1355,6 +1569,11 @@
         "https://finance.yahoo.com/news/report-says-elon-musks-businesses-150042117.html",
         "https://goodjobsfirst.org/elon-musks-business-empire-is-built-on-38-billion-in-government-funding/"
       ],
+      "citations": [
+        "https://www.washingtonpost.com/technology/interactive/2025/elon-musk-business-government-contracts-funding/",
+        "https://finance.yahoo.com/news/report-says-elon-musks-businesses-150042117.html",
+        "https://goodjobsfirst.org/elon-musks-business-empire-is-built-on-38-billion-in-government-funding/"
+      ],
       "_file": "2025-03-11_wapo_38b_support.yaml",
       "_id_hash": "b4d78c610d445b1a96db3314b308b6faacdb774b5e5b52c7c455aceef5cf584f"
     },
@@ -1364,6 +1583,9 @@
       "title": "Challenger: 280,253 layoff plans tied to DOGE actions (federal & contractors) in first two months",
       "summary": "Outplacement firm Challenger, Gray & Christmas attributes over 280k planned cuts to DOGE-related actions across 27 agencies.",
       "sources": [
+        "https://www.challengergray.com/blog/federal-cuts-dominate-march-2025-total-275240-announced-job-cuts-216670-from-doge-actions/"
+      ],
+      "citations": [
         "https://www.challengergray.com/blog/federal-cuts-dominate-march-2025-total-275240-announced-job-cuts-216670-from-doge-actions/"
       ],
       "_file": "2025-03-12_challenger_280k_plans.yaml",
@@ -1390,6 +1612,16 @@
           "url": "https://campaignlegal.org/document/clc-complaint-oge-and-department-commerce-ethics-officials-regarding-commerce-secretary"
         }
       ],
+      "citations": [
+        {
+          "title": "Sen. Reed letter to Commerce IG & OGE (PDF)",
+          "url": "https://www.reed.senate.gov/imo/media/doc/4-2-2025_letter_to_commerce_ig_re_lutnick_ethics_issues_signed.pdf"
+        },
+        {
+          "title": "Campaign Legal Center complaint",
+          "url": "https://campaignlegal.org/document/clc-complaint-oge-and-department-commerce-ethics-officials-regarding-commerce-secretary"
+        }
+      ],
       "_file": "2025-03-19_lutnick_tesla_remarks_ethics_complaints.yaml",
       "_id_hash": "c045ba30c8b74c8a0056cb15d7163ac410254fd4037958ea1e1d4f3c2d28a57e"
     },
@@ -1406,6 +1638,16 @@
         "deregulation"
       ],
       "sources": [
+        {
+          "title": "EPA \u2013 Status update on TSCA TCE rule",
+          "url": "https://www.epa.gov/chemicals-under-tsca/update-status-tsca-risk-management-rule-tce"
+        },
+        {
+          "title": "ProPublica \u2013 Republicans move to block TCE ban; delays",
+          "url": "https://www.propublica.org/article/tce-ban-cancer-parkinsons-trump-republicans"
+        }
+      ],
+      "citations": [
         {
           "title": "EPA \u2013 Status update on TSCA TCE rule",
           "url": "https://www.epa.gov/chemicals-under-tsca/update-status-tsca-risk-management-rule-tce"
@@ -1476,6 +1718,16 @@
           "url": "https://www.airandspaceforces.com/space-force-13-7-billion-launch-contracts/"
         }
       ],
+      "citations": [
+        {
+          "title": "Reuters \u2013 SpaceX/ULA/Blue Origin clinch NSSL awards",
+          "url": "https://www.reuters.com/business/aerospace-defense/spacex-ula-expected-clinch-multibillion-dollar-contract-key-pentagon-launch-2025-04-04/"
+        },
+        {
+          "title": "Air & Space Forces \u2013 Contract breakdowns",
+          "url": "https://www.airandspaceforces.com/space-force-13-7-billion-launch-contracts/"
+        }
+      ],
       "_file": "2025-04-04_spacex_59b_space-force_nssl.yaml",
       "_id_hash": "2ef4c983a678bf3b20965ae2c17110eb5d7ba03f33c54babde788d029363f52a"
     },
@@ -1485,6 +1737,10 @@
       "title": "SpaceX wins ~$5.9B share of $13.5B Space Force launch contracts",
       "summary": "Space Force awards NSSL Phase 3 contracts to SpaceX (~$5.9B), ULA (~$5.4B), and Blue Origin (~$2.4B) through 2029.",
       "sources": [
+        "https://www.reuters.com/business/aerospace-defense/spacex-ula-expected-clinch-multibillion-dollar-contract-key-pentagon-launch-2025-04-04/",
+        "https://www.theregister.com/2025/04/07/spacex_space_force_contracts/"
+      ],
+      "citations": [
         "https://www.reuters.com/business/aerospace-defense/spacex-ula-expected-clinch-multibillion-dollar-contract-key-pentagon-launch-2025-04-04/",
         "https://www.theregister.com/2025/04/07/spacex_space_force_contracts/"
       ],
@@ -1605,6 +1861,9 @@
       "sources": [
         "https://fedscoop.com/doge-lawsuit-cfpb-hhs-labor-data/"
       ],
+      "citations": [
+        "https://fedscoop.com/doge-lawsuit-cfpb-hhs-labor-data/"
+      ],
       "_file": "2025-04-17_fedscoop_apa_challenge_ok.yaml",
       "_id_hash": "6e9a4ac3a67588d91ea86543e58c00450a5547944b1fe61073ac1acfcc894732"
     },
@@ -1618,6 +1877,11 @@
         "https://www.theguardian.com/technology/2025/apr/28/elon-musks-doge-conflict-of-interest",
         "https://www.theregister.com/2025/04/28/musk_doge_help_companies/"
       ],
+      "citations": [
+        "https://www.hsgac.senate.gov/wp-content/uploads/2025-04-27-Minority-Staff-Memorandum-Elon-Musk-Conflicts.pdf",
+        "https://www.theguardian.com/technology/2025/apr/28/elon-musks-doge-conflict-of-interest",
+        "https://www.theregister.com/2025/04/28/musk_doge_help_companies/"
+      ],
       "_file": "2025-04-27_senate_psi_memo_liabilities.yaml",
       "_id_hash": "48ba6f7a2809d603b770b807f7b786a68c51f657a3e48f2519d9a6388a428d14"
     },
@@ -1627,6 +1891,11 @@
       "title": "Partnership for Public Service estimates DOGE costs could reach ~$135B in FY2025",
       "summary": "PPP analysis cited by major outlets estimates taxpayer costs from paid leave, productivity loss, and rehiring tied to DOGE actions.",
       "sources": [
+        "https://ourpublicservice.org/press-release/partnership-for-public-service-releases-new-resources-measuring-the-impact-of-president-trumps-federal-government-reforms-during-first-100-days/",
+        "https://fortune.com/article/doge-mass-federal-workforce-cuts-taxpayers-billions/",
+        "https://www.cbsnews.com/news/doge-cuts-cost-135-billion-analysis-elon-musk-department-of-government-efficiency/"
+      ],
+      "citations": [
         "https://ourpublicservice.org/press-release/partnership-for-public-service-releases-new-resources-measuring-the-impact-of-president-trumps-federal-government-reforms-during-first-100-days/",
         "https://fortune.com/article/doge-mass-federal-workforce-cuts-taxpayers-billions/",
         "https://www.cbsnews.com/news/doge-cuts-cost-135-billion-analysis-elon-musk-department-of-government-efficiency/"
@@ -1662,6 +1931,9 @@
       "title": "TIGTA snapshot: IRS workforce reductions, DRP details",
       "summary": "Treasury Inspector General documents deferred resignation program terms and early reduction-in-force actions at IRS.",
       "sources": [
+        "https://www.tigta.gov/sites/default/files/reports/2025-05/2025ier017fr.pdf"
+      ],
+      "citations": [
         "https://www.tigta.gov/sites/default/files/reports/2025-05/2025ier017fr.pdf"
       ],
       "_file": "2025-05-02_tigta_snapshot_irs_reductions.yaml",
@@ -1717,6 +1989,26 @@
           "date": "2025-06-01"
         }
       ],
+      "citations": [
+        {
+          "title": "CNN: DHS revoking student visas linked to protests",
+          "url": "https://www.cnn.com/2025/05/20/politics/student-visa-revocations-protests/index.html",
+          "outlet": "CNN",
+          "date": "2025-05-20"
+        },
+        {
+          "title": "Harvard Gazette: SEVP guidance and campus compliance",
+          "url": "https://news.harvard.edu/gazette/story/2025/05/what-revoked-student-visa-status-means/",
+          "outlet": "Harvard Gazette",
+          "date": "2025-05-21"
+        },
+        {
+          "title": "FOIA Docs: SEVP policy emails (excerpt repository)",
+          "url": "https://www.documentcloud.org/documents/24680123-sevp-foia-2025",
+          "outlet": "DocumentCloud",
+          "date": "2025-06-01"
+        }
+      ],
       "_file": "2025-05-20-student-visa-revocations-protest-context.yaml",
       "_id_hash": "66ab7babefb70e65a5f1e1afbb2763cf3a35f5af5ddc84cbdf7218388b6e35c3"
     },
@@ -1732,6 +2024,26 @@
         "gao"
       ],
       "sources": [
+        {
+          "title": "B-337137: Department of Transportation\u2014Impoundment Control Act\u2014NEVI Funds",
+          "url": "https://www.gao.gov/products/b-337137",
+          "outlet": "U.S. GAO",
+          "date": "2025-05-22"
+        },
+        {
+          "title": "White House tells DOT to disregard GAO opinion",
+          "url": "https://www.politico.com/news/2025/06/04/white-house-dot-ignore-gao-impoundment-00168900",
+          "outlet": "POLITICO",
+          "date": "2025-06-04"
+        },
+        {
+          "title": "House bill moves to cut GAO budget nearly in half",
+          "url": "https://www.govexec.com/oversight/2025/06/house-bill-would-cut-gaos-budget-nearly-half/397901/",
+          "outlet": "Government Executive",
+          "date": "2025-06-27"
+        }
+      ],
+      "citations": [
         {
           "title": "B-337137: Department of Transportation\u2014Impoundment Control Act\u2014NEVI Funds",
           "url": "https://www.gao.gov/products/b-337137",
@@ -1852,6 +2164,11 @@
       "title": "Judge Denise Cote issues preliminary injunction restricting DOGE access to OPM records",
       "summary": "Court finds privacy and cybersecurity laws violated in granting DOGE affiliates access to OPM systems; limits further access pending litigation.",
       "sources": [
+        "https://fedscoop.com/judge-grants-preliminary-injunction-challenge-doge-opm-record-access/",
+        "https://federalnewsnetwork.com/management/2025/06/judge-finds-opm-broke-law-in-granting-data-access-to-doge/",
+        "https://www.narfe.org/il/2025/06/19/judge-restricts-doge-access-to-opm-systems/"
+      ],
+      "citations": [
         "https://fedscoop.com/judge-grants-preliminary-injunction-challenge-doge-opm-record-access/",
         "https://federalnewsnetwork.com/management/2025/06/judge-finds-opm-broke-law-in-granting-data-access-to-doge/",
         "https://www.narfe.org/il/2025/06/19/judge-restricts-doge-access-to-opm-systems/"
@@ -1986,6 +2303,20 @@
           "date": "2025-06-20"
         }
       ],
+      "citations": [
+        {
+          "title": "District court ruling reported; Ninth Circuit stay follows",
+          "url": "https://apnews.com/article/los-angeles-guard-marines-ruling-stay-2025",
+          "outlet": "AP News",
+          "date": "2025-06-20"
+        },
+        {
+          "title": "Courthouse News on emergency stay",
+          "url": "https://www.courthousenews.com/appeals-court-stays-order-halting-national-guard-in-los-angeles/",
+          "outlet": "Courthouse News",
+          "date": "2025-06-20"
+        }
+      ],
       "_file": "2025-06-12-breyer-ruling-and-ninth-circuit-stays.yaml",
       "_id_hash": "03d03edeb7f59e94c95cd4bb0e3b4db12d7cf8bb2309d82c8655281873e4edf2"
     },
@@ -2042,6 +2373,26 @@
         "states"
       ],
       "sources": [
+        {
+          "title": "AP: Minnesota lawmaker lies in state; suspect indicted",
+          "url": "https://apnews.com/article/minnesota-lawmakers-shot-funeral-119d4589c28205b4faec41f5c59a823c",
+          "outlet": "Associated Press",
+          "date": "2025-06-27"
+        },
+        {
+          "title": "CNN live updates (June 15)",
+          "url": "https://www.cnn.com/us/live-news/minnesota-lawmaker-shootings-06-15-25/index.html",
+          "outlet": "CNN",
+          "date": "2025-06-15"
+        },
+        {
+          "title": "Wikipedia summary (for aggregation only)",
+          "url": "https://en.wikipedia.org/wiki/2025_shootings_of_Minnesota_legislators",
+          "outlet": "Wikipedia",
+          "date": "2025-07-15"
+        }
+      ],
+      "citations": [
         {
           "title": "AP: Minnesota lawmaker lies in state; suspect indicted",
           "url": "https://apnews.com/article/minnesota-lawmakers-shot-funeral-119d4589c28205b4faec41f5c59a823c",
@@ -2263,6 +2614,26 @@
           "date": "2025-06-13"
         }
       ],
+      "citations": [
+        {
+          "title": "LA Times: Judge orders LAPD to stop shooting journalists with rubber bullets",
+          "url": "https://www.latimes.com/california/story/2025-07-11/federal-judge-lapd-journalists-order",
+          "outlet": "Los Angeles Times",
+          "date": "2025-07-11"
+        },
+        {
+          "title": "CPJ: Law enforcement injure multiple journalists in LA",
+          "url": "https://cpj.org/2025/06/law-enforcement-injure-multiple-journalists-others-assaulted-while-covering-los-angeles-protests/",
+          "outlet": "Committee to Protect Journalists",
+          "date": "2025-06-09"
+        },
+        {
+          "title": "RCFP coalition letter documenting incidents",
+          "url": "https://www.rcfp.org/la-immigration-protests-press-rights-letter/",
+          "outlet": "Reporters Committee for Freedom of the Press",
+          "date": "2025-06-13"
+        }
+      ],
       "_file": "2025-07-11-la-press-tro.yaml",
       "_id_hash": "f593bf41ec7d2a9ee0d602d57a55996d789afebb41892e1b418831c56a181941"
     },
@@ -2330,6 +2701,16 @@
           "url": "https://www.reuters.com/business/autos-transportation/us-department-defense-awards-contracts-google-xai-2025-07-14/"
         }
       ],
+      "citations": [
+        {
+          "title": "DoD CDAO press \u2013 Partnerships with frontier AI companies",
+          "url": "https://www.ai.mil/latest/news-press/pr-view/article/4242822/cdao-announces-partnerships-with-frontier-ai-companies-to-address-national-secu/"
+        },
+        {
+          "title": "Reuters \u2013 Pentagon awards vendor list",
+          "url": "https://www.reuters.com/business/autos-transportation/us-department-defense-awards-contracts-google-xai-2025-07-14/"
+        }
+      ],
       "_file": "2025-07-14_dod_frontier_ai_contracts_xai.yaml",
       "_id_hash": "4ca7b60cb4e0382e92f7d44d1934d844bc9ecc672051c7deb7488c596e4f7572"
     },
@@ -2339,6 +2720,10 @@
       "title": "DoD CDAO announces $200M-ceiling AI awards including xAI",
       "summary": "Defense Department announces partnerships with Anthropic, Google, OpenAI, and xAI\u2014each with a $200M ceiling\u2014to develop frontier AI capabilities.",
       "sources": [
+        "https://www.ai.mil/latest/news-press/pr-view/article/4242822/cdao-announces-partnerships-with-frontier-ai-companies-to-address-national-secu/",
+        "https://www.reuters.com/business/autos-transportation/us-department-defense-awards-contracts-google-xai-2025-07-14/"
+      ],
+      "citations": [
         "https://www.ai.mil/latest/news-press/pr-view/article/4242822/cdao-announces-partnerships-with-frontier-ai-companies-to-address-national-secu/",
         "https://www.reuters.com/business/autos-transportation/us-department-defense-awards-contracts-google-xai-2025-07-14/"
       ],
@@ -2386,6 +2771,14 @@
           "date": "2025-07-18"
         }
       ],
+      "citations": [
+        {
+          "title": "Texas Tribune: Cornyn asks FBI to help find Democrats amid redistricting standoff",
+          "url": "https://www.texastribune.org/2025/07/18/texas-redistricting-cornyn-fbi/",
+          "outlet": "Texas Tribune",
+          "date": "2025-07-18"
+        }
+      ],
       "_file": "2025-07-18-texas-redistricting-fbi-inquiry.yaml",
       "_id_hash": "d9f9055f4a1d77fd34021b4fe01dc1a5ec4b002ac42bd0c28d5e49a34270def2"
     },
@@ -2395,6 +2788,9 @@
       "title": "TIGTA update: IRS reductions and DRP effects as of July",
       "summary": "Follow-on TIGTA snapshot quantifies DRP and VERA/VSIP participation and implications for IRS operations and revenue.",
       "sources": [
+        "https://www.tigta.gov/sites/default/files/reports/2025-07/2025ier027fr.pdf"
+      ],
+      "citations": [
         "https://www.tigta.gov/sites/default/files/reports/2025-07/2025ier027fr.pdf"
       ],
       "_file": "2025-07-18_tigta_snapshot_update.yaml",
@@ -2452,6 +2848,26 @@
           "date": "2025-07-26"
         }
       ],
+      "citations": [
+        {
+          "title": "FCC news release on approval",
+          "url": "https://www.fcc.gov/document/fcc-approves-skydances-acquisition-paramount-cbs",
+          "outlet": "FCC",
+          "date": "2025-07-24"
+        },
+        {
+          "title": "Reuters: US clears way for $8.4B Paramount\u2013Skydance merger",
+          "url": "https://www.reuters.com/sustainability/boards-policy-regulation/us-clears-way-8-billion-paramount-skydance-merger-2025-07-25/",
+          "outlet": "Reuters",
+          "date": "2025-07-25"
+        },
+        {
+          "title": "AP: Merger closes, scrutiny on CBS News operations",
+          "url": "https://apnews.com/article/paramount-skydance-merger-cbs-news-trump-85560c3c7aaaa1fe894380683e66a89c",
+          "outlet": "Associated Press",
+          "date": "2025-07-26"
+        }
+      ],
       "_file": "2025-07-24-fcc-approves-skydance-paramount.yaml",
       "_id_hash": "97b9ececa3a22194f5ae3a1d25d425c20e86bd23ef9088fe1ee9c8768ed377f9"
     },
@@ -2481,6 +2897,11 @@
       "title": "Senate PSI report alleges $21.7B in DOGE-created waste",
       "summary": "Minority staff report cites $14.8B in 'Deferred Resignation Program' payments and $6.1B in administrative leave among other waste categories.",
       "sources": [
+        "https://www.blumenthal.senate.gov/newsroom/press/release/07/31/2025/the-217-billion-blunder-new-psi-report-reveals-billions-in-taxpayer-dollars-squandered-by-doge",
+        "https://www.washingtonpost.com/documents/b256b202-ff01-48dc-a2d1-80b0e43fa87a.pdf",
+        "https://www.washingtonpost.com/politics/2025/07/31/federal-workers-doge-buyout-paid/"
+      ],
+      "citations": [
         "https://www.blumenthal.senate.gov/newsroom/press/release/07/31/2025/the-217-billion-blunder-new-psi-report-reveals-billions-in-taxpayer-dollars-squandered-by-doge",
         "https://www.washingtonpost.com/documents/b256b202-ff01-48dc-a2d1-80b0e43fa87a.pdf",
         "https://www.washingtonpost.com/politics/2025/07/31/federal-workers-doge-buyout-paid/"
@@ -2545,6 +2966,26 @@
         "platforms"
       ],
       "sources": [
+        {
+          "title": "Politico: Elon Musk and X notch court win",
+          "url": "https://www.politico.com/news/2025/08/05/elon-musk-x-court-win-california-deepfake-law-00494936",
+          "outlet": "Politico",
+          "date": "2025-08-05"
+        },
+        {
+          "title": "Bloomberg Law: Musk\u2011challenged deepfake law struck",
+          "url": "https://news.bloomberglaw.com/litigation/musk-challenged-california-anti-deepfake-law-struck-by-judge",
+          "outlet": "Bloomberg Law",
+          "date": "2025-08-06"
+        },
+        {
+          "title": "Courthouse News: Judge rebukes California laws targeting misinformation",
+          "url": "https://www.courthousenews.com/federal-judge-rebukes-california-laws-targeting-misinformation/",
+          "outlet": "Courthouse News Service",
+          "date": "2025-08-06"
+        }
+      ],
+      "citations": [
         {
           "title": "Politico: Elon Musk and X notch court win",
           "url": "https://www.politico.com/news/2025/08/05/elon-musk-x-court-win-california-deepfake-law-00494936",
@@ -2664,6 +3105,26 @@
         "military"
       ],
       "sources": [
+        {
+          "title": "AP: Increased federal presence ordered",
+          "url": "https://apnews.com/article/trump-washington-increased-federal-law-enforcement-takeover-33b186a95dabf111bac61db398aa7543",
+          "outlet": "Associated Press",
+          "date": "2025-08-08"
+        },
+        {
+          "title": "Washington Post: FBI agents dispatched to D.C. streets",
+          "url": "https://www.washingtonpost.com/dc-md-va/2025/08/10/dc-crime-trump-crackdown/",
+          "outlet": "Washington Post",
+          "date": "2025-08-10"
+        },
+        {
+          "title": "Reuters: Military preparing Guard activation in D.C.",
+          "url": "https://www.reuters.com/world/us/us-military-preparing-national-guard-activation-washington-dc-officials-say-2025-08-11/",
+          "outlet": "Reuters",
+          "date": "2025-08-11"
+        }
+      ],
+      "citations": [
         {
           "title": "AP: Increased federal presence ordered",
           "url": "https://apnews.com/article/trump-washington-increased-federal-law-enforcement-takeover-33b186a95dabf111bac61db398aa7543",

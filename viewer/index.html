@@ -12,6 +12,7 @@
   </style>
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
 </head>
 <body class="bg-neutral-950 text-neutral-100">
 <div id="root"></div>
@@ -20,6 +21,22 @@ const e = React.createElement;
 
 function EventItem({ ev }) {
   const [open, setOpen] = React.useState(false);
+  const [details, setDetails] = React.useState(null);
+
+  const toggle = () => {
+    setOpen((v) => !v);
+    if (!details) {
+      fetch(`../timeline/${ev._file}`)
+        .then((r) => r.text())
+        .then((txt) => setDetails(jsyaml.load(txt)))
+        .catch((err) => console.error("failed to load yaml", err));
+    }
+  };
+
+  const d = details || ev;
+  const citations = d.citations || d.sources || [];
+
+
   return e(
     "div",
     { className: "border-b border-neutral-700 py-2" },
@@ -27,7 +44,7 @@ function EventItem({ ev }) {
       "div",
       {
         className: "font-semibold cursor-pointer",
-        onClick: () => setOpen((v) => !v),
+        onClick: toggle,
       },
       `${ev.date} — ${ev.title}`
     ),
@@ -38,8 +55,40 @@ function EventItem({ ev }) {
             className:
               "mt-2 bg-neutral-900 p-3 rounded text-sm space-y-2",
           },
-          ev.summary ? e("div", null, ev.summary) : null,
-          ev.citations && ev.citations.length
+          d.summary ? e("div", null, d.summary) : null,
+          d.tags && d.tags.length
+            ? e(
+                "div",
+                null,
+                e("span", { className: "font-semibold" }, "Tags: "),
+                d.tags.join(", ")
+              )
+            : null,
+          d.location
+            ? e(
+                "div",
+                null,
+                e("span", { className: "font-semibold" }, "Location: "),
+                d.location
+              )
+            : null,
+          d.actors && d.actors.length
+            ? e(
+                "div",
+                null,
+                e("span", { className: "font-semibold" }, "Actors: "),
+                d.actors.join(", ")
+              )
+            : null,
+          d.notes
+            ? e(
+                "div",
+                null,
+                e("span", { className: "font-semibold" }, "Notes: "),
+                d.notes
+              )
+            : null,
+          citations.length
             ? e(
                 "div",
                 null,
@@ -47,7 +96,7 @@ function EventItem({ ev }) {
                 e(
                   "ul",
                   { className: "list-disc ml-4 space-y-1" },
-                  ev.citations.map((c, i) =>
+                  citations.map((c, i) =>
                     e(
                       "li",
                       { key: i },
@@ -58,7 +107,7 @@ function EventItem({ ev }) {
                           target: "_blank",
                           className: "text-blue-400 underline",
                         },
-                        typeof c === "string" ? c : c.url
+                        typeof c === "object" && c.title ? c.title : typeof c === "string" ? c : c.url
                       ),
                       typeof c === "object" && c.archived
                         ? e(
@@ -79,7 +128,20 @@ function EventItem({ ev }) {
                   )
                 )
               )
-            : null
+            : null,
+          e(
+            "div",
+            null,
+            e(
+              "a",
+              {
+                href: `../timeline/${ev._file}`,
+                target: "_blank",
+                className: "text-blue-400 underline",
+              },
+              "View YAML"
+            )
+          )
         )
       : null
   );
