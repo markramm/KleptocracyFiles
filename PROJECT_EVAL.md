@@ -42,7 +42,7 @@
 3) **URL health check (This week)**
    - Run a link linter to detect 3xx/4xx/5xx and suggest alternatives (govinfo mirrors; court PDFs).
 4) **RAG demo (Optional)**
-   - Load `timeline/index.json` and serve a Q&A endpoint that always returns **answer + citations**.
+   - Load `timeline/index.json` (generated during the Pages workflow) and serve a Q&A endpoint that always returns **answer + citations**.
 5) **Distribution**
    - Generate **print‑ready PDFs** (Weeks 1–4) with title/footers and appendix of sources; keep URLs visible.
 

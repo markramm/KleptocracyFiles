@@ -21,6 +21,16 @@ class TimelineIndexTests(unittest.TestCase):
             yaml.safe_dump({"id": "evt1", "date": "2025-01-01", "title": "A"}, f)
         with open(os.path.join(self.timeline, "b.yml"), "w", encoding="utf-8") as f:
             yaml.safe_dump({"id": "evt2", "date": "2025-01-02", "title": "B"}, f)
+        with open(os.path.join(self.timeline, "c.yaml"), "w", encoding="utf-8") as f:
+            yaml.safe_dump(
+                {
+                    "id": "evt3",
+                    "date": "2025-01-03",
+                    "title": "C",
+                    "sources": [{"url": "https://example.com"}],
+                },
+                f,
+            )
 
         self.mod = load_module("build_timeline_index", os.path.join(SCRIPTS, "build_timeline_index.py"))
 
@@ -32,10 +42,18 @@ class TimelineIndexTests(unittest.TestCase):
         self.mod.main(self.timeline, out_json)
         data = json.load(open(out_json, "r", encoding="utf-8"))
         files = sorted(e["_file"] for e in data["events"])
-        self.assertEqual(files, ["a.yaml", "b.yml"])
+        self.assertEqual(files, ["a.yaml", "b.yml", "c.yaml"])
         hashes = {e["_file"]: e["_id_hash"] for e in data["events"]}
         self.assertEqual(hashes["a.yaml"], hashlib.sha256("evt1".encode("utf-8")).hexdigest())
         self.assertEqual(hashes["b.yml"], hashlib.sha256("evt2".encode("utf-8")).hexdigest())
+        self.assertEqual(hashes["c.yaml"], hashlib.sha256("evt3".encode("utf-8")).hexdigest())
+        c_event = next(e for e in data["events"] if e["_file"] == "c.yaml")
+        self.assertEqual(c_event["citations"], [{"url": "https://example.com"}])
+        for ev in data["events"]:
+            self.assertIn("tags", ev)
+            self.assertIsInstance(ev["tags"], list)
+
+
 
 
 if __name__ == "__main__":
