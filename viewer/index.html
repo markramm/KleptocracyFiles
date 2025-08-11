@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Debugging Democracy — Interactive Timeline</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/tailwind.min.css" rel="stylesheet">
   <style>
     html, body { height: 100%; }
     body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
@@ -24,6 +24,9 @@ const e = React.createElement;
 function App() {
   const [events, setEvents] = React.useState([]);
   React.useEffect(() => {
+    if (location.protocol === "file:") {
+      console.error("Use a local HTTP server (e.g. 'python -m http.server') to view the timeline.");
+    }
     fetch("../timeline/index.json")
       .then((r) => r.json())
       .then((d) => setEvents(d.events || []))
