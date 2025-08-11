@@ -1,0 +1,26 @@
+id: 2025-06-07-dod-support-dhs-memo-and-la-deployments
+date: '2025-06-07'
+title: Memo authorizes DoD support to DHS; National Guard federalized; Marines deploy to Los Angeles
+summary: A presidential memorandum authorized at least 2,000 Guard for 60 days to support DHS. Within days, federalized Guard and ~700 Marines supported operations in Los Angeles amid protests, triggering legal challenges.
+tags:
+- military
+- domestic-deployment
+- dhs
+- posse-comitatus
+sources:
+- title: White House Presidential Memorandum (June 7, 2025)
+  url: https://www.whitehouse.gov/presidential-actions/2025/06/department-of-defense-security-for-the-protection-of-department-of-homeland-security-functions/
+  outlet: WhiteHouse.gov
+  date: '2025-06-07'
+- title: GovInfo record of memorandum
+  url: https://www.govinfo.gov/app/details/DCPD-202500672
+  outlet: govinfo.gov
+  date: '2025-06-07'
+- title: 'USNI: Marines deploying to LA'
+  url: https://news.usni.org/2025/06/09/marines-deploy-to-los-angeles
+  outlet: USNI News
+  date: '2025-06-09'
+- title: Brookings analysis of LA deployment authority
+  url: https://www.brookings.edu/articles/how-can-the-president-put-soldiers-on-the-streets-of-los-angeles/
+  outlet: Brookings Institution
+  date: '2025-06-26'

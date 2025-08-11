@@ -1,0 +1,27 @@
+[1] https://twitter.com/elonmusk/status/1640490130543771650
+[2] https://www.vanityfair.com/news/2023/03/elon-musk-getting-everyone-pay-for-twitter
+[3] https://blog.youtube/news-and-events/our-approach-to-2024-elections/
+[4] https://www.cnn.com/2023/06/02/tech/youtube-election-misinformation-policy/index.html
+[5] https://blog.x.com/en_us/topics/company/2023/Expanding-our-political-advertising-policy
+[6] https://www.reuters.com/world/us/elon-musks-x-to-allow-us-political-ads-again-2023-08-29/
+[7] https://about.instagram.com/blog/announcements/continuing-our-approach-to-political-content-on-instagram-and-threads
+[8] https://www.theverge.com/2024/2/9/24067742/instagram-threads-meta-political-content-recommended-feeds
+[9] https://techcrunch.com/2024/02/09/instagram-and-threads-will-no-longer-proactively-recommend-political-content/
+[10] https://www.supremecourt.gov/opinions/23pdf/23a814_febh.pdf
+[11] https://www.texastribune.org/2024/03/19/texas-illegal-immigration-supreme-court-sb-4/
+[12] https://www.ca5.uscourts.gov/opinions/pub/24/24-50149-CV2.pdf
+[13] https://www.theguardian.com/us-news/2024/mar/29/georgia-state-election-law-changes
+[14] https://www.supremecourt.gov/opinions/23pdf/23-235_n7ip.pdf
+[15] https://www.scotusblog.com/cases/case-files/food-and-drug-administration-v-alliance-for-hippocratic-medicine-2/
+[16] https://www.theverge.com/2024/6/26/24186388/instagram-threads-meta-political-content-filter-setting-stuck
+[17] https://www.engadget.com/a-meta-error-broke-the-political-content-filter-on-threads-and-instagram-173020269.html
+[18] https://www.supremecourt.gov/opinions/23pdf/23-411_3dq3.pdf
+[19] https://firstamendment.mtsu.edu/article/murthy-v-missouri-2024/
+[20] https://www.supremecourt.gov/opinions/23pdf/22-859_1924.pdf
+[21] https://www.reuters.com/legal/legalindustry/jurys-not-out-supreme-courts-jarkesy-decision-limits-secs-use-administrative-2024-07-18/
+[22] https://www.supremecourt.gov/opinions/23pdf/23a349_6537.pdf
+[23] https://www.brennancenter.org/our-work/analysis-opinion/what-supreme-courts-epa-stay-means
+[24] https://www.supremecourt.gov/opinions/23pdf/22-451_7m58.pdf
+[25] https://www.reuters.com/legal/us-supreme-court-curbs-federal-agency-powers-overturning-1984-precedent-2024-06-28/
+
+*Filed: 2025-08-11*

@@ -1,0 +1,17 @@
+id: meta_political_filter_bug_persists
+title: Bug causes Meta political-content filter to remain on for some users
+date: '2024-06-26'
+summary: Some Instagram/Threads users reported they could not disable the political-content limit setting;
+  Meta acknowledged an 'error' and pushed a fix.
+location: null
+actors:
+- Meta
+- Instagram
+- Threads
+tags:
+- bug
+- platform-policy
+citations:
+- https://www.theverge.com/2024/6/26/24186388/instagram-threads-meta-political-content-filter-setting-stuck
+- https://www.engadget.com/a-meta-error-broke-the-political-content-filter-on-threads-and-instagram-173020269.html
+notes: ''

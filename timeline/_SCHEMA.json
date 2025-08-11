@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "required": true,
+      "desc": "YYYY-MM-DD-slug"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "required": true,
+      "format": "YYYY-MM-DD"
+    },
+    {
+      "name": "summary",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "location",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "actors",
+      "type": "list[string]",
+      "required": false
+    },
+    {
+      "name": "tags",
+      "type": "list[string]",
+      "required": true
+    },
+    {
+      "name": "citations",
+      "type": "list[string]",
+      "required": true
+    },
+    {
+      "name": "notes",
+      "type": "string",
+      "required": false
+    }
+  ]
+}

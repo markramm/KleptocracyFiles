@@ -1,0 +1,16 @@
+id: "2023-06-02-youtube-election-policy"
+title: "YouTube stops removing false claims about past U.S. elections"
+date: "2023-06-02"
+summary: "YouTube announced it would no longer remove content alleging fraud in past U.S. elections, shifting to context labels and recommendation interventions."
+location: "Online"
+actors:
+  - "YouTube"
+  - "Google"
+tags:
+  - "platform-policy"
+  - "elections"
+  - "content-moderation"
+  - "youtube"
+citations:
+  - https://support.google.com/youtube/answer/10835034
+  - https://www.axios.com/2023/06/02/us-election-fraud-youtube-policy

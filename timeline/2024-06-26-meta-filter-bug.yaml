@@ -1,0 +1,15 @@
+id: "2024-06-26-meta-filter-bug"
+title: "Meta political-content filter bug prevents some users from changing setting"
+date: "2024-06-26"
+summary: "A bug made it appear that some users could not disable Meta's political-content filter on Instagram/Threads; Meta acknowledged and fixed the issue."
+location: "Online"
+actors:
+  - "Meta"
+tags:
+  - "bug"
+  - "meta"
+  - "instagram"
+  - "threads"
+  - "elections"
+citations:
+  - https://www.engadget.com/a-meta-error-broke-the-political-content-filter-on-threads-and-instagram-173020269.html
