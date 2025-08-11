@@ -96,31 +96,6 @@ function App() {
       .catch((err) => console.error("failed to load index", err));
   }, []);
 
-  const tags = React.useMemo(() => {
-    const set = new Set();
-    events.forEach((ev) => (ev.tags || []).forEach((t) => set.add(t)));
-    return Array.from(set).sort();
-  }, [events]);
-
-  const filtered = events.filter((ev) => {
-    const q = query.toLowerCase();
-    const matchesText =
-      (ev.title || "").toLowerCase().includes(q) ||
-      (ev.summary || "").toLowerCase().includes(q);
-    const matchesTag = !tag || (ev.tags || []).includes(tag);
-    return matchesText && matchesTag;
-  });
-  svg.call(zoom);
-}
-
-  const grouped = {};
-  filtered.forEach((ev) => {
-    const year = ev.date.slice(0, 4);
-    if (!grouped[year]) grouped[year] = [];
-    grouped[year].push(ev);
-  });
-  const years = Object.keys(grouped).sort().reverse();
-
   const tags = React.useMemo(() => Array.from(new Set(events.flatMap(ev => ev.tags || []))).sort(), [events]);
   const actors = React.useMemo(() => Array.from(new Set(events.flatMap(ev => ev.actors || []))).sort(), [events]);
 
@@ -168,20 +143,14 @@ function App() {
       ),
     ]
   );
+}
 
-document.getElementById('modalClose').addEventListener('click', () => {
-  document.getElementById('modal').classList.add('hidden');
-});
-
-fetch("../timeline/index.json")
-  .then(r => r.json())
-  .then(data => {
-    allEvents = data.events || [];
-    populateFilters(allEvents);
-    currentEvents = allEvents.slice();
-    renderTimeline();
-  })
-  .catch(err => console.error("failed to load index", err));
+const rootEl = document.getElementById("root");
+if (location.protocol === "file:") {
+  rootEl.innerHTML = '<p class="p-4">Run a local web server (e.g., <code>python -m http.server</code>) to view the timeline.</p>';
+} else {
+  ReactDOM.createRoot(rootEl).render(e(App));
+}
 </script>
 </body>
 </html>
