@@ -1,9 +1,11 @@
 # Kleptocracy Files – Agent Guide
 
 ## Generated artifacts
-- `timeline/index.json` – built from individual YAML items via `scripts/build_timeline_index.py`.
 - Footnote pages in `posts/` – build with `scripts/build_footnotes.py`.
 - Link report – run `python scripts/link_check.py --csv link_check.csv`.
+  - The checker caches results in `link_status.json`; commit this file so repeated runs can skip recently verified URLs.
+- Timeline index – run `python scripts/build_timeline_index.py`.
+  - Outputs `timeline/index.json`, generated during the GitHub Pages workflow and ignored by Git.
 
 ## Archiving citations
 - Timeline YAML `citations` entries may specify `url` and optional `archived` fields.
