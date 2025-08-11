@@ -19,12 +19,11 @@
   <div id="root"></div>
   <script>
     const e = React.createElement;
-
     function App() {
       const [events, setEvents] = React.useState([]);
       const [query, setQuery] = React.useState("");
       const [tag, setTag] = React.useState("");
-      const [actor, setActor] = React.useState("");
+      const [modal, setModal] = React.useState(null);
 
       React.useEffect(() => {
         if (location.protocol === "file:") {
@@ -37,24 +36,43 @@
       }, []);
 
       const tags = React.useMemo(
-        () => Array.from(new Set(events.flatMap(ev => ev.tags || []))).sort(),
-        [events]
-      );
-      const actors = React.useMemo(
-        () => Array.from(new Set(events.flatMap(ev => ev.actors || []))).sort(),
+        () => Array.from(new Set(events.flatMap((ev) => ev.tags || []))).sort(),
         [events]
       );
 
-      const filtered = events.filter(ev => {
+      const filtered = events.filter((ev) => {
         const evTags = ev.tags || [];
-        const evActors = ev.actors || [];
         const matchesTag = !tag || evTags.includes(tag);
-        const matchesActor = !actor || evActors.includes(actor);
-        const matchesQuery = !query || (ev.title + " " + (ev.summary || "")).toLowerCase().includes(query.toLowerCase());
-        return matchesTag && matchesActor && matchesQuery;
+        const matchesQuery =
+          !query ||
+          (ev.title + " " + (ev.summary || "")).toLowerCase().includes(query.toLowerCase());
+        return matchesTag && matchesQuery;
       });
 
-      return e("div", { className: "p-4 space-y-4" }, [
+      const [startMs, endMs] = React.useMemo(() => {
+        if (!events.length) return [0, 1];
+        const times = events.map((ev) => new Date(ev.date).getTime());
+        return [Math.min(...times), Math.max(...times)];
+      }, [events]);
+
+      const range = endMs - startMs || 1;
+
+      function leftPercent(date) {
+        return ((new Date(date).getTime() - startMs) / range) * 100;
+      }
+
+      function openModal(ev) {
+        fetch(`../timeline/${ev._file}`)
+          .then((r) => r.text())
+          .then((txt) => setModal({ title: ev.title, text: txt }))
+          .catch((err) => setModal({ title: ev.title, text: String(err) }));
+      }
+
+      function closeModal() {
+        setModal(null);
+      }
+
+      return e("div", { className: "p-4 space-y-6" }, [
         e("div", { className: "flex flex-wrap gap-2" }, [
           e("input", {
             type: "text",
@@ -63,32 +81,103 @@
             value: query,
             onChange: (ev) => setQuery(ev.target.value),
           }),
-          e("select", {
-            className: "border px-2 py-1 rounded text-neutral-900",
-            value: tag,
-            onChange: (ev) => setTag(ev.target.value),
-          }, [
-            e("option", { value: "" }, "All tags"),
-            ...tags.map((t) => e("option", { key: t, value: t }, t)),
-          ]),
-          e("select", {
-            className: "border px-2 py-1 rounded text-neutral-900",
-            value: actor,
-            onChange: (ev) => setActor(ev.target.value),
-          }, [
-            e("option", { value: "" }, "All actors"),
-            ...actors.map((a) => e("option", { key: a, value: a }, a)),
-          ]),
+          e(
+            "select",
+            {
+              className: "border px-2 py-1 rounded text-neutral-900",
+              value: tag,
+              onChange: (ev) => setTag(ev.target.value),
+            },
+            [
+              e("option", { value: "" }, "All tags"),
+              ...tags.map((t) => e("option", { key: t, value: t }, t)),
+            ]
+          ),
         ]),
-        filtered.map((ev) =>
-          e("div", { key: ev.id, className: "border-b border-neutral-700 pb-2" }, [
-            e("div", { className: "font-semibold" }, `${ev.date} — ${ev.title}`),
-            ev.summary ? e("div", { className: "text-sm" }, ev.summary) : null,
-          ])
+        e(
+          "div",
+          { className: "relative h-64" },
+          [
+            e("div", {
+              className: "absolute top-1/2 left-0 right-0 h-px bg-neutral-700",
+            }),
+            ...filtered.map((ev, idx) => {
+              const left = leftPercent(ev.date);
+              const above = idx % 2 === 0;
+              return e(
+                React.Fragment,
+                { key: ev.id },
+                [
+                  e("div", {
+                    className: "absolute w-px bg-neutral-700",
+                    style: {
+                      left: `${left}%`,
+                      top: above ? "20%" : "50%",
+                      height: "30%",
+                      transform: "translateX(-50%)",
+                    },
+                  }),
+                  e(
+                    "button",
+                    {
+                      className:
+                        "absolute w-3 h-3 bg-neutral-100 border border-neutral-700 rounded-full cursor-pointer",
+                      style: {
+                        left: `${left}%`,
+                        top: "50%",
+                        transform: "translate(-50%, -50%)",
+                      },
+                      onClick: () => openModal(ev),
+                      title: `${ev.date} – ${ev.title}`,
+                    }
+                  ),
+                  e(
+                    "div",
+                    {
+                      className: "absolute w-40 text-sm text-center",
+                      style: {
+                        left: `${left}%`,
+                        top: above ? "20%" : "80%",
+                        transform: "translate(-50%, -50%)",
+                      },
+                    },
+                    ev.title
+                  ),
+                ]
+              );
+            }),
+          ]
         ),
+        modal &&
+          e(
+            "div",
+            {
+              className:
+                "fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center",
+              onClick: closeModal,
+            },
+            [
+              e(
+                "div",
+                {
+                  className:
+                    "bg-neutral-900 p-4 rounded max-w-2xl w-full max-h-full overflow-auto",
+                  onClick: (ev) => ev.stopPropagation(),
+                },
+                [
+                  e("div", { className: "font-semibold mb-2" }, modal.title),
+                  e(
+                    "button",
+                    { className: "mb-2 px-2 py-1 border rounded", onClick: closeModal },
+                    "Close"
+                  ),
+                  e("pre", { className: "whitespace-pre-wrap text-sm" }, modal.text),
+                ]
+              ),
+            ]
+          ),
       ]);
     }
-
     const rootEl = document.getElementById("root");
     if (location.protocol === "file:") {
       rootEl.innerHTML = '<p class="p-4">Run a local web server (e.g., <code>python -m http.server</code>) to view the timeline.</p>';
