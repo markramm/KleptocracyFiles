@@ -1,6 +1,6 @@
-# Timeline (per-event YAML)
+# Timeline (per-event `.yaml` files)
 
-Each significant event has its own YAML file (see `_SCHEMA.json`). These are concise, neutral summaries with full URLs for citations.
+Each significant event has its own `.yaml` file (see `_SCHEMA.json`). These are concise, neutral summaries with full URLs for citations.
 
 ## Build an index
 ```bash
