@@ -64,8 +64,8 @@ def fetch(url: str, timeout=30):
 def find_existing_by_sha(directory: str, sha: str):
     if not os.path.isdir(directory):
         return None
-    for fn in os.listdir(directory):
-        if fn.startswith(sha + "."):
+    for fn in sorted(os.listdir(directory)):
+        if fn.startswith(sha + ".") and not fn.endswith(".yaml"):
             return os.path.join(directory, fn)
     return None
 
