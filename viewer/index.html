@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Debugging Democracy — Interactive Timeline</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css" />
   <style>
     html, body { height: 100%; }
     body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
@@ -12,9 +12,6 @@
   </style>
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/yaml@2.4.5/dist/yaml.umd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 <body class="bg-neutral-950 text-neutral-100">
 <div id="root"></div>
@@ -23,6 +20,10 @@ const e = React.createElement;
 
 function App() {
   const [events, setEvents] = React.useState([]);
+  const [query, setQuery] = React.useState("");
+  const [tag, setTag] = React.useState("");
+  const [actor, setActor] = React.useState("");
+
   React.useEffect(() => {
     fetch("../timeline/index.json")
       .then((r) => r.json())
@@ -30,21 +31,62 @@ function App() {
       .catch((err) => console.error("failed to load index", err));
   }, []);
 
-  return e(
-    "div",
-    { className: "p-4 space-y-4" },
-    events.map((ev) =>
-      e(
-        "div",
-        { key: ev.id, className: "border-b border-neutral-700 pb-2" },
-        e("div", { className: "font-semibold" }, `${ev.date} — ${ev.title}`),
-        ev.summary ? e("div", { className: "text-sm" }, ev.summary) : null
-      )
-    )
+  const tags = React.useMemo(() => Array.from(new Set(events.flatMap(ev => ev.tags || []))).sort(), [events]);
+  const actors = React.useMemo(() => Array.from(new Set(events.flatMap(ev => ev.actors || []))).sort(), [events]);
+
+  const filtered = events.filter(ev => {
+    const evTags = ev.tags || [];
+    const evActors = ev.actors || [];
+    const matchesTag = !tag || evTags.includes(tag);
+    const matchesActor = !actor || evActors.includes(actor);
+    const matchesQuery = !query || (ev.title + " " + (ev.summary || "")).toLowerCase().includes(query.toLowerCase());
+    return matchesTag && matchesActor && matchesQuery;
+  });
+
+  return e("div", { className: "p-4 space-y-4" },
+    [
+      e("div", { className: "flex flex-wrap gap-2" }, [
+        e("input", {
+          type: "text",
+          placeholder: "Search…",
+          className: "border px-2 py-1 rounded text-neutral-900",
+          value: query,
+          onChange: (ev) => setQuery(ev.target.value),
+        }),
+        e("select", {
+          className: "border px-2 py-1 rounded text-neutral-900",
+          value: tag,
+          onChange: (ev) => setTag(ev.target.value),
+        }, [
+          e("option", { value: "" }, "All tags"),
+          ...tags.map((t) => e("option", { key: t, value: t }, t)),
+        ]),
+        e("select", {
+          className: "border px-2 py-1 rounded text-neutral-900",
+          value: actor,
+          onChange: (ev) => setActor(ev.target.value),
+        }, [
+          e("option", { value: "" }, "All actors"),
+          ...actors.map((a) => e("option", { key: a, value: a }, a)),
+        ]),
+      ]),
+      filtered.map((ev) =>
+        e("div", { key: ev.id, className: "border-b border-neutral-700 pb-2" }, [
+          e("div", { className: "font-semibold" }, `${ev.date} — ${ev.title}`),
+          ev.summary ? e("div", { className: "text-sm" }, ev.summary) : null,
+        ])
+      ),
+    ]
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(e(App));
+const rootEl = document.getElementById("root");
+if (location.protocol === "file:") {
+  rootEl.innerHTML = '<p class="p-4">Run a local web server (e.g., <code>python -m http.server</code>) to view the timeline.</p>';
+} else {
+  ReactDOM.createRoot(rootEl).render(e(App));
+}
 </script>
 </body>
 </html>
+
