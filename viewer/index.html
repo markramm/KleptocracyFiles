@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Debugging Democracy — Interactive Timeline</title>
   <link rel="stylesheet" href="tailwind.min.css" />
-
   <style>
+    html, body, #root { height: 100%; width: 100%; }
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+      Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
     html, body, #root { height: 100%; width: 100%; }
     body {
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
@@ -16,11 +20,13 @@
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
 </head>
 <body class="bg-neutral-950 text-neutral-100">
   <div id="root" class="w-full"></div>
   <script>
     const e = React.createElement;
+
     function App() {
       const [events, setEvents] = React.useState([]);
       const [query, setQuery] = React.useState("");
@@ -36,7 +42,20 @@
           .then((d) => setEvents(d.events || []))
           .catch((err) => console.error("failed to load index", err));
       }, []);
+      React.useEffect(() => {
+        if (location.protocol === "file:") {
+          console.error("Use a local HTTP server (e.g. 'python -m http.server') to view the timeline.");
+        }
+        fetch("../timeline/index.json")
+          .then((r) => r.json())
+          .then((d) => setEvents(d.events || []))
+          .catch((err) => console.error("failed to load index", err));
+      }, []);
 
+      const tags = React.useMemo(
+        () => Array.from(new Set(events.flatMap((ev) => ev.tags || []))).sort(),
+        [events]
+      );
       const tags = React.useMemo(
         () => Array.from(new Set(events.flatMap((ev) => ev.tags || []))).sort(),
         [events]
@@ -51,10 +70,38 @@
         return matchesTag && matchesQuery;
       });
 
+      const minDate = React.useMemo(
+        () =>
+          filtered.length
+            ? Math.min(...filtered.map((ev) => Date.parse(ev.date)))
+            : 0,
+        [filtered]
+      );
+      const maxDate = React.useMemo(
+        () =>
+          filtered.length
+            ? Math.max(...filtered.map((ev) => Date.parse(ev.date)))
+            : 0,
+        [filtered]
+      );
+
       function openModal(ev) {
-        fetch(`../timeline/${ev._file}`)
-          .then((r) => r.text())
-          .then((txt) => setModal({ title: ev.title, text: txt }))
+        const localUrl = `../timeline/${ev._file}`;
+        const owner = location.hostname.endsWith("github.io")
+          ? location.hostname.split(".")[0]
+          : null;
+        const repo = location.hostname.endsWith("github.io")
+          ? location.pathname.split("/")[1]
+          : null;
+        fetch(localUrl).then((r) => {
+          if (r.ok) return r.text();
+          if (owner && repo) {
+            return fetch(
+              `https://raw.githubusercontent.com/${owner}/${repo}/main/timeline/${ev._file}`
+            ).then((r2) => r2.text());
+          }
+          throw new Error("event not found");
+        }).then((txt) => setModal({ title: ev.title, text: txt }))
           .catch((err) => setModal({ title: ev.title, text: String(err) }));
       }
 
@@ -62,7 +109,7 @@
         setModal(null);
       }
 
-      return e("div", { className: "p-4 space-y-6 w-full" }, [
+      return e("div", { className: "p-4 space-y-6 max-w-5xl mx-auto" }, [
         e("div", { className: "flex flex-wrap gap-2" }, [
           e("input", {
             type: "text",
@@ -86,50 +133,60 @@
         ]),
         e(
           "div",
-          { className: "relative border-l border-neutral-700 ml-4" },
-          React.useMemo(
-            () =>
-              filtered
-                .slice()
-                .sort((a, b) => new Date(a.date) - new Date(b.date))
-                .map((ev) =>
-                  e(
-                    "div",
-                    { key: ev.id, className: "pl-8 pb-8 relative" },
-                    [
-                      e("div", {
-                        className:
-                          "absolute -left-1.5 top-1 w-3 h-3 bg-neutral-100 border border-neutral-700 rounded-full",
-                      }),
+          { className: "relative h-64" },
+          [
+            e("div", {
+              className: "absolute top-1/2 left-0 right-0 h-0.5 bg-neutral-700",
+            }),
+            ...filtered
+              .slice()
+              .sort((a, b) => new Date(a.date) - new Date(b.date))
+              .map((ev, idx) => {
+                const pos =
+                  maxDate === minDate
+                    ? 0
+                    : ((Date.parse(ev.date) - minDate) / (maxDate - minDate)) * 100;
+                const isTop = idx % 2 === 0;
+                const card = e(
+                  "div",
+                  {
+                    className:
+                      "max-w-xs text-sm cursor-pointer text-center hover:text-neutral-200",
+                    onClick: () => openModal(ev),
+                    title: `${ev.date} – ${ev.title}`,
+                  },
+                  [
+                    e("div", { className: "font-semibold" }, `${ev.date} — ${ev.title}`),
+                    ev.summary &&
                       e(
                         "div",
-                        {
-                          className:
-                            "cursor-pointer hover:text-neutral-200", /* event card */
-                          onClick: () => openModal(ev),
-                          title: `${ev.date} – ${ev.title}`,
-                        },
-                        [
-                          e(
-                            "div",
-                            { className: "font-semibold" },
-                            `${ev.date} — ${ev.title}`
-                          ),
-                          ev.summary &&
-                            e(
-                              "div",
-                              {
-                                className: "text-sm text-neutral-300 mt-1",
-                              },
-                              ev.summary
-                            ),
-                        ]
+                        { className: "text-neutral-300 mt-1" },
+                        ev.summary
                       ),
-                    ]
-                  )
-                ),
-            [filtered]
-          )
+                  ]
+                );
+                const line = e("div", { className: "w-px h-8 bg-neutral-700" });
+                const dot = e("div", {
+                  className:
+                    "w-3 h-3 bg-neutral-100 border border-neutral-700 rounded-full cursor-pointer",
+                  onClick: () => openModal(ev),
+                  title: `${ev.date} – ${ev.title}`,
+                });
+                return e(
+                  "div",
+                  {
+                    key: ev.id,
+                    className:
+                      "absolute flex flex-col items-center transform -translate-x-1/2" +
+                      (isTop ? " bottom-1/2" : " top-1/2"),
+                    style: { left: `${pos}%` },
+                  },
+                  isTop
+                    ? [card, line, dot]
+                    : [dot, line, card]
+                );
+              }),
+          ]
         ),
         modal &&
           e(
@@ -162,6 +219,13 @@
       ]);
     }
 
+    const rootEl = document.getElementById("root");
+    if (location.protocol === "file:") {
+      rootEl.innerHTML = '<p class="p-4">Run a local web server (e.g., <code>python -m http.server</code>) to view the timeline.</p>';
+    } else {
+      ReactDOM.createRoot(rootEl).render(e(App));
+    }
+  </script>
     const rootEl = document.getElementById("root");
     if (location.protocol === "file:") {
       rootEl.innerHTML = '<p class="p-4">Run a local web server (e.g., <code>python -m http.server</code>) to view the timeline.</p>';
