@@ -4,154 +4,227 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Debugging Democracy — Interactive Timeline</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css" />
+  <link rel="stylesheet" href="tailwind.min.css" />
   <style>
-    html, body { height: 100%; }
-    body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue,
- Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    html, body, #root { height: 100%; width: 100%; }
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+      Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
   </style>
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
 </head>
 <body class="bg-neutral-950 text-neutral-100">
-<div class="p-4 space-y-4 max-w-5xl mx-auto">
-  <div class="flex flex-wrap gap-2">
-    <input id="search" class="flex-1 min-w-[12rem] p-2 rounded bg-neutral-800" placeholder="Search…" />
-    <select id="tagFilter" class="p-2 rounded bg-neutral-800">
-      <option value="">All tags</option>
-    </select>
-    <select id="actorFilter" class="p-2 rounded bg-neutral-800">
-      <option value="">All actors</option>
-    </select>
-  </div>
-  <div id="timeline" class="relative h-96 border border-neutral-700 rounded"></div>
-</div>
+  <div id="root" class="w-full"></div>
+  <script>
+    const e = React.createElement;
 
-<div id="modal" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center">
-  <div class="bg-neutral-900 p-4 rounded max-w-xl w-full max-h-[90vh] overflow-y-auto">
-    <button id="modalClose" class="float-right text-neutral-400">&times;</button>
-    <h2 id="modalTitle" class="text-xl font-bold mb-2"></h2>
-    <div id="modalBody" class="space-y-2 text-sm"></div>
-  </div>
-</div>
+    function App() {
+      const [events, setEvents] = React.useState([]);
+      const [query, setQuery] = React.useState("");
+      const [tag, setTag] = React.useState("");
+      const [modal, setModal] = React.useState(null);
+      const [zoom, setZoom] = React.useState(4);
 
-<script>
-if (location.protocol === "file:") {
-  console.error("Use a local HTTP server (e.g. 'python -m http.server') to view the timeline.");
-}
+      React.useEffect(() => {
+        if (location.protocol === "file:") {
+          console.error("Use a local HTTP server (e.g. 'python -m http.server') to view the timeline.");
+        }
+        fetch("../timeline/index.json")
+          .then((r) => r.json())
+          .then((d) => setEvents(d.events || []))
+          .catch((err) => console.error("failed to load index", err));
+      }, []);
 
-let allEvents = [];
-let currentEvents = [];
+      const tags = React.useMemo(
+        () => Array.from(new Set(events.flatMap((ev) => ev.tags || []))).sort(),
+        [events]
+      );
 
-const searchInput = document.getElementById('search');
-const tagSelect = document.getElementById('tagFilter');
-const actorSelect = document.getElementById('actorFilter');
+      const filtered = events.filter((ev) => {
+        const evTags = ev.tags || [];
+        const matchesTag = !tag || evTags.includes(tag);
+        const matchesQuery =
+          !query ||
+          (ev.title + " " + (ev.summary || "")).toLowerCase().includes(query.toLowerCase());
+        return matchesTag && matchesQuery;
+      });
 
-function populateFilters(events) {
-  const tagSet = new Set();
-  const actorSet = new Set();
-  events.forEach(ev => {
-    (ev.tags || []).forEach(t => tagSet.add(t));
-    (ev.actors || []).forEach(a => actorSet.add(a));
-  });
-  [...tagSet].sort().forEach(t => {
-    const opt = document.createElement('option');
-    opt.value = t;
-    opt.textContent = t;
-    tagSelect.appendChild(opt);
-  });
-  [...actorSet].sort().forEach(a => {
-    const opt = document.createElement('option');
-    opt.value = a;
-    opt.textContent = a;
-    actorSelect.appendChild(opt);
-  });
-}
+      const [startMs, endMs] = React.useMemo(() => {
+        if (!events.length) return [0, 1];
+        const times = events.map((ev) => new Date(ev.date).getTime());
+        return [Math.min(...times), Math.max(...times)];
+      }, [events]);
 
-function applyFilters() {
-  const q = searchInput.value.toLowerCase();
-  const tag = tagSelect.value;
-  const actor = actorSelect.value;
-  currentEvents = allEvents.filter(ev => {
-    return (!tag || ev.tags.includes(tag)) &&
-           (!actor || ev.actors.includes(actor)) &&
-           (ev.title.toLowerCase().includes(q) || (ev.summary && ev.summary.toLowerCase().includes(q)));
-  });
-  renderTimeline();
-}
+      const range = endMs - startMs || 1;
 
-function App() {
-  const [events, setEvents] = React.useState([]);
-  const [query, setQuery] = React.useState("");
-  const [tag, setTag] = React.useState("");
-  const [actor, setActor] = React.useState("");
+      function leftPercent(date) {
+        return ((new Date(date).getTime() - startMs) / range) * 100;
+      }
 
-  React.useEffect(() => {
-    if (location.protocol === "file:") {
-      console.error("Use a local HTTP server (e.g. 'python -m http.server') to view the timeline.");
+      function openModal(ev) {
+        const file = `../timeline/${ev._file}`;
+        fetch(file)
+          .then((r) => {
+            if (!r.ok) throw new Error(`HTTP ${r.status}`);
+            return r.text();
+          })
+          .then((txt) => {
+            try {
+              jsyaml.load(txt);
+              setModal({ title: ev.title, text: txt });
+            } catch (err) {
+              throw new Error("Invalid YAML");
+            }
+          })
+          .catch((err) => setModal({ title: ev.title, text: String(err) }));
+      }
+
+      function closeModal() {
+        setModal(null);
+      }
+
+      return e("div", { className: "h-screen w-full flex flex-col" }, [
+        e("div", { className: "sticky top-0 z-10 bg-neutral-950 p-4 flex flex-wrap items-center gap-2" }, [
+          e("input", {
+            type: "text",
+            placeholder: "Search…",
+            className: "border px-2 py-1 rounded text-neutral-900",
+            value: query,
+            onChange: (ev) => setQuery(ev.target.value),
+          }),
+          e(
+            "select",
+            {
+              className: "border px-2 py-1 rounded text-neutral-900",
+              value: tag,
+              onChange: (ev) => setTag(ev.target.value),
+            },
+            [
+              e("option", { value: "" }, "All tags"),
+              ...tags.map((t) => e("option", { key: t, value: t }, t)),
+            ]
+          ),
+          e(
+            "label",
+            { className: "flex items-center gap-2 text-sm" },
+            [
+              "Zoom",
+              e("input", {
+                type: "range",
+                min: 1,
+                max: 10,
+                step: 0.5,
+                className: "w-40",
+                value: zoom,
+                onChange: (ev) => setZoom(parseFloat(ev.target.value)),
+              }),
+            ]
+          ),
+        ]),
+        e(
+          "div",
+          { className: "flex-1 overflow-x-auto p-4" },
+          e(
+            "div",
+            {
+              className: "relative h-full",
+              style: { width: `${zoom * 100}%`, minHeight: "40rem" },
+            },
+            [
+              e("div", {
+                className: "absolute top-1/2 left-0 right-0 h-px bg-neutral-700",
+              }),
+              ...filtered.map((ev, idx) => {
+                const left = leftPercent(ev.date);
+                const lanes = [15, 30, 70, 85];
+                const top = lanes[idx % lanes.length];
+                const above = top < 50;
+                return e(
+                  React.Fragment,
+                  { key: ev.id },
+                  [
+                    e("div", {
+                      className: "absolute w-px bg-neutral-700",
+                      style: {
+                        left: `${left}%`,
+                        top: `${above ? top : 50}%`,
+                        height: `${Math.abs(50 - top)}%`,
+                        transform: "translateX(-50%)",
+                      },
+                    }),
+                    e(
+                      "button",
+                      {
+                        className:
+                          "absolute w-3 h-3 bg-neutral-100 border border-neutral-700 rounded-full cursor-pointer",
+                        style: {
+                          left: `${left}%`,
+                          top: "50%",
+                          transform: "translate(-50%, -50%)",
+                        },
+                        onClick: () => openModal(ev),
+                        title: `${ev.date} – ${ev.title}`,
+                      }
+                    ),
+                    e(
+                      "div",
+                      {
+                        className: "absolute w-64 text-sm text-center",
+                        style: {
+                          left: `${left}%`,
+                          top: `${top}%`,
+                          transform: "translate(-50%, -50%)",
+                        },
+                      },
+                      ev.title
+                    ),
+                  ]
+                );
+              }),
+            ]
+          )
+        ),
+        modal &&
+          e(
+            "div",
+            {
+              className:
+                "fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center",
+              onClick: closeModal,
+            },
+            [
+              e(
+                "div",
+                {
+                  className:
+                    "bg-neutral-900 p-4 rounded max-w-2xl w-full max-h-full overflow-auto",
+                  onClick: (ev) => ev.stopPropagation(),
+                },
+                [
+                  e("div", { className: "font-semibold mb-2" }, modal.title),
+                  e(
+                    "button",
+                    { className: "mb-2 px-2 py-1 border rounded", onClick: closeModal },
+                    "Close"
+                  ),
+                  e("pre", { className: "whitespace-pre-wrap text-sm" }, modal.text),
+                ]
+              ),
+            ]
+          ),
+      ]);
     }
-    fetch("../timeline/index.json")
-      .then((r) => r.json())
-      .then((d) => setEvents(d.events || []))
-      .catch((err) => console.error("failed to load index", err));
-  }, []);
 
-  const tags = React.useMemo(() => Array.from(new Set(events.flatMap(ev => ev.tags || []))).sort(), [events]);
-  const actors = React.useMemo(() => Array.from(new Set(events.flatMap(ev => ev.actors || []))).sort(), [events]);
-
-  const filtered = events.filter(ev => {
-    const evTags = ev.tags || [];
-    const evActors = ev.actors || [];
-    const matchesTag = !tag || evTags.includes(tag);
-    const matchesActor = !actor || evActors.includes(actor);
-    const matchesQuery = !query || (ev.title + " " + (ev.summary || "")).toLowerCase().includes(query.toLowerCase());
-    return matchesTag && matchesActor && matchesQuery;
-  });
-
-  return e("div", { className: "p-4 space-y-4" },
-    [
-      e("div", { className: "flex flex-wrap gap-2" }, [
-        e("input", {
-          type: "text",
-          placeholder: "Search…",
-          className: "border px-2 py-1 rounded text-neutral-900",
-          value: query,
-          onChange: (ev) => setQuery(ev.target.value),
-        }),
-        e("select", {
-          className: "border px-2 py-1 rounded text-neutral-900",
-          value: tag,
-          onChange: (ev) => setTag(ev.target.value),
-        }, [
-          e("option", { value: "" }, "All tags"),
-          ...tags.map((t) => e("option", { key: t, value: t }, t)),
-        ]),
-        e("select", {
-          className: "border px-2 py-1 rounded text-neutral-900",
-          value: actor,
-          onChange: (ev) => setActor(ev.target.value),
-        }, [
-          e("option", { value: "" }, "All actors"),
-          ...actors.map((a) => e("option", { key: a, value: a }, a)),
-        ]),
-      ]),
-      filtered.map((ev) =>
-        e("div", { key: ev.id, className: "border-b border-neutral-700 pb-2" }, [
-          e("div", { className: "font-semibold" }, `${ev.date} — ${ev.title}`),
-          ev.summary ? e("div", { className: "text-sm" }, ev.summary) : null,
-        ])
-      ),
-    ]
-  );
-}
-
-const rootEl = document.getElementById("root");
-if (location.protocol === "file:") {
-  rootEl.innerHTML = '<p class="p-4">Run a local web server (e.g., <code>python -m http.server</code>) to view the timeline.</p>';
-} else {
-  ReactDOM.createRoot(rootEl).render(e(App));
-}
-</script>
+    const rootEl = document.getElementById("root");
+    if (location.protocol === "file:") {
+      rootEl.innerHTML = '<p class="p-4">Run a local web server (e.g., <code>python -m http.server</code>) to view the timeline.</p>';
+    } else {
+      ReactDOM.createRoot(rootEl).render(e(App));
+    }
+  </script>
 </body>
 </html>
 
