@@ -20,7 +20,6 @@
   <div id="root" class="w-full"></div>
   <script>
     const e = React.createElement;
-
     function App() {
       const [events, setEvents] = React.useState([]);
       const [query, setQuery] = React.useState("");
@@ -88,6 +87,7 @@
 
       return e("div", { className: "h-screen w-full flex flex-col" }, [
         e("div", { className: "sticky top-0 z-10 bg-neutral-950 p-4 flex flex-wrap items-center gap-2" }, [
+
           e("input", {
             type: "text",
             placeholder: "Search…",
@@ -133,6 +133,7 @@
               className: "relative h-full",
               style: { width: `${zoom * 100}%`, minHeight: "40rem" },
             },
+
             [
               e("div", {
                 className: "absolute top-1/2 left-0 right-0 h-px bg-neutral-700",
@@ -142,6 +143,7 @@
                 const lanes = [15, 30, 70, 85];
                 const top = lanes[idx % lanes.length];
                 const above = top < 50;
+
                 return e(
                   React.Fragment,
                   { key: ev.id },
@@ -217,7 +219,6 @@
           ),
       ]);
     }
-
     const rootEl = document.getElementById("root");
     if (location.protocol === "file:") {
       rootEl.innerHTML = '<p class="p-4">Run a local web server (e.g., <code>python -m http.server</code>) to view the timeline.</p>';
