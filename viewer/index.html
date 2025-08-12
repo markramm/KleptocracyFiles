@@ -11,9 +11,15 @@
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
       Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
     }
+    html, body, #root { height: 100%; width: 100%; }
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+      Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
   </style>
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
 </head>
 <body class="bg-neutral-950 text-neutral-100">
   <div id="root" class="w-full"></div>
@@ -35,7 +41,20 @@
           .then((d) => setEvents(d.events || []))
           .catch((err) => console.error("failed to load index", err));
       }, []);
+      React.useEffect(() => {
+        if (location.protocol === "file:") {
+          console.error("Use a local HTTP server (e.g. 'python -m http.server') to view the timeline.");
+        }
+        fetch("../timeline/index.json")
+          .then((r) => r.json())
+          .then((d) => setEvents(d.events || []))
+          .catch((err) => console.error("failed to load index", err));
+      }, []);
 
+      const tags = React.useMemo(
+        () => Array.from(new Set(events.flatMap((ev) => ev.tags || []))).sort(),
+        [events]
+      );
       const tags = React.useMemo(
         () => Array.from(new Set(events.flatMap((ev) => ev.tags || []))).sort(),
         [events]
@@ -199,6 +218,13 @@
       ]);
     }
 
+    const rootEl = document.getElementById("root");
+    if (location.protocol === "file:") {
+      rootEl.innerHTML = '<p class="p-4">Run a local web server (e.g., <code>python -m http.server</code>) to view the timeline.</p>';
+    } else {
+      ReactDOM.createRoot(rootEl).render(e(App));
+    }
+  </script>
     const rootEl = document.getElementById("root");
     if (location.protocol === "file:") {
       rootEl.innerHTML = '<p class="p-4">Run a local web server (e.g., <code>python -m http.server</code>) to view the timeline.</p>';
