@@ -41,6 +41,12 @@
     "status": 403,
     "target": "https://apnews.com/article/arizona-cochise-county-election-certification-criminal-512a5ab9b7cadd889b2bc5ad7f6de120"
   },
+  "https://ballotpedia.org/Donald_Trump%27s_executive_orders_and_actions,_2025": {
+    "checked_at": "2025-08-12T02:48:21.620641+00:00",
+    "info": null,
+    "status": 402,
+    "target": "https://ballotpedia.org/Donald_Trump%27s_executive_orders_and_actions,_2025"
+  },
   "https://blog.x.com/en_us/topics/company/2023/expanding-our-political-advertising-policy": {
     "checked_at": "2025-08-11T20:43:57.792929+00:00",
     "info": null,
@@ -166,6 +172,12 @@
     "info": null,
     "status": 200,
     "target": "https://techcrunch.com/2024/02/09/instagram-and-threads-will-no-longer-proactively-recommend-political-content/"
+  },
+  "https://time.com/7209901/donald-trump-executive-actions-project-2025/": {
+    "checked_at": "2025-08-12T02:48:21.620641+00:00",
+    "info": null,
+    "status": 200,
+    "target": "https://time.com/7209901/donald-trump-executive-actions-project-2025/"
   },
   "https://tracreports.org/whatsnew/email.250801.html": {
     "checked_at": "2025-08-11T20:43:57.792929+00:00",
@@ -796,6 +808,24 @@
     "info": null,
     "status": 200,
     "target": "https://www.whitehouse.gov/fact-sheets/2025/07/19853/"
+  },
+  "https://www.whitehouse.gov/presidential-actions/2025/01/declaring-a-national-emergency-at-the-southern-border-of-the-united-states/": {
+    "checked_at": "2025-08-12T02:48:21.620641+00:00",
+    "info": null,
+    "status": 200,
+    "target": "https://www.whitehouse.gov/presidential-actions/2025/01/declaring-a-national-emergency-at-the-southern-border-of-the-united-states/"
+  },
+  "https://www.whitehouse.gov/presidential-actions/2025/01/declaring-a-national-energy-emergency/": {
+    "checked_at": "2025-08-12T02:48:21.620641+00:00",
+    "info": null,
+    "status": 200,
+    "target": "https://www.whitehouse.gov/presidential-actions/2025/01/declaring-a-national-energy-emergency/"
+  },
+  "https://www.whitehouse.gov/presidential-actions/2025/01/initial-rescissions-of-harmful-executive-orders-and-actions/": {
+    "checked_at": "2025-08-12T02:48:21.620641+00:00",
+    "info": null,
+    "status": 200,
+    "target": "https://www.whitehouse.gov/presidential-actions/2025/01/initial-rescissions-of-harmful-executive-orders-and-actions/"
   },
   "https://www.whitehouse.gov/presidential-actions/2025/02/pausing-foreign-corrupt-practices-act-enforcement-to-further-american-economic-and-national-security/": {
     "checked_at": "2025-08-11T20:43:57.792929+00:00",
